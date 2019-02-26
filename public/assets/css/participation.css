@@ -10,6 +10,11 @@
   font-size: 16px;
 }
 
+.container > hr {
+  width: 60px;
+  border: 1px solid #FC627A;
+}
+
 .container > p {
   font-size: 16px;
   margin-top: 50px;
@@ -21,14 +26,14 @@
   justify-content: space-between;
 }
 
+
+/* Item */
+
 .item {
   width: 100%;
   max-width: 450px;
   margin-top: 50px;
 }
-
-
-/* Title */
 
 .item .title {
   position: relative;
