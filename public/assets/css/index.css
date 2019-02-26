@@ -78,6 +78,10 @@
   font-size: 16px;
 }
 
+#news .button {
+  background-color: #FAD48D;
+}
+
 
 /* What's WELgee */
 
@@ -97,6 +101,10 @@
 
 #what-welgee p strong .yellow {
   color: #FFDE71;
+}
+
+#what-welgee .button {
+  background-color: #FAD48D;
 }
 
 
@@ -130,6 +138,10 @@
   padding-bottom: 10px;
   width: 100%;
   background-color: rgba(255,222,113, 0.4);
+}
+
+#passion .button {
+  background-color: #FAD48D;
 }
 
 
@@ -181,6 +193,11 @@
   font-size: 16px;
 }
 
+#director-msg .button {
+  background-color: #FAD48D;
+}
+
+
 /* Our Programs */
 
 #programs {
@@ -230,6 +247,10 @@
 #programs .item p {
   margin-top: 10px;
   font-size: 16px;
+}
+
+#programs .button {
+  background-color: #FAD48D;
 }
 
 
@@ -373,6 +394,10 @@
 #events .item .title {
   margin-top: 10px;
   text-align: left;
+}
+
+#events .button {
+  background-color: #FAD48D;
 }
 
 
