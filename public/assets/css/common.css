@@ -1,9 +1,23 @@
 /* Common */
 
+@font-face {
+  font-family: "NotoSansCJKjp";
+  font-style: normal;
+  font-weight: bold;
+  src: url('/assets/font/NotoSansCJKjp-Bold.woff') format("woff");
+}
+
+@font-face {
+  font-family: "NotoSansCJKjp";
+  font-style: normal;
+  font-weight: normal;
+  src: url('/assets/font/NotoSansCJKjp-Regular.woff') format("woff");
+}
+
 body {
   color: #333333;
   margin: 0;
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'NotoSansCJKjp', sans-serif;
 }
 
 a {
