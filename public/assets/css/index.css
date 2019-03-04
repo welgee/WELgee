@@ -205,21 +205,45 @@
   margin-top: 100px;
 }
 
-#programs .group h3 {
-  margin-top: 100px;
+#programs .group .header {
+  position: relative;
+  height: 120px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+#programs .group .header .circle {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+  background-color: #FAD48D;
+  bottom: 0px;
+  left: 0px;
+  color: white;
+  text-align: center;
+  line-height: 80px;
+  font-size: 40px;
+}
+
+#programs .group .header h3 {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
   font-size: 30px;
   font-weight: bold;
   text-align: left;
 }
 
-#programs .group h3 span {
+#programs .group .header h3 span {
   font-size: 20px;
   font-weight: normal;
+  margin-left: 30px;
 }
 
 #programs .item-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 
