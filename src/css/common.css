@@ -1,0 +1,142 @@
+/* Common */
+
+@font-face {
+  font-family: "NotoSansCJKjp";
+  font-style: normal;
+  font-weight: bold;
+  src: url('/font/NotoSansCJKjp-Bold.woff') format("woff");
+}
+
+@font-face {
+  font-family: "NotoSansCJKjp";
+  font-style: normal;
+  font-weight: normal;
+  src: url('/font/NotoSansCJKjp-Regular.woff') format("woff");
+}
+
+body {
+  color: #333333;
+  margin: 0;
+  font-family: 'NotoSansCJKjp', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  text-align: center;
+  line-height: 2;
+}
+
+.container {
+  width: 80%;
+  max-width: 980px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+h2, h3, h5 {
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  font-weight: bold;
+}
+
+.title-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  vertical-align: top;
+}
+
+.title-main .bar {
+  width: 30vw;
+  max-width: 290px;
+  height: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-main .bar .block {
+  width: 3vw;
+  max-width: 24px;
+  height: 3vw;
+  max-height: 24px;
+}
+
+.title-main .bar .block.yellow {
+  background-color: #FFDE71;
+}
+
+.title-main .bar .block.green {
+  background-color: #D7F87E;
+}
+
+.title-main .bar .block.blue {
+  background-color: #5CBBFF;
+}
+
+.title-main .bar .block.red {
+  background-color: #FC627A;
+}
+
+.title-sub {
+  margin-top: 22px;
+  margin-bottom: 50px;
+}
+
+a.button {
+  width: 240px;
+  height: 40px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  border-radius: 20px;
+  background-color: #D7F87E;
+  color: #333333;
+  text-align: center;
+  font-weight: bold;
+  line-height: 40px;
+  font-size: 16px;
+  border: none;
+  padding: 0;
+}
+
+@media screen and (min-width: 480px) {
+  h2 {
+    font-size: 40px;
+  }
+
+  h3 {
+    font-size: 30px;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 17px;
+  }
+
+  h5 {
+    font-size: 15px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
