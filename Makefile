@@ -1,4 +1,3 @@
-CDN_URL:=https://res.cloudinary.com/dehmxyns2/image/upload/v1551771650/welgee
 CSS_SRCS:=$(wildcard src/css/*.css)
 HTML_SRCS:=$(shell find src/html -name "*.html")
 CSS_SRCS:=$(shell find src/css -name "*.css")
