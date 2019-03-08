@@ -49,16 +49,6 @@ header {
   .nav-item i {
     margin: 0 10px;
   }
-
-  #header-desc {
-    height: 40px;
-    background-color: #FFDE71;
-    color: #6A6A6A;
-    font-size: 14px;
-    text-align: right;
-    line-height: 40px;
-    padding-right: 5%;
-  }
 }
 
 @media screen and (max-width: 480px) {

@@ -44,7 +44,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #FAD48D;
+  background-color: #F7BD00;
   color: white;
   text-align: center;
 }
@@ -106,4 +106,7 @@
   text-align: left;
 }
 
-
+.item > a {
+  background-color: #FFBF00;
+  color: white;
+}

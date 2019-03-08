@@ -44,6 +44,34 @@ h2, h3, h5 {
   font-weight: bold;
 }
 
+
+/* Breadcrumbs */
+#breadcrumbs {
+  margin-top: 20px;
+  padding-left: 100px;
+  color: #6A6A6A;
+  font-size: 14px;
+}
+
+#breadcrumbs > a {
+  margin: 0 5px;
+}
+
+#breadcrumbs > a:link {
+  color: #6A6A6A;
+}
+
+#breadcrumbs > a:visited {
+  color: #6A6A6A;
+}
+
+@media screen and (max-width: 480px) {
+  #breadcrumbs {
+    display: none;
+  }
+}
+
+
 .title-main {
   display: flex;
   justify-content: space-between;
@@ -137,6 +165,6 @@ a.button {
   }
 
   p {
-    font-size: 14px;
+    font-size: 13px;
   }
 }
