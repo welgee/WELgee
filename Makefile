@@ -9,18 +9,15 @@ CSS_PUBS:=$(CSS_SRCS:src/%=public/%)
 all: $(HTML_PUBS) $(CSS_PUBS)
 
 public/%.html: src/html/header.html.tmpl src/html/footer.html.tmpl src/html/%.html
-	export HEADER=$$(IMG_URL=$(CDN_URL) envsubst < src/html/header.html.tmpl)
-	export FOOTER=$$(IMG_URL=$(CDN_URL) envsubst < src/html/footer.html.tmpl)
-	export IMG_URL=$(CDN_URL)
 	mkdir -p $(dir $@)
+	HEADER=$$(IMG_URL=$(CDN_URL) envsubst < src/html/header.html.tmpl) \
+	FOOTER=$$(IMG_URL=$(CDN_URL) envsubst < src/html/footer.html.tmpl) \
+	IMG_URL=$(CDN_URL) \
 	envsubst < $(@:public/%=src/html/%) > $@
-	export -n HEADER FOOTER IMG_URL
 
 public/css/%.css: src/css/%.css
-	export IMG_URL=$(CDN_URL)
 	mkdir -p $(dir $@)
-	envsubst < $< > $@
-	export -n IMG_URL
+	IMG_URL=$(CDN_URL) envsubst < $< > $@
 
 run:
 	docker run --rm -v $(CURDIR)/public:/usr/share/nginx/html -p 8001:80 nginx
