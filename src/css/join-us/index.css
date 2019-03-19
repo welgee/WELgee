@@ -77,13 +77,12 @@
   }
 }
 
-/*
 @media screen and (max-width: 480px) {
-  .item .title {
+  #how-to-join > .items > .item > .title {
     height: 80px;
   }
 
-  .item .title .circle {
+  #how-to-join > .items > .item > .title > .circle {
     width: 80px;
     height: 80px;
     border-radius: 40px;
@@ -91,12 +90,11 @@
     line-height: 60px;
   }
 
-  .item .title h3 {
+  #how-to-join > .items > .item > .title > h3 {
     font-size: 18px;
     bottom: 6px;
   }
 }
-*/
 
 #how-to-join > .items > .item > img {
   display: block;
