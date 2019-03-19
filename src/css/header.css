@@ -1,86 +1,84 @@
 /* Header */
 
-header {
-  width: 100%;
-  background-color: white;
-  border-bottom: 1px solid gray;
-}
-
 @media screen and (min-width: 480px) {
-  header .mobile {
+  header > .mobile {
     display: none;
   }
 
-  #header-main {
-    height: 110px;
+  header > .pc.contents {
+    width: 100%;
+    background-color: white;
+    height: 120px;
   }
 
-  #header-logo {
+  header > .pc.contents > .logo {
     display: inline-flex;
-    width: 150px;
+    width: 120px;
     height: 100%;
     margin-left: 100px;
     align-items: center;
   }
 
-  #header-logo img {
+  header > .pc.contents > .logo > img {
     width: 100%;
   }
 
-  #nav-bar {
+  header > .pc.contents > .nav-items {
     display: inline-flex;
     vertical-align: top;
     height: 100%;
-    width: calc(100% - 300px);
+    width: calc(100% - 250px);
     flex-flow: row nowrap;
     justify-content: flex-end;
   }
 
-  .nav-item {
-    display: inline-block;
+  header > .pc.contents > .nav-items > .nav-item {
+    display: block;
     height: 100%;
-    margin-right: 50px;
-    line-height: 110px;
-    font-size: 18px;
+    margin-right: 40px;
+    line-height: 120px;
+    font-size: 16px;
+    font-family: "NotoSansCJKjp";
     font-weight: bold;
     color: #333333;
   }
 
-  .nav-item i {
+  header > .pc.contents > .nav-items > .nav-item.sns > a {
     margin: 0 10px;
   }
 }
 
 @media screen and (max-width: 480px) {
-  header .pc {
+  header > .pc {
     display: none;
   }
 
-  header .mobile .bar {
-    width: 100%;
+  header > .mobile.bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
     height: 80px;
+    margin: 0 auto;
     background-color: white;
   }
 
-  header .mobile .bar .logo {
-    position: absolute;
-    left: 40px;
-    top: 30px;
-  }
-
-  header .mobile .bar .logo img {
+  header > .mobile.bar > .logo {
+    display: block;
     width: 70px;
-    height: 30px;
   }
 
-  header .mobile .menu-btn {
-    position: absolute;
-    right: 40px;
-    top: 30px;
+  header > .mobile.bar > .logo > img{
+    width: 100%;
+  }
+
+  header > .mobile.bar > .menu-btn {
+    display: block;
+    width: 30px;
     font-size: 25px;
   }
 
-  header #mobile-menu {
+  header > .mobile.contents {
     display: none;
     position: fixed;
     top: 0px;
@@ -91,54 +89,79 @@ header {
     background-color: white;
   }
 
-  header #mobile-menu .close-btn {
+  header > .mobile.contents > .close-btn {
     position: absolute;
-    right: 40px;
+    right: 20px;
     top: 30px;
-    font-size: 30px;
+    width: 40px;
+    height: 40px;
   }
 
-  header #mobile-menu .logo {
-    text-align: center;
+  header > .mobile.contents > .close-btn:before,
+  header > .mobile.contents > .close-btn:after {
+    position: absolute;
+    left: 19px;
+    content: ' ';
+    height: 41px;
+    width: 2px;
+    background-color: #333;
+  }
+  header > .mobile.contents > .close-btn:before {
+    transform: rotate(45deg);
+  }
+  header > .mobile.contents > .close-btn:after {
+    transform: rotate(-45deg);
+  }
+
+
+  header > .mobile.contents > .logo {
+    display: block;
+    width: 30vw;
+    height: 100px;
+    margin: 0 auto;
     margin-top: 50px;
   }
 
-  header #mobile-menu .logo img {
-    width: 170px;
+  header > .mobile.contents > .logo > img {
+    width: 100%;
   }
 
-  header #mobile-menu .menu {
-    width: 230px;
-    margin: 0 auto;
+  header > .mobile.contents > .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 160px;
+    height: calc(100vh - 150px - 30px - 150px);
+    margin-left: 35%;
     margin-top: 30px;
   }
 
-  header #mobile-menu .menu .item {
-    margin-top: 5vh;
+  header > .mobile.contents > .menu > .item {
+    position: relative;
     font-size: 15px;
   }
-
-  header #mobile-menu .menu .item .block {
+  header > .mobile.contents > .menu > .item:before {
+    position: absolute;
+    left: -40px;
+    content: ' ';
     width: 20px;
     height: 20px;
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 20px;
   }
-
-  header #mobile-menu .menu .item .block.yellow {
+  header > .mobile.contents > .menu > .item.yellow:before {
     background-color: #FFDE71;
   }
-
-  header #mobile-menu .menu .item .block.green {
+  header > .mobile.contents > .menu > .item.green:before {
     background-color: #D7F87E;
   }
-
-  header #mobile-menu .menu .item .block.blue {
+  header > .mobile.contents > .menu > .item.blue:before {
     background-color: #5CBBFF;
   }
-
-  header #mobile-menu .menu .item .block.red {
+  header > .mobile.contents > .menu > .item.red:before {
     background-color: #FC627A;
+  }
+
+  header > .mobile.contents > a.button {
+    background-color: #FAD48D;
+    margin-top: 50px;
   }
 }

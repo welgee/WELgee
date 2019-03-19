@@ -1,6 +1,13 @@
 /* Common */
 
 @font-face {
+  font-family: "League Spartan";
+  font-style: normal;
+  font-weight: bold;
+  src: url('/font/LeagueSpartan-Bold.otf') format("opentype");
+}
+
+@font-face {
   font-family: "NotoSansCJKjp";
   font-style: normal;
   font-weight: bold;
@@ -12,6 +19,10 @@
   font-style: normal;
   font-weight: normal;
   src: url('/font/NotoSansCJKjp-Regular.woff') format("woff");
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -71,51 +82,6 @@ h2, h3, h5 {
   }
 }
 
-
-.title-main {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  vertical-align: top;
-}
-
-.title-main .bar {
-  width: 30vw;
-  max-width: 290px;
-  height: 100%;
-  display: inline-flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.title-main .bar .block {
-  width: 3vw;
-  max-width: 24px;
-  height: 3vw;
-  max-height: 24px;
-}
-
-.title-main .bar .block.yellow {
-  background-color: #FFDE71;
-}
-
-.title-main .bar .block.green {
-  background-color: #D7F87E;
-}
-
-.title-main .bar .block.blue {
-  background-color: #5CBBFF;
-}
-
-.title-main .bar .block.red {
-  background-color: #FC627A;
-}
-
-.title-sub {
-  margin-top: 22px;
-  margin-bottom: 50px;
-}
-
 a.button {
   width: 240px;
   height: 40px;
@@ -126,6 +92,7 @@ a.button {
   background-color: #D7F87E;
   color: #333333;
   text-align: center;
+  font-family: "League Spartan";
   font-weight: bold;
   line-height: 40px;
   font-size: 16px;
