@@ -1,0 +1,376 @@
+#passion {
+  margin-top: 100px;
+}
+
+#passion > hr {
+  width: 60px;
+  border: 1px solid #FC627A;
+}
+
+#passion > p {
+  margin-top: 50px;
+}
+
+#passion-image {
+  margin-top: 100px;
+  width: 100vw;
+  height: 500px;
+  background-image: url("${IMG_URL}/about/passion/passion.jpg");
+  background-color: lightgray;
+  background-size: cover;
+  background-position: center;
+}
+
+
+#issue {
+  margin-top: 100px;
+}
+
+#issue > hr {
+  width: 60px;
+  border: 1px solid #FC627A;
+}
+
+#issue > p {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#issue > .contents1 {
+  width: 100vw;
+  background-image: url("${IMG_URL}/about/passion/issue-bg.jpg");
+  background-color: lightgray;
+  background-size: cover;
+  background-position: center;
+  margin-top: 50px;
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+
+#issue > .contents1 > p {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  font-size: 18px;
+  text-align: center;
+}
+
+#issue > .contents2 {
+  width: 100vw;
+  padding: 50px 0;
+  background-color: rgba(201, 201, 201, 0.2);
+}
+
+#issue > .contents2 > p {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  font-size: 18px;
+  text-align: left;
+}
+
+#issue > .contents2 > img {
+  display: block;
+  width: 90%;
+  max-width: 500px;
+  height: 300px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+#issue > .contents3 > p {
+  width: 90%;
+  max-width: 500px;
+  margin: 50px auto;
+  text-align: left;
+}
+
+#issue > .contents3 > img {
+  display: block;
+  width: 90%;
+  max-width: 500px;
+  height: 300px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+
+
+#why {
+  margin-top: 100px;
+  background-color: rgba(201, 201, 201, 0.2);
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+#why > h3 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+#why > .items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 80%;
+  margin: 0 auto;
+}
+
+#why > .items > .item {
+  width: 80%;
+  max-width: 490px;
+}
+
+#why > .items > .item > h4 {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+#why > .items > .item > p {
+  background-color: #EAEAEA;
+  padding: 45px 25px;
+  text-align: left;
+  margin-top: 0;
+}
+
+#why > p {
+  width: 90%;
+  max-width: 500px;
+  margin: 50px auto;
+  text-align: left;
+  color: #707070;
+}
+
+
+
+#problems > .top-image {
+  width: 100vw;
+  height: 485px;
+  background-image: url("${IMG_URL}/about/passion/problems-top.jpg");
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+}
+
+#problems > .top-image > h3 {
+  height: 485px;
+  color: white;
+  font-size: 60px;
+  line-height: 485px;
+}
+
+#problems > .contents {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+#problems > .contents > h3 {
+  color: white;
+  font-size: 40px;
+}
+
+#problems > .contents > .items {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+#problems > .contents > .items > .item {
+  width: 70%;
+  max-width: 360px;
+  background-color: #EAEAEA;
+  padding: 40px 25px;
+  margin-top: 50px;
+}
+
+#problems > .contents > .items > .item > h3 {
+  font-size: 40px;
+}
+
+#problems > .contents > .items > .item > h4 {
+  font-size: 24px;
+  text-align: center;
+}
+
+#problems > .contents > .items > .item > p {
+  color: #333333;
+  text-align: left;
+}
+
+#problems > .contents > p {
+  color: white;
+  width: 70%;
+  font-size: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+
+
+#but {
+  background-color: #C9C9C9;
+  padding: 50px 0;
+}
+
+#but > h3 {
+  color: white;
+  font-size: 40px;
+}
+
+
+
+#actual {
+  padding: 50px 0;
+}
+
+#actual > .items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#actual > .items > .item {
+  width: 100%;
+  max-width: 280px;
+  margin-top: 50px;
+}
+
+
+#actual > .items > .item > img {
+  width: 250px;
+  height: 250px;
+  border-radius: 125px;
+}
+
+#actual > .items > .item > h4 {
+  margin-top: 20px;
+}
+
+#actual > .items > .item > p {
+  margin-top: 20px;
+}
+
+
+
+#mission {
+  margin-top: 100px;
+}
+
+#mission > .top-image {
+  width: 100vw;
+  height: 500px;
+  background-image: url("${IMG_URL}/about/passion/problems-top.jpg");
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+}
+
+#mission > hr {
+  width: 60px;
+  border: 1px solid #FC627A;
+}
+
+#mission > h3 {
+  margin-top: 40px;
+}
+
+#mission > p {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+#mission > img {
+  display: block;
+  width: 80%;
+  max-width: 750px;
+  height: 480px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+
+
+#vision {
+  margin-top: 100px;
+}
+
+#vision > hr {
+  width: 60px;
+  border: 1px solid #FC627A;
+}
+
+#vision > h3 {
+  margin-top: 40px;
+}
+
+#vision > p {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+
+
+#collaborate {
+  margin-top: 100px;
+  padding: 50px 0;
+  background-image: url();
+  background-color: lightgray;
+  background-size: cover;
+  background-position: center;
+}
+
+#collaborate > .items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#collaborate > .items > .item {
+  width: 100%;
+  max-width: 260px;
+  margin-top: 50px;
+}
+
+#collaborate > .items > .item > img {
+  width: 250px;
+  height: 250px;
+  border-radius: 125px;
+}
+
+#collaborate > .items > .item > h3 {
+  margin-top: 30px;
+}
+
+#collaborate > .items > .item > p {
+  margin-top: 30px;
+  font-size: 16px;
+}
+
+#collaborate > .items > .item > .button {
+  margin-top 50px;
+  background-color: #FFBF00;
+}
+
+
+
+footer {
+  margin-top: 0px;
+}

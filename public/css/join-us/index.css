@@ -1,46 +1,50 @@
-.container {
+#top-msg {
   margin-top: 100px;
 }
 
-.container > h3 {
-  font-size: 30px;
+#top-msg > h2 {
+  font-family: "League Spartan";
 }
 
-.container > h5 {
+#top-msg > h5 {
   font-size: 16px;
 }
 
-.container > hr {
+#top-msg > hr {
   width: 60px;
   border: 1px solid #FC627A;
 }
 
-.container > p {
-  font-size: 16px;
+#top-msg > p {
   margin-top: 50px;
+  line-height: 2;
 }
 
-.items {
+#how-to-join {
+  margin-top: 100px;
+}
+
+#how-to-join > .items {
+  width: 90%;
+  max-width: 1000px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin: 0 auto;
 }
 
-
-/* Item */
-
-.item {
+#how-to-join > .items > .item {
   width: 100%;
   max-width: 450px;
-  margin-top: 50px;
+  margin-top: 100px;
 }
 
-.item .title {
+#how-to-join > .items > .item > .title {
   position: relative;
   height: 120px;
 }
 
-.item .title .circle {
+#how-to-join > .items > .item > .title > .circle {
   position: absolute;
   top: 0;
   left: 0;
@@ -49,17 +53,17 @@
   text-align: center;
 }
 
-.item .title h3 {
+#how-to-join > .items > .item > .title > h3 {
   position: absolute;
   text-align: left;
 }
 
 @media screen and (min-width: 480px) {
-  .item .title {
+  #how-to-join > .items > .item > .title {
     height: 120px;
   }
 
-  .item .title .circle {
+  #how-to-join > .items > .item > .title > .circle {
     width: 120px;
     height: 120px;
     border-radius: 60px;
@@ -67,18 +71,18 @@
     line-height: 80px;
   }
 
-  .item .title h3 {
-    font-size: 25px;
+  #how-to-join > .items > .item > .title > h3 {
+    font-size: 22px;
     bottom: 10px;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .item .title {
+  #how-to-join > .items > .item > .title {
     height: 80px;
   }
 
-  .item .title .circle {
+  #how-to-join > .items > .item > .title > .circle {
     width: 80px;
     height: 80px;
     border-radius: 40px;
@@ -86,13 +90,13 @@
     line-height: 60px;
   }
 
-  .item .title h3 {
+  #how-to-join > .items > .item > .title > h3 {
     font-size: 18px;
     bottom: 6px;
   }
 }
 
-.item img {
+#how-to-join > .items > .item > img {
   display: block;
   width: 100%;
   max-width: 440px;
@@ -101,12 +105,12 @@
   margin-top: 20px;
 }
 
-.item > p {
+#how-to-join > .items > .item > p {
   font-size: 16px;
   text-align: left;
 }
 
-.item > a {
+#how-to-join > .items > .item > a {
   background-color: #FFBF00;
   color: white;
 }
