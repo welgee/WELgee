@@ -2,6 +2,10 @@
   margin-top: 100px;
 }
 
+#passion > h2 {
+  font-family: "League Spartan";
+}
+
 #passion > hr {
   width: 60px;
   border: 1px solid #FC627A;
@@ -16,7 +20,6 @@
   width: 100vw;
   height: 500px;
   background-image: url("${IMG_URL}/about/passion/passion.jpg");
-  background-color: lightgray;
   background-size: cover;
   background-position: center;
 }
@@ -39,16 +42,21 @@
 
 #issue > .contents1 {
   width: 100vw;
-  background-image: url("${IMG_URL}/about/passion/issue-bg.jpg");
-  background-color: lightgray;
+  background-image: url("${IMG_URL}/about/passion/issue.png");
   background-size: cover;
   background-position: center;
   margin-top: 50px;
-  padding-top: 100px;
-  padding-bottom: 80px;
 }
 
-#issue > .contents1 > p {
+#issue > .contents1 > .filter {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255,0.65);
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+#issue > .contents1 > .filter > p {
   width: 90%;
   max-width: 500px;
   margin: 0 auto;
@@ -99,17 +107,25 @@
 
 #why {
   margin-top: 100px;
-  background-color: rgba(201, 201, 201, 0.2);
+  background-image: url("${IMG_URL}/about/passion/why-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#why > .filter {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255,0.7);
   padding-top: 50px;
   padding-bottom: 100px;
 }
 
-#why > h3 {
+#why > .filter > h3 {
   font-size: 40px;
   font-weight: bold;
 }
 
-#why > .items {
+#why > .filter > .items {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -117,45 +133,42 @@
   margin: 0 auto;
 }
 
-#why > .items > .item {
+#why > .filter > .items > .item {
   width: 80%;
   max-width: 490px;
 }
 
-#why > .items > .item > h4 {
+#why > .filter > .items > .item > h4 {
   font-size: 30px;
   font-weight: bold;
   text-align: left;
   margin-bottom: 0;
 }
 
-#why > .items > .item > p {
+#why > .filter > .items > .item > p {
   background-color: #EAEAEA;
   padding: 45px 25px;
   text-align: left;
   margin-top: 0;
 }
 
-#why > p {
+#why > .filter > p {
   width: 90%;
   max-width: 500px;
   margin: 50px auto;
   text-align: left;
-  color: #707070;
+  color: #333333;
 }
 
 
 
-#problems > .top-image {
+#problems > .top {
   width: 100vw;
   height: 485px;
-  background-image: url("${IMG_URL}/about/passion/problems-top.jpg");
   background-color: black;
-  background-size: cover;
-  background-position: center;
 }
 
-#problems > .top-image > h3 {
+#problems > .top > h2 {
   height: 485px;
   color: white;
   font-size: 60px;
@@ -168,9 +181,9 @@
   padding-bottom: 50px;
 }
 
-#problems > .contents > h3 {
+#problems > .contents > h2 {
   color: white;
-  font-size: 40px;
+  font-weight: normal;
 }
 
 #problems > .contents > .items {
@@ -220,18 +233,25 @@
   padding: 50px 0;
 }
 
-#but > h3 {
+#but > h2 {
   color: white;
-  font-size: 40px;
+  font-weight: normal;
 }
 
 
 
 #actual {
-  padding: 50px 0;
+  background-image: url("${IMG_URL}/about/passion/actual-bg.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
-#actual > .items {
+#actual > .filter {
+  background-color: rgba(255,255,255,0.8);
+  padding: 100px 0;
+}
+
+#actual > .filter > .items {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -240,24 +260,24 @@
   margin: 0 auto;
 }
 
-#actual > .items > .item {
+#actual > .filter > .items > .item {
   width: 100%;
   max-width: 280px;
   margin-top: 50px;
 }
 
 
-#actual > .items > .item > img {
+#actual > .filter > .items > .item > img {
   width: 250px;
   height: 250px;
   border-radius: 125px;
 }
 
-#actual > .items > .item > h4 {
+#actual > .filter > .items > .item > h3 {
   margin-top: 20px;
 }
 
-#actual > .items > .item > p {
+#actual > .filter > .items > .item > p {
   margin-top: 20px;
 }
 
@@ -267,13 +287,8 @@
   margin-top: 100px;
 }
 
-#mission > .top-image {
-  width: 100vw;
-  height: 500px;
-  background-image: url("${IMG_URL}/about/passion/problems-top.jpg");
-  background-color: black;
-  background-size: cover;
-  background-position: center;
+#mission > h2 {
+  font-family: "League Spartan";
 }
 
 #mission > hr {
@@ -307,6 +322,10 @@
   margin-top: 100px;
 }
 
+#vision > h2 {
+  font-family: "League Spartan";
+}
+
 #vision > hr {
   width: 60px;
   border: 1px solid #FC627A;
@@ -327,14 +346,22 @@
 
 #collaborate {
   margin-top: 100px;
-  padding: 50px 0;
-  background-image: url();
-  background-color: lightgray;
+  background-image: url("${IMG_URL}/about/passion/collaborate-bg.jpg");
   background-size: cover;
   background-position: center;
 }
 
-#collaborate > .items {
+#collaborate > .filter {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 100px 0;
+}
+
+#collaborate > .filter > h5 {
+  margin-top: 10px;
+  font-family: "League Spartan";
+}
+
+#collaborate > .filter > .items {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -343,28 +370,28 @@
   margin: 0 auto;
 }
 
-#collaborate > .items > .item {
+#collaborate > .filter > .items > .item {
   width: 100%;
   max-width: 260px;
   margin-top: 50px;
 }
 
-#collaborate > .items > .item > img {
+#collaborate > .filter > .items > .item > img {
   width: 250px;
   height: 250px;
   border-radius: 125px;
 }
 
-#collaborate > .items > .item > h3 {
+#collaborate > .filter > .items > .item > h3 {
   margin-top: 30px;
 }
 
-#collaborate > .items > .item > p {
+#collaborate > .filter > .items > .item > p {
   margin-top: 30px;
   font-size: 16px;
 }
 
-#collaborate > .items > .item > .button {
+#collaborate > .filter > .items > .item > .button {
   margin-top 50px;
   background-color: #FFBF00;
 }
