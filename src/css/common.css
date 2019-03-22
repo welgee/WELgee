@@ -40,6 +40,15 @@ p {
   line-height: 2;
 }
 
+strong {
+  font-weight: bold;
+}
+
+hr {
+  width: 60px;
+  border: 1px solid #FC627A;
+}
+
 .container {
   width: 80%;
   max-width: 1140px;

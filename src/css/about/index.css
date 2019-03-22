@@ -1,0 +1,237 @@
+#top > .contents-1 {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+#top > .contents-1 > h2 {
+  font-family: "League Spartan";
+}
+
+#top > .contents-1 > h5 {
+  font-family: "League Spartan";
+  margin-top: 10px;
+}
+
+#top > .contents-1 > p {
+  margin-top: 50px;
+}
+
+
+#top > .img {
+  width: 100vw;
+  height: 500px;
+  margin-top: 100px;
+  background-image: url("${IMG_URL}/about/top.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#top > .contents-2 {
+  margin-top: 50px;
+}
+
+
+#issue {
+  margin-top: 100px;
+}
+
+#issue > h2 {
+  font-family: "League Spartan";
+}
+
+#issue > p {
+  margin-top: 50px;
+}
+
+
+#issue > .img {
+  margin-top: 50px;
+  background-image: url("${IMG_URL}/about/issue-bg.jpg")
+}
+
+#issue > .img > .filter {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 100px 20px;
+}
+
+#issue > .img > .filter > h1 {
+  color: white;
+}
+
+#issue > .contents {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+#issue > .contents > a.button {
+  background-color: #FFBF00;
+}
+
+
+#mission {
+  margin-top: 100px;
+  background-image: url("${IMG_URL}/about/mission-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#mission > .filter {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+#mission > .filter > p {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+#mission > .filter > a.button {
+  margin-top: 60px;
+  background-color: #FFBF00;
+}
+
+
+#info {
+  margin-top: 200px;
+}
+
+#info > table {
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 100px;
+  table-layout: fixed;
+  word-wrap: break-word;
+}
+
+#info > table > tbody > tr > td:nth-child(1) {
+  width: 100px;
+}
+
+
+#awards {
+  margin-top: 100px;
+  background-image: url("${IMG_URL}/about/awards-bg.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#awards > .filter {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 100px 20px;
+}
+
+#awards > .filter > .contents {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+#awards > .filter > .contents > p {
+  text-align: left;
+  color: #707070;
+}
+
+#awards > .filter > .contents > hr {
+  width: 100%;
+  max-width: 800px;
+  border: 1px solid #707070;
+}
+
+
+#messages {
+  margin-top: 100px;
+}
+
+#messages > .items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+#messages > .items > .item {
+  width: 100%;
+  max-width: 330px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+#messages > .items > .item > img {
+  display: block;
+  width: 250px;
+  margin: 0 auto;
+  border-radius: 125px;
+}
+
+#messages > .items > .item > h3 {
+  margin-top: 30px;
+}
+
+#messages > .items > .item > p {
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+#messages > a.button {
+  margin-top: 50px;
+  background-color: #FFBF00;
+}
+
+
+#partners {
+  margin-top: 100px;
+}
+
+
+#programs {
+  margin-top: 100px;
+}
+
+#programs > .items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+#programs > .items > .item {
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+#programs > .items > .item > img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+#programs > .items > .item > h5 {
+  margin-top: 20px;
+}
+
+#programs > .items > .item > p {
+  margin-top: 10px;
+}
+
+#programs > a.button {
+  margin-top: 50px;
+  background-color: #FFBF00;
+}
