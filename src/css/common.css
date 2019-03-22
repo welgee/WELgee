@@ -48,7 +48,7 @@ p {
   padding-right: 10px;
 }
 
-h2, h3, h5 {
+h1, h2, h3, h5 {
   text-align: center;
   width: 100%;
   margin: 0;
@@ -101,6 +101,10 @@ a.button {
 }
 
 @media screen and (min-width: 480px) {
+  h1 {
+    font-size: 60px;
+  }
+
   h2 {
     font-size: 40px;
   }
@@ -119,6 +123,10 @@ a.button {
 }
 
 @media screen and (max-width: 480px) {
+  h1 {
+    font-size: 20px;
+  }
+
   h2 {
     font-size: 20px;
   }
