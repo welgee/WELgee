@@ -110,7 +110,7 @@
 /* Our Passion */
 
 #passion {
-  background-image: url("{IMG_URL}/passion-bg.jpg");
+  background-image: url("${IMG_URL}/passion-bg.jpg");
   background-color: gray;
   background-size: cover;
   background-position: center;
