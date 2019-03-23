@@ -32,7 +32,13 @@ body {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
+}
+a:link {
+  color: #333333;
+}
+a:visited {
+  color: #333333;
 }
 
 p {
@@ -75,6 +81,7 @@ h1, h2, h3, h5 {
 
 #breadcrumbs > a {
   margin: 0 5px;
+  text-decoration: none;
 }
 
 #breadcrumbs > a:link {
@@ -105,6 +112,7 @@ a.button {
   font-weight: bold;
   line-height: 40px;
   font-size: 16px;
+  text-decoration: none;
   border: none;
   padding: 0;
 }

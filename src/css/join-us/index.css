@@ -20,9 +20,6 @@
   line-height: 2;
 }
 
-#how-to-join {
-  margin-top: 100px;
-}
 
 #how-to-join > .items {
   width: 90%;
@@ -31,12 +28,13 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 0 auto;
+  margin-top: -26px;
 }
 
 #how-to-join > .items > .item {
   width: 100%;
   max-width: 450px;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 #how-to-join > .items > .item > .title {

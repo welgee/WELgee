@@ -15,8 +15,8 @@
   margin-top: 50px;
 }
 
-#passion-image {
-  margin-top: 100px;
+#passion > .image {
+  margin-top: 42px;
   width: 100vw;
   height: 500px;
   background-image: url("${IMG_URL}/about/passion/passion.jpg");
@@ -158,11 +158,19 @@
 
 #problems > .top {
   width: 100vw;
-  background-color: black;
+  background-image: url("${IMG_URL}/about/passion/problem-top.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#problems > .top > .filter {
+  background-color: rgba(0,0,0, 0.7);
+  width: 100%;
+  height: 100%;
   padding: 200px 10px;;
 }
 
-#problems > .top > h1 {
+#problems > .top > .filter > h1 {
   color: white;
 }
 
