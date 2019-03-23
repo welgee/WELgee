@@ -31,15 +31,17 @@ footer .company img {
 
 footer .company p {
   padding-left: 20px;
-  font-size: 16px;
+  font-size: 0.8rem;
   text-align: left;
-  max-width: 700px;
+  max-width: 600px;
   margin: 10px auto;
 }
 
 footer .company .sns {
   padding-left: 20px;
-  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
   margin: 10px auto;
 }
 
