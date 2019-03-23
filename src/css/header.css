@@ -45,6 +45,7 @@
   }
 
   header > .pc.contents > .nav-items > .nav-item.sns > a {
+    text-decoration: none;
     margin: 0 10px;
   }
 }
