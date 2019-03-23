@@ -1,57 +1,41 @@
 /* Top image */
 
 #top-image {
-  width: 100%;
-  position: relative;
-  background-image: url("${IMG_URL}/top/top.jpg");
+  width: 100vw;
+  height: 650px;
+  background-image: url("${IMG_URL}/top.jpg");
+  background-color: lightgray;
   background-size: cover;
   background-position: center;
-}
-
-@media screen and (max-width: 480px) {
-  #top-image {
-    height: 400px;
-  }
-}
-
-@media screen and (min-width: 480px) {
-  #top-image {
-    height: 700px;
-  }
-}
-
-#top-image h2 {
-  color: white;
-  position: absolute;
-  bottom: 50px;
 }
 
 
 /* News */
 
 #news {
-  width: 100%;
-  background-color: white;
   margin-top: 100px;
 }
 
-#news h2, #news h5 {
-  color: #333333;
+#news > h5 {
+  font-family: "League Spartan";
 }
 
-#news .items {
+#news > .items {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  width: 80%;
+  max-width: 950px;
+  margin: 0 auto;
 }
 
-#news .item {
+#news > .items > .item {
   width: 250px;
   margin: 0 auto;
   margin-top: 30px;
 }
 
-#news .item .category {
+#news > .items > .item > .category {
   width: 70px;
   height: 25px;
   background-color: #5CBBFF;
@@ -62,365 +46,240 @@
   line-height: 25px;
 }
 
-#news .item img {
+#news > .items > .item > a > img {
   margin-top: 12px;
   width: 250px;
   height: 150px;
 }
 
-#news .item .date {
+#news > .items > .item > .date {
   margin-top: 5px;
   font-size: 14px;
 }
 
-#news .item .title {
+#news > .items > .item > .title {
   margin-top: 8px;
   font-size: 16px;
 }
 
-#news .button {
-  background-color: #FAD48D;
+#news > a.button {
+  background-color: #FFDE59;
+  color: white;
+  margin-top: 50px;
 }
 
 
 /* What's WELgee */
 
 #what-welgee {
-  width: 100%;
-  margin-top: 100px;
+  margin-top: 50px;
+  border-top: 1px solid #333333;
+  padding-top: 50px;
 }
 
-#what-welgee p {
+#what-welgee > h2.title {
+  font-family: "League Spartan";
+}
+
+#what-welgee > h5 {
+  margin-top: 10px;
+  font-family: "League Spartan";
+}
+
+#what-welgee > h2.welgee {
+  margin-top: 40px;
+  font-family: "League Spartan";
+}
+
+#what-welgee > h2.welgee > .yellow {
+  color: #F7BD00;
+}
+
+#what-welgee > p {
+  margin-top: 30px;
   font-size: 20px;
 }
 
-#what-welgee p strong {
-  font-size: 40px;
-  font-weight: normal;
-}
-
-#what-welgee p strong .yellow {
-  color: #FFDE71;
-}
-
-#what-welgee .button {
-  background-color: #FAD48D;
+#what-welgee > a.button {
+  margin-top: 60px;
+  background-color: #FFDE59;
+  color: white;
 }
 
 
 /* Our Passion */
 
 #passion {
+  background-image: url("{IMG_URL}/passion-bg.jpg");
   background-color: gray;
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
-  margin-top: 50px;
+  margin-top: 100px;
 }
 
-#passion .filter {
+#passion > .filter {
+  width: 100%;
   height: 100%;
   background: rgba(255, 255, 255, 0.7);
   padding-top: 70px;
-  padding-bottom: 70px;
+  padding-bottom: 50px;
 }
 
-#passion .title-main {
-  display: block;
-  width: 100%;
-  padding-top: 10px;
-  background-color: rgba(255,222,113, 0.4);
+#passion > .filter > h5 {
+  font-family: "League Spartan";
 }
 
-#passion .title-sub {
-  margin-top: 0px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  width: 100%;
-  background-color: rgba(255,222,113, 0.4);
+#passion > .filter > p {
+  margin-top: 50px;
 }
 
-#passion .button {
-  background-color: #FAD48D;
+#passion > .filter > a.button {
+  margin-top: 20px;
+  background-color: #FFDE59;
 }
 
 
 /* Message from Director */
 
 #director-msg {
-  margin-top: 100px;
+  padding-top: 100px;
 }
 
-#director-msg .contents {
-  letter-spacing: -.4em;
+#director-msg > h5 {
+  margin-top: 20px;
+  font-family: "League Spartan";
+}
+
+#director-msg > .contents {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-}
-
-#director-msg .contents img {
-  display: inline-block;
+  justify-content: space-between;
+  align-items: start;
   width: 80%;
-  max-width: 430px;
-  height: 300px;
-  border-radius: 10px;
+  max-width: 910px;
   margin: 0 auto;
 }
 
-#director-msg .contents .text {
-  display: inline-block;
-  vertical-align: top;
-  width: 80%;
-  max-width: 500px;
-  letter-spacing: normal;
-  margin: 0 auto;
+#director-msg > .contents > img {
+  width: 100%;
+  max-width: 380px;
+  margin-top: 50px;
+  border-radius: 4px;
+  box-shadow: -10px 10px 0 0 #5CBBFF;
 }
 
-#director-msg .contents .text .job {
-  margin-bottom: 0;
+#director-msg > .contents > .text {
+  width: 100%;
+  max-width: 470px;
+  margin-top: 50px;
+}
+
+#director-msg > .contents > .text > .job {
   text-align: left;
 }
 
-
-#director-msg .contents .text .name {
-  margin-top: 0;
+#director-msg > .contents > .text > .name {
   text-align: left;
 }
 
-#director-msg .contents .text .message {
-  margin-top: 30px;
-  text-align: left;
+#director-msg > .contents > .text > .message {
+  margin-top: 20px;
   font-size: 16px;
+  text-align: left;
 }
 
-#director-msg .button {
-  background-color: #FAD48D;
+#director-msg > a.button {
+  margin-top: 80px;
+  background-color: #FFDE59;
+  color: white;
 }
 
 
 /* Our Programs */
 
 #programs {
-  width: 100%;
-  margin-top: 100px;
+  width: 80%;
+  max-width: 1080px;
+  margin: 0 auto;
+  margin-top: 120px;
 }
 
-#programs .group .header {
+#programs > h5 {
+  margin-top: 20px;
+  font-family: "League Spartan";
+}
+
+#programs > p {
+  margin-top: 30px;
+}
+
+#programs > .group > .header {
   position: relative;
-  height: 120px;
-  margin-top: 50px;
-  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  margin-top: 8rem;
 }
 
-#programs .group .header .circle {
+#programs > .group > .header > .circle {
   position: absolute;
-  width: 120px;
-  height: 120px;
-  border-radius: 60px;
-  background-color: #FAD48D;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 4rem;
+  background-color: #F7BD00;
   bottom: 0px;
   left: 0px;
   color: white;
   text-align: center;
-  line-height: 80px;
-  font-size: 40px;
+  line-height: 5rem;
+  font-size: 2.5rem;
+  z-index: -1;
 }
 
-#programs .group .header h3 {
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  font-size: 30px;
+#programs > .group > .header > h3 {
+  width: max-content;
+  font-family: "League Spartan";
+  text-align: left;
+  margin-right: 20px;
+}
+
+#programs > .group > .header > p {
+  width: max-content;
+  font-size: 1.1rem;
   font-weight: bold;
-  text-align: left;
 }
 
-#programs .group .header h3 span {
-  font-size: 20px;
-  font-weight: normal;
-  margin-left: 30px;
-}
-
-#programs .item-container {
+#programs > .group > .items {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
-#programs .item {
-  margin: 0 auto;
-}
-
-#programs .item.min {
-  width: 280px;
-}
-
-#programs .item.large {
-  width: 440px;
-}
-
-#programs .item img {
+#programs > .group > .items > .item {
   width: 100%;
-  border-radius: 4px;
-}
-
-#programs .item h5 {
+  margin: 0 auto;
   margin-top: 20px;
 }
 
-#programs .item p {
-  margin-top: 10px;
-  font-size: 16px;
+#programs > .group > .items > .item.min {
+  max-width: 280px;
 }
 
-#programs .button {
-  background-color: #FAD48D;
-}
-
-
-/* Participate */
-
-#participate {
-  margin-top: 100px;
-  width: 100%;
-}
-
-#participate .title-main {
-  font-size: 26px;
-}
-
-#participate .items {
-  margin-top: 50px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-#participate .item {
-  width: 260px;
-  margin: 0 auto;
-  margin-top: 80px;
-}
-
-#participate .item h3 {
-  margin-top: 40px;
-}
-
-#participate .item img {
-  width: 200px;
-  height: 200px;
-  margin-left: 30px;
-}
-
-#participate .item p {
-  margin-top: 25px;
-  font-size: 16px;
-}
-
-#participate .item .link-button {
-  margin-top: 30px;
-  background-color: #D7F87E;
-}
-
-/* Join */
-
-#join {
-  width: 100%;
-  margin-top: 100px;
-  background-image: url("${IMG_URL}/top/join-bg.jpg");
-  background-size: 100%;
-  background-position: center;
-}
-
-#join .filter {
-  padding-top: 50px;
-  padding-bottom: 50px;
-  background: rgba(255, 255, 255, 0.7);
-  width: 100%;
-}
-
-#join .title-main {
-  width: 100%;
-  display: block;
-  padding-top: 10px;
-  background-color: rgba(255, 222, 113, 0.4);
-}
-
-#join .title-sub {
-  width: 100%;
-  margin-top: 0px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: rgba(255, 222, 113, 0.4);
-}
-
-#join .items {
-  margin-top: 50px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-#join .items .item {
-  width: 90%;
+#programs > .group > .items > .item.large {
   max-width: 440px;
-  margin: 0 auto;
 }
 
-#join .item img {
+#programs > .group > .items > .item > img {
   width: 100%;
   border-radius: 4px;
 }
 
-#join .item h5 {
+#programs > .group > .items > .item > h5 {
   margin-top: 20px;
 }
 
-#join .item p {
-  font-size: 16px;
-}
-
-#join .item .link-button {
-  background-color: #D7F87E;
-}
-
-
-/* Events */
-
-#events {
-  margin-top: 100px;
-}
-
-#events .items {
-  margin-top: 50px;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-#events .item {
-  width: 90%;
-  max-width: 260px;
-  margin: 0 auto;
-  margin-top: 30px;
-}
-
-#events .item img {
-  width: 100%;
-  border-radius: 4px;
-}
-
-#events .item .date {
-  margin: 0;
-  text-align: left;
-}
-
-#events .item .title {
+#programs > .group > .items > .item > p {
   margin-top: 10px;
-  text-align: left;
-}
-
-#events .button {
-  background-color: #FAD48D;
 }
 
 
@@ -430,18 +289,171 @@
   margin-top: 100px;
 }
 
-#partners .items {
-  margin-top: 50px;
+#partners > .items {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  width: 80%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+#partners > .items > img {
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 190px;
+}
+
+
+/* Collaborate */
+
+#collaborate {
+  margin-top: 100px;
+  background-image: url("${IMG_URL}//collaborate-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#collaborate > .filter {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 100px 0;
+}
+
+#collaborate > .filter > h5 {
+  margin-top: 10px;
+  font-family: "League Spartan";
+}
+
+#collaborate > .filter > .items {
+  display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-#partners .item {
-  width: 160px;
-}
-
-#partners .item img {
+#collaborate > .filter > .items > .item {
   width: 100%;
+  max-width: 260px;
+  margin-top: 50px;
 }
+
+#collaborate > .filter > .items > .item > img {
+  width: 250px;
+  height: 250px;
+  border-radius: 125px;
+}
+
+#collaborate > .filter > .items > .item > h3 {
+  margin-top: 30px;
+}
+
+#collaborate > .filter > .items > .item > p {
+  margin-top: 30px;
+  font-size: 16px;
+}
+
+#collaborate > .filter > .items > .item > .button {
+  margin-top 50px;
+  background-color: #FFBF00;
+}
+
+
+/* Events */
+
+#events {
+  margin-top: 100px;
+}
+
+#events > h5 {
+  font-family: "League Spartan";
+  margin-top: 15px;
+}
+
+#events > .items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#events > .items > .item {
+  width: 100%;
+  max-width: 260px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+#events > .items > .item > img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+#events > .items > .item > .date {
+  margin: 0;
+  text-align: left;
+}
+
+#events > .items > .item > .title {
+  margin-top: 10px;
+  text-align: left;
+}
+
+#events > .button {
+  margin-top: 50px;
+}
+
+
+/* Join */
+
+#join {
+  margin-top: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-top: 1px solid #333333;
+}
+
+#join > h5 {
+  font-family: "League Spartan";
+  margin-top: 20px;
+}
+
+#join > .items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 80%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+#join > .items > .item {
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+#join > .items > .item > img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+#join > .items > .item > h5 {
+  margin-top: 10px;
+}
+
+#join > .items > .item > p {
+  margin-top: 10px;
+}
+
+#join > .items > .item > a.button {
+  margin-top: 30px;
+}
+
+
+
