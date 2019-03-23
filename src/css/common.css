@@ -115,6 +115,11 @@ a.button {
   text-decoration: none;
   border: none;
   padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+a.button:hover {
+  font-size: 18px;
 }
 
 @media screen and (min-width: 480px) {
