@@ -1,0 +1,43 @@
+#contents {
+  width: 80%;
+  max-width: 960px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+#contents > .header > .category {
+  display: inline-block;
+  width: 75px;
+  height: 25px;
+  background-color: #5CBBFF;
+  color: white;
+  font-size: 14px;
+  line-height: 25px;
+  text-align: center;
+}
+
+#contents > .header > .date {
+  display: inline-block;
+  width: 80px;
+  font-size: 16px;
+  margin-left: 15px;
+}
+
+#contents > .header > h3 {
+  text-align: left;
+  margin-top: 15px;
+}
+
+#contents > p {
+  margin-top: 50px;
+  text-align: left;
+}
+
+#contents > p > a {
+  color: #FAD48D;
+}
+
+#contents > img {
+  margin-top: 50px;
+  width: 100%;
+}
