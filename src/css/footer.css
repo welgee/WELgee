@@ -39,8 +39,12 @@ footer .company p {
 
 footer .company .sns {
   padding-left: 20px;
-  width: 100px;
+  width: 200px;
   margin: 10px auto;
+}
+
+footer .company .sns a {
+  text-decoration: none;
 }
 
 footer .company .sns i {
@@ -64,12 +68,13 @@ footer .contact {
   align-items: center;
 }
 
-footer .contact .button {
-  background-color: #FAD48D;
+footer > .contact > a.button {
+  color: black;
   margin-top: 0px;
 }
 
 footer .contact .item {
+  text-decoration: none;
   width: 160px;
   text-align: center;
   margin: 0 auto;
