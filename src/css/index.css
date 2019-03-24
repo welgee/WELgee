@@ -86,6 +86,9 @@
 /* What's WELgee */
 
 #what-welgee {
+  width: 80%;
+  max-width: 1080px;
+  margin: 0 auto;
   margin-top: 50px;
   border-top: 1px solid #333333;
   padding-top: 50px;
@@ -111,7 +114,7 @@
 
 #what-welgee > p {
   margin-top: 30px;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 #what-welgee > a.button {
