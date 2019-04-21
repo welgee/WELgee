@@ -4,7 +4,6 @@
   width: 100vw;
   height: 650px;
   background-image: url("${IMG_URL}/top.jpg");
-  background-color: lightgray;
   background-size: cover;
   background-position: center;
 }
