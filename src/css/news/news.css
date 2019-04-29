@@ -1,11 +1,15 @@
-#contents {
+section {
   width: 80%;
   max-width: 960px;
   margin: 0 auto;
+}
+
+#header {
   margin-top: 100px;
 }
 
-#contents > .header > .category {
+
+#header > .category {
   display: inline-block;
   width: 75px;
   height: 25px;
@@ -16,17 +20,23 @@
   text-align: center;
 }
 
-#contents > .header > .date {
+#header > .date {
   display: inline-block;
   width: 80px;
   font-size: 16px;
   margin-left: 15px;
 }
 
-#contents > .header > h3 {
+#header > h3 {
   text-align: left;
   margin-top: 15px;
 }
+
+#header > img {
+  margin-top: 50px;
+  width: 100%;
+}
+
 
 #contents > p {
   margin-top: 50px;
@@ -37,7 +47,23 @@
   color: #FAD48D;
 }
 
-#contents > img {
-  margin-top: 50px;
+#contents > p img {
+  display: inline-block;
   width: 100%;
+  margin: 20px 0;
+}
+
+#contents > table {
+  table-layout: fixed;
+  width: 100%;
+  margin: 50px auto;
+}
+
+#contents > table td:first-child {
+  width: 30%;
+}
+
+#contents > table td {
+  padding: 20px 10px;
+  vertical-align: top;
 }

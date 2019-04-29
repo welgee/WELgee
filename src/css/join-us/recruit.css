@@ -108,10 +108,13 @@
   margin-top: 20px;
 }
 
+#voice > p {
+  margin-top: 50px;
+}
+
 
 #statistics {
   padding-top: 50px;
-  padding-bottom: 100px;
 }
 
 #statistics > .items {
@@ -138,6 +141,14 @@
   margin-top: 20px;
 }
 
-#jobs {
-  padding-top: 100px;
+
+#jobs > h3 {
+  margin-top: 100px;
+}
+
+#jobs > a > img {
+  display: block;
+  width: 80%;
+  max-width: 780px;
+  margin: 50px auto;
 }
