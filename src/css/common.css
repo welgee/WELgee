@@ -14,6 +14,10 @@
   src: url('/font/NotoSansCJKjp-Bold.woff') format("woff");
 }
 
+.embed-wrapper-inner{
+    background-color: ghostwhite;
+}
+
 @font-face {
   font-family: "NotoSansCJKjp";
   font-style: normal;
