@@ -1,5 +1,6 @@
 /* Top image */
 
+@media screen and (min-width: 481px){
 #top-image {
   width: 100vw;
   height: 650px;
@@ -8,6 +9,15 @@
   background-position: center;
 }
 
+@media screen and (max-width: 480px)
+{
+  #top-image {
+    width:100vw;
+    background-image: url("https://lh3.googleusercontent.com/cNily8dq9mzPH5KwaXz5OSnhbAV_OLG_3FWRN4B2K5Uwov8k3vd4mJ2fsJqhZehi7CLOGB6636yGjnpYjM2rGhcVU6n05Gq2oPizo3ZSA-sEcrtMS9jJSPzo1YRuLXM1PEAEANr5mj3zlRnX-C6LpATN01mn_ByukBS41yRK5J3NsR7b3BZJ9vIjjdgb91-SMUWctzVTvL6FH3W7QgGpoIuqdFjS8uaORGqWVlFmaEiypZnRv-E9LuIe_aZEILz092lX2wWAtAWVZh78fXql1I0cmBc_o5Vb7ytvCQh6RTv19mWQzKB8_uxT8ncziCQ_l2bBldw6C6SWlc9Kd6eFAQT21qxSWgHLtPjzzXUkj6NruGdbDKVGex2cgah7xSWYYH7iUR32Bx4u5QABFVdLySinFCstCd-XqaUfCx2t43LoQb--GKcV3B8l4psuL6Icp_XzGkdSWmUie6Te9qM2L_w1zDSm5jTsfRD7SWTWKJZi6A9tKUdLRjmA-KezNzG0XuKTuS275CPMVfsCbr1jhqZaEPKzmF2U_3gXrOZLiaKrDVDPDX4b-RUv8tP5_TLMMTm1TAsmDocJSVtWTsFhQagzsPl14Ke9RITHVTF3OZqfhpwCz_chpbZ_E18Up-ovZ-M25-LnyHhSJme9av5VyG6r=w575-h753-no");
+    background-size: cover;
+    background-position: center;
+  }
+}
 
 /* Campaign */
 
@@ -470,6 +480,3 @@
 #join > .items > .item > a.button {
   margin-top: 30px;
 }
-
-
-
