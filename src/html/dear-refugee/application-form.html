@@ -705,7 +705,7 @@ Licences and Certificates:
 
 <h2>Final Educational Background</h2>
 
-Period:
+Year of Enrollment
 <select required  id="00N0o00000MgLVs" name="00N0o00000MgLVs" title="入学年">
   <option value=""></option>
   <option value="2010">2010</option>
@@ -740,7 +740,8 @@ Period:
   <option value="2039">2039</option>
 </select>
 
-,
+
+Month of Enrollment
 
 <select required  id="00N0o00000MgLVx" name="00N0o00000MgLVx" title="入学月">
   <option value=""></option>
@@ -758,7 +759,7 @@ Period:
   <option value="12月">Dec.</option>
 </select>
 
--
+Year of Graduation
 
 <select required id="00N0o00000MfwVO" name="00N0o00000MfwVO" title="卒業・修了・退学年">
   <option value=""></option>
@@ -795,7 +796,7 @@ Period:
   <option value="2039">2039</option>
 </select>
 
-,
+Month of Graduation
 
 <select required  id="00N0o00000MfwVT" name="00N0o00000MfwVT" title="卒業・修了・退学月">
   <option value=""></option>
@@ -813,6 +814,7 @@ Period:
   <option value="12月">Dec.</option>
 </select>
 
+Current Status
 <select required  id="00N0o00000MfwVJ" name="00N0o00000MfwVJ" title="在籍・卒業・修了・退学" >
   <option value="" ></option>
   <option value="在籍中">Attending</option>
@@ -1329,7 +1331,7 @@ Job Description:
 <textarea  id="00N0o00000MgKwn" name="00N0o00000MgKwn" type="text" wrap="soft"></textarea><br>
 
 Period:
-From
+From(Year)
 <select  id="00N0o00000MgKws" name="00N0o00000MgKws" title="開始年">
   <option value=""></option>
   <option value="2010">2010</option>
@@ -1363,7 +1365,7 @@ From
   <option value="2038">2038</option>
   <option value="2039">2039</option>
 </select>
-,
+,(Month)
 
 <select  id="00N0o00000MgKwx" name="00N0o00000MgKwx" title="開始月">
   <option value=""></option>
@@ -1381,7 +1383,7 @@ From
   <option value="12月">Dec.</option>
 </select>
 
-To
+To(Year)
 
 <select  id="00N0o00000MgKyU" name="00N0o00000MgKyU" title="終了年">
   <option value=""></option>
@@ -1417,7 +1419,7 @@ To
   <option value="2039">2039</option>
 </select>
 
-,
+,(Month)
 
 <select  id="00N0o00000MgKyZ" name="00N0o00000MgKyZ" title="終了月">
   <option value=""></option>
@@ -1447,3 +1449,110 @@ Reason for Quitting
 <input type="submit" name="submit">
 
 </form>
+
+
+<style>
+form{
+	max-width: 500px;
+	padding: 10px 20px;
+	background: #f4f7f8;
+	margin: 10px auto;
+	padding: 20px;
+	background: #f4f7f8;
+	border-radius: 8px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+form fieldset{
+	border: none;
+}
+form legend {
+	font-size: 1.4em;
+	margin-bottom: 10px;
+}
+label {
+	display: block;
+	margin-bottom: 8px;
+}
+form input[type="text"],
+form input[type="date"],
+form input[type="datetime"],
+form input[type="email"],
+form input[type="number"],
+form input[type="search"],
+form input[type="time"],
+form input[type="url"],
+form textarea,
+form select {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	background: rgba(255,255,255,.1);
+	border: none;
+	border-radius: 4px;
+	font-size: 15px;
+	margin: 0;
+	outline: 0;
+	padding: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	background-color: #e8eeef;
+	color:#8a97a0;
+	-webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+	box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+	margin-bottom: 30px;
+}
+form input[type="text"]:focus,
+form input[type="date"]:focus,
+form input[type="datetime"]:focus,
+form input[type="email"]:focus,
+form input[type="number"]:focus,
+form
+input[type="search"]:focus,
+form input[type="time"]:focus,
+form input[type="url"]:focus,
+form textarea:focus,
+form select:focus{
+	background: #d2d9dd;
+}
+.form select{
+	-webkit-appearance: menulist-button;
+	height:35px;
+}
+form number {
+	background: #1abc9c;
+	color: #fff;
+	height: 30px;
+	width: 30px;
+	display: inline-block;
+	font-size: 0.8em;
+	margin-right: 4px;
+	line-height: 30px;
+	text-align: center;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+	border-radius: 15px 15px 15px 0px;
+}
+
+form input[type="submit"],
+form input[type="button"]
+{
+	position: relative;
+	display: block;
+	padding: 19px 39px 18px 39px;
+	color: #FFF;
+	margin: 0 auto;
+	background: #1abc9c;
+	font-size: 18px;
+	text-align: center;
+	font-style: normal;
+	width: 100%;
+	border: 1px solid #16a085;
+	border-width: 1px 1px 3px;
+	margin-bottom: 10px;
+}
+form input[type="submit"]:hover,
+.form input[type="button"]:hover
+{
+	background: #109177;
+}
+
+</style>
