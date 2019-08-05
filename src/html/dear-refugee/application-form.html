@@ -6,7 +6,7 @@
   <meta property="og:url" content="https://www.welgee.jp/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Application form for new refugee"/>
-  <meta property="og:site_name" content="Non Profit Organizaton ELgee(Welcome + refugee)" />
+  <meta property="og:site_name" content="Non Profit Or ganizaton ELgee(Welcome + refugee)" />
   <meta property="og:description" content=">Good morning and thank you for your interest in WELgee!!
     In order to better serve you, we kindly request that you complete our short survey.
     This survey should take about  <strong>15 minutes</strong> of your time and will allow us to better address your needs or concerns.
@@ -57,7 +57,7 @@ Application form for refugees  </h3>
 <!--  ----------------------------------------------------------------------  -->
 
 <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
-<script src="https://www.google.com/recaptcha/api.js"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script>
  function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500);
 </script>
@@ -75,8 +75,7 @@ Application form for refugees  </h3>
 <!--  ----------------------------------------------------------------------  -->
 
 <form data-persist=”garlic” action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
-  <p>Good morning and thank you for your interest in WELgee!!<br>
-    In order to better serve you, we kindly request that you complete our short survey.
+  <p>Thank you for your interest in WELgee!!<br>
     <br>
     <br>Please be advised that the form must be completed once started
     (if left idle for more than six hours all progress will be lost).
@@ -166,7 +165,7 @@ Your Facebook URL:<input  id="00N0o00000MfwPQ" maxlength="255" name="00N0o00000M
 
 <label for="street">Street/Number</label><textarea required name="street"></textarea><br>
 
-Your Nearest Station:<input required  id="00N0o00000Mfqly" maxlength="50" name="00N0o00000Mfqly" size="20" type="text" />Station<br>
+Your Nearest Station:<input required  id="00N0o00000Mfqly" maxlength="50" name="00N0o00000Mfqly" size="20" type="text" /><br>
 
 <select  id="lead_source" name="lead_source" readonly hidden>
 <option value="Change-Makers&#39; Form" selected></option>
@@ -395,7 +394,7 @@ Birth Country:<select required  id="00N0o00000MfoNQ" name="00N0o00000MfoNQ" titl
 <option value="">else</option>
 </select><br>
 
-Ethnicity:<input  id="00N0o00000MfofU" maxlength="40" name="00N0o00000MfofU" size="20" type="text" /><br>
+<!-- Ethnicity:<input  id="00N0o00000MfofU" maxlength="40" name="00N0o00000MfofU" size="20" type="text" /><br> -->
 
 Religion:<select required  id="00N0o00000Mfofe" name="00N0o00000Mfofe" title="宗教">
   <option value="キリスト教">Christian</option>
@@ -530,11 +529,11 @@ Your Current Residence Status:
   <option value="No Residence Status">No Residence Status</option>
 </select><br>
 
-Is your status is "Provisional Release (Kari-Homen)"? If yes, put a check mark.=>
+<!-- Is your status is "Provisional Release (Kari-Homen)"? If yes, put a check mark.=>
 <input  id="00N0o00000MfvLm" name="00N0o00000MfvLm" type="checkbox" value="1" /><br>
 
 Is your status is "Permit for Provisional Stay (Kari-Taizai-Kyoka)"? If yes, put a check mark.=>
-<input  id="00N0o00000MfvM1" name="00N0o00000MfvM1" type="checkbox" value="1" /><br>
+<input  id="00N0o00000MfvM1" name="00N0o00000MfvM1" type="checkbox" value="1" /><br> -->
 
 <br>
 
@@ -1458,8 +1457,7 @@ We really appliciate your efforts! Thank you so much!
 
 
 
-<!--
-<div class="g-recaptcha" data-sitekey="6LdSV6wUAAAAAJJpxfVT9skaMbFMWuubcTIwo1Da"></div><br>-->
+<div class="g-recaptcha" data-sitekey="6LdKV6wUAAAAAB-31K-QfQ4pjaN6xmaoPRigck73"></div><br>
 <input type="submit" name="submit">
 
 </form>
