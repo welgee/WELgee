@@ -36,7 +36,7 @@ ${HEADER}
 
 <div id="breadcrumbs">
   <a href="/">WELgee</a>
-  >
+  > dear-refugee > Application-form
   <a href="/dear-refugee/application-form"></a>
 </div>
 
@@ -48,7 +48,6 @@ Application form for refugees  </h3>
   <img src="http://bit.ly/2LZ4szF">
 </section>
 <section id="contents">
-
 <!--  ----------------------------------------------------------------------  -->
 <!--  次の <META> 要素を、HTML の <HEAD>タグ間に追加してください。必要に応じて、charset                  -->
 <!--  パラメータを変更して、HTML ページの文字コードを指定してください。                                     -->
@@ -73,6 +72,14 @@ Application form for refugees  </h3>
 <!--  ----------------------------------------------------------------------  -->
 
 <form data-persist=”garlic” action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+  <p>Good morning and thank you for your interest in WELgee!!<br>
+    In order to better serve you, we kindly request that you complete our short survey.
+    <br>
+    <br>Please be advised that the form must be completed once started
+    (if left idle for more than six hours all progress will be lost).
+    <br>This survey should take about  <strong>15 minutes</strong> of your time and will allow us to better address your needs or concerns.
+    <br><br>warm regards, WELgee team
+  </p>
 
 <input type=hidden name='captcha_settings' value='{"keyname":"KeyPair1","fallback":"true","orgId":"00D7F000007etFs","ts":""}'>
 <input type=hidden name="oid" value="00D7F000007etFs">
@@ -467,6 +474,7 @@ Otherwise, choose "else" and write them in the textbox.<br>
 <input placeholder="Your Mother Language" id="00N0o00000Mfofo" maxlength="60" name="00N0o00000Mfofo" size="25" type="text" /><br>
 <br>
 
+<hr style="border:1px dotted #000000;"><p><strong>You've finished 50%!!</strong>Go ahead!!</p>
 Reason for Your Emmigration:
 <select required  id="00N0o00000MfvJ2" multiple="multiple" name="00N0o00000MfvJ2" title="出国理由">
   <option value="迫害（のおそれ）">(Fear of) Persecution</option>
@@ -703,8 +711,8 @@ Licences and Certificates:
 
 <div class="FinalEducationalBackground">
 
+<hr style="border:1px dotted #000000;"><p><strong>You've finished 75%!!</strong>Keep going!!</p>
 <h2>Final Educational Background</h2>
-
 Year of Enrollment
 <select required  id="00N0o00000MgLVs" name="00N0o00000MgLVs" title="入学年">
   <option value=""></option>
@@ -1439,13 +1447,16 @@ To(Year)
 
 Reason for Quitting
 <textarea  id="00N0o00000MgKye" name="00N0o00000MgKye" type="text" wrap="soft"></textarea><br>
-
+<p>All right!<br>
+You've completed to fill the form!<br>
+We really appliciate your efforts! Thank you so much!
+</p>
 </div>
 
 
 
-
-<div class="g-recaptcha" data-sitekey="6LdSV6wUAAAAAJJpxfVT9skaMbFMWuubcTIwo1Da"></div><br>
+<!--
+<div class="g-recaptcha" data-sitekey="6LdSV6wUAAAAAJJpxfVT9skaMbFMWuubcTIwo1Da"></div><br>-->
 <input type="submit" name="submit">
 
 </form>
