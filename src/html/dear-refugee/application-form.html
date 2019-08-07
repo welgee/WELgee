@@ -6,7 +6,7 @@
   <meta property="og:url" content="https://www.welgee.jp/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Application form for new refugee"/>
-  <meta property="og:site_name" content="Non Profit Or ganizaton ELgee(Welcome + refugee)" />
+  <meta property="og:site_name" content="Non Profit Or ganizaton WELgee(Welcome + refugee)" />
   <meta property="og:description" content=">Good morning and thank you for your interest in WELgee!!
     In order to better serve you, we kindly request that you complete our short survey.
     This survey should take about  <strong>15 minutes</strong> of your time and will allow us to better address your needs or concerns.
@@ -76,11 +76,10 @@ Application form for refugees  </h3>
 
 <form data-persist=”garlic” action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
   <p>Thank you for your interest in WELgee!!<br>
-    <br>
     <br>Please be advised that the form must be completed once started
     (if left idle for more than six hours all progress will be lost).
     <br>This survey should take about  <strong>15 minutes</strong> of your time and will allow us to better address your needs or concerns.
-    <br><br>warm regards, WELgee team
+    <br><br>Please have your own passport and / or residence card for your information.
   </p>
 
 <input type=hidden name='captcha_settings' value='{"keyname":"KeyPair1","fallback":"true","orgId":"00D7F000007etFs","ts":""}'>
@@ -493,7 +492,7 @@ Date of Your Immigration to Japan (yyyy/mm/dd):
 Your Current Residence Status:
 <select required  id="00N0o00000MfvLc" name="00N0o00000MfvLc" title="在留資格">
   <option value=""></option>
-  <option value="Diplomat">Diplomat</option>
+  <!-- <option value="Diplomat">Diplomat</option>
   <option value="Official">Official</option>
   <option value="Professor">Professor</option>
   <option value="Artist">Artist</option>
@@ -516,17 +515,18 @@ Your Current Residence Status:
   <option value="TechnicalInternTraining(3)">TechnicalInternTraining(3)</option>
   <option value="SpecifiedSkills(1)">SpecifiedSkills(1)</option>
   <option value="SpecifiedSkills(2)">SpecifiedSkills(2)</option>
-  <option value="CulturalActivities">CulturalActivities</option>
+  <option value="CulturalActivities">CulturalActivities</option> -->
   <option value="TemporaryVisitor">TemporaryVisitor</option>
   <option value="Student">Student</option>
-  <option value="Trainee">Trainee</option>
-  <option value="Dependent">Dependent</option>
+  <!-- <option value="Trainee">Trainee</option> -->
+  <!-- <option value="Dependent">Dependent</option> -->
   <option value="DesignatedActivities">DesignatedActivities</option>
   <option value="PermanentResident">PermanentResident</option>
-  <option value="SpouseOrChildOfJapaneseNational">SpouseOrChildOfJapaneseNational</option>
-  <option value="SpouseOrChildOfPermanentResident">SpouseOrChildOfPermanentResident</option>
+  <!-- <option value="SpouseOrChildOfJapaneseNational">SpouseOrChildOfJapaneseNational</option>
+  <option value="SpouseOrChildOfPermanentResident">SpouseOrChildOfPermanentResident</option> -->
   <option value="LongTermResident">LongTermResident</option>
   <option value="No Residence Status">No Residence Status</option>
+  <option value="Others">Others</option>
 </select><br>
 
 <!-- Is your status is "Provisional Release (Kari-Homen)"? If yes, put a check mark.=>
@@ -541,14 +541,14 @@ Your Residence:
 <select required id="00N0o00000MfvIs" name="00N0o00000MfvIs" title="主要住居形態">
   <option value=""></option>
   <option value="アパート">Apartment</option>
-  <option value="戸建て">House</option>
+  <!-- <option value="戸建て">House</option> -->
   <option value="宗教施設">Religious Building</option>
   <option value="ホテル・ホステル等宿泊施設">Accomodation like hotel or hostel</option>
   <option value="不定">Not Fixed</option>
   <option value="その他">else</option>
 </select><br>
 
-Roommates:
+<!-- Roommates:
 <select required  id="00N0o00000MfvJM" multiple="multiple" name="00N0o00000MfvJM" title="同居人">
   <option value="なし">No</option>
   <option value="友人">Friend(s)</option>
@@ -558,7 +558,7 @@ Roommates:
   <option value="親戚">Relative(s)</option>
   <option value="支援者">Supporter(s)</option>
   <option value="その他">Else</option>
-</select><br>
+</select><br> -->
 
 Times of Applications for Refugee Recognition (the refugee status) in Japan:
 <select required  id="00N0o00000MfvKK" name="00N0o00000MfvKK" title="難民認定申請回数">
@@ -571,19 +571,19 @@ Times of Applications for Refugee Recognition (the refugee status) in Japan:
 Date of the Newest Application (yyyy/mm/dd):
 <input required id="00N0o00000MfvKZ" name="00N0o00000MfvKZ" size="12" type="date" /><br>
 
-Status or Result of the Newest Application:
+Status or Result of the Newest Refugee Application:
 <select required  id="00N0o00000MfvLN" name="00N0o00000MfvLN" title="難民認定申請状況（最新）">
 <option value=""></option>
 <option value="申請中">In the Application Process</option>
-<option value="不認定">Denial (or Not Recognized)</option>
-<option value="認定">Approval (or Recognized)</option>
+<option value="不認定">Denial (Not Recognized)</option>
+<option value="認定">Approval (Recognized)</option>
 <option value="人道配慮">Special Permission to Stay for the Humanitarian Reason</option>
 <option value="異議申立中">In the Objection Process</option>
-<option value="不認定処分取消訴訟中">In the Litigation for the Revocation of the Denial Disposition</option>
+<option value="その他">Others</option>
 </select><br>
 
 <br>
-
+<!--
 JLPT Grade:
 <select required  id="00N0o00000Mfqul" name="00N0o00000Mfqul" title="日本語能力試験（JLPT）">
   <option value="なし">No Grade</option>
@@ -593,23 +593,23 @@ JLPT Grade:
   <option value="N2">N2</option>
   <option value="N1">N1</option>
 </select>
-<br>
+<br> -->
 
 
 Japanese Language Level:
 <select  id="00N0o00000Mfsvm" name="00N0o00000Mfsvm" title="日本語レベル">
   <option value="">--なし--</option>
-  <option value="N5相当（基本的な日本語をある程度理解することができる）">The ability to understand some basic Japanese.</option>
-  <option value="N4相当（基本的な日本語を理解することができる）">The ability to understand basic Japanese.</option>
-  <option value="N3相当（日常的な場面で使われる日本語をある程度理解することができる）">The ability to understand Japanese used in everyday situations to a certain degree.</option>
-  <option value="N2相当（日常的な場面で使われる日本語の理解に加え、より幅広い場面で使われる日本語をある程度理解することができる）">The ability to understand Japanese used in everyday situations, and in a variety of circumstances to a certain degree.</option>
-  <option value="N1相当（幅広い場面で使われる日本語を理解することができる）">The ability to understand Japanese used in a variety of circumstances.</option>
+  <option value="N5相当（基本的な日本語をある程度理解することができる）">beginner`s level</option>
+  <option value="N4相当（基本的な日本語を理解することができる）">beginner`s level to Everyday level</option>
+  <option value="N3相当（日常的な場面で使われる日本語をある程度理解することができる）">Everyday level to Bussiness level</option>
+  <option value="N2相当（日常的な場面で使われる日本語の理解に加え、より幅広い場面で使われる日本語をある程度理解することができる）">Bussiness level</option>
+  <option value="N1相当（幅広い場面で使われる日本語を理解することができる）">Native level</option>
 </select><br>
 
 CTIC Japanese Language School:
 <select required required id="00N0o00000Mfswk" name="00N0o00000Mfswk" title="CTIC日本語教室">
-  <option value="NotKnow">Not Know</option>
-  <option value="NotAttend">Not Attend</option>
+  <option value="NotKnow">Do Not Know</option>
+  <option value="NotAttend">Do Not Attend</option>
   <option value="Attending">Attending</option>
   <option value="DroppedOut">Dropped Out</option>
   <option value="Completed">Completed</option>
@@ -617,8 +617,8 @@ CTIC Japanese Language School:
 
 DAIKI Japanese Language School:
 <select required id="00N0o00000Mfswu" name="00N0o00000Mfswu" title="DAIKI日本語教室">
-  <option value="NotKnow">Not Know</option>
-  <option value="NotAttend">Not Attend</option>
+  <option value="NotKnow">Do Not Know</option>
+  <option value="NotAttend">Do Not Attend</option>
   <option value="Attending">Attending</option>
   <option value="DroppedOut">Dropped Out</option>
   <option value="Completed">Completed</option>
@@ -639,7 +639,7 @@ English Language Level:
 
 Do you have work permission from the Japanese Government? If yes, put a check mark.=>
 <input id="00N0o00000Mfsh6" name="00N0o00000Mfsh6" type="checkbox" value="1" /><br>
-
+<!--
 When did you or are you scheduled to get the work permission?
 <p>
 <select id="00N0o00000MfshB" name="00N0o00000MfshB" title="就労許可取得（予定）年">
@@ -701,7 +701,7 @@ When did you or are you scheduled to get the work permission?
   <option value="10月">Oct.</option>
   <option value="11月">Nov.</option>
   <option value="12月">Dec.</option>
-</select><br>
+</select><br> -->
 
 Do you have a driver licence valid in Japan? If yes, put a check mark.=>
 <input  id="00N0o00000Mfqug" name="00N0o00000Mfqug" type="checkbox" value="1" /><br>
@@ -718,6 +718,11 @@ Licences and Certificates:
 Year of Enrollment
 <select required  id="00N0o00000MgLVs" name="00N0o00000MgLVs" title="入学年">
   <option value=""></option>
+  <option value="2005">2005</option>
+  <option value="2006">2006</option>
+  <option value="2007">2007</option>
+  <option value="2008">2008</option>
+  <option value="2009">2009</option>
   <option value="2010">2010</option>
   <option value="2011">2011</option>
   <option value="2012">2012</option>
@@ -734,7 +739,7 @@ Year of Enrollment
   <option value="2023">2023</option>
   <option value="2024">2024</option>
   <option value="2025">2025</option>
-  <option value="2026">2026</option>
+  <!-- <option value="2026">2026</option>
   <option value="2027">2027</option>
   <option value="2028">2028</option>
   <option value="2029">2029</option>
@@ -747,7 +752,7 @@ Year of Enrollment
   <option value="2036">2036</option>
   <option value="2037">2037</option>
   <option value="2038">2038</option>
-  <option value="2039">2039</option>
+  <option value="2039">2039</option> -->
 </select>
 
 
@@ -774,7 +779,28 @@ Year of Graduation
 <select required id="00N0o00000MfwVO" name="00N0o00000MfwVO" title="卒業・修了・退学年">
   <option value=""></option>
   <option value="">Current</option>
+  <option value="2005">2005</option>
+  <option value="2006">2006</option>
+  <option value="2007">2007</option>
+  <option value="2008">2008</option>
+  <option value="2009">2009</option>
   <option value="2010">2010</option>
+  <option value="2011">2011</option>
+  <option value="2012">2012</option>
+  <option value="2013">2013</option>
+  <option value="2014">2014</option>
+  <option value="2015">2015</option>
+  <option value="2016">2016</option>
+  <option value="2017">2017</option>
+  <option value="2018">2018</option>
+  <option value="2019">2019</option>
+  <option value="2020">2020</option>
+  <option value="2021">2021</option>
+  <option value="2022">2022</option>
+  <option value="2023">2023</option>
+  <option value="2024">2024</option>
+  <option value="2025">2025</option>
+  <!-- <option value="2010">2010</option>
   <option value="2011">2011</option>
   <option value="2012">2012</option>
   <option value="2013">2013</option>
@@ -803,7 +829,7 @@ Year of Graduation
   <option value="2036">2036</option>
   <option value="2037">2037</option>
   <option value="2038">2038</option>
-  <option value="2039">2039</option>
+  <option value="2039">2039</option> -->
 </select>
 
 Month of Graduation
@@ -839,14 +865,14 @@ Type of School:
   <option value="小学校">Elementary School</option>
   <option value="中学校">Junior High School</option>
   <option value="高等学校">High School</option>
-  <option value="専門学校">Vocational School</option>
+  <option value="専門学校">Vocational School(Speciality School)</option>
   <option value="短期大学">Junior College</option>
-  <option value="大学">University/College</option>
-  <option value="大学院">Graduate School</option>
+  <option value="大学">Bachelor/University</option>
+  <option value="大学院">Master/Graduate School</option>
   <option value="その他">else</option>
 </select><br>
 
-School Name:
+School Name(please write full name):
 <input required  id="00N0o00000MfwUf" maxlength="40" name="00N0o00000MfwUf" size="20" type="text" /><br>
 
 Country of School:
@@ -1063,9 +1089,9 @@ Country of School:
 
 Faculty:
 <input  id="00N0o00000MfwUp" maxlength="50" name="00N0o00000MfwUp" size="20" type="text" /><br>
-
+<!--
 Department:
-<input  id="00N0o00000MfwUu" maxlength="50" name="00N0o00000MfwUu" size="20" type="text" /><br>
+<input  id="00N0o00000MfwUu" maxlength="50" name="00N0o00000MfwUu" size="20" type="text" /><br> -->
 
 Course (in case of graduate schol):
 <select  id="00N0o00000MfwUz" name="00N0o00000MfwUz" title="課程">
@@ -1078,7 +1104,7 @@ Course (in case of graduate schol):
 Discipline:
 <select  id="00N0o00000MfwV4" name="00N0o00000MfwV4" title="専門領域">
   <option value=""></option>
-  <option value="数学">Mathematics数学</option>
+  <option value="数学">Mathematics</option>
   <option value="物理学">Physics</option>
   <option value="工学">Engineering</option>
   <option value="化学">Chemicals</option>
@@ -1102,8 +1128,8 @@ Discipline:
   <option value="その他">else</option>
 </select><br>
 
-Discipline Description:
-<textarea  id="00N0o00000MfwV9" name="00N0o00000MfwV9" type="text" wrap="soft"></textarea><br>
+<!-- Discipline Description:
+<textarea  id="00N0o00000MfwV9" name="00N0o00000MfwV9" type="text" wrap="soft"></textarea><br> -->
 
 Thesis or Research Theme:
 <textarea  id="00N0o00000MfwVE" name="00N0o00000MfwVE" type="text" wrap="soft"></textarea><br>
@@ -1333,8 +1359,8 @@ Country of Office:
 Regular or Irregular Work?:
 <select id="00N0o00000MgKyj" name="00N0o00000MgKyj" title="常勤／非常勤">
   <option value="" ></option>
-  <option value="常勤">常勤</option>
-  <option value="非常勤">非常勤</option>
+  <option value="常勤">Full Time</option>
+  <option value="非常勤">Part Time</option>
 </select><br>
 
 Job Description:
@@ -1454,8 +1480,6 @@ You've completed to fill the form!<br>
 We really appliciate your efforts! Thank you so much!
 </p>
 </div>
-
-
 
 <div class="g-recaptcha" data-sitekey="6LdKV6wUAAAAAB-31K-QfQ4pjaN6xmaoPRigck73"></div><br>
 <input type="submit" name="submit">
