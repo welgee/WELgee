@@ -22,6 +22,24 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <script src="/js/header.js"></script>
 
+  <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+  <!--
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <script>
+   function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500);
+  </script>
+  -->
+
+  <script src=”https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js”></script>
+  <script src=”https://cdn.jsdelivr.net/npm/garlic@0.0.3/index.min.js”></script>
+
+  <script>
+    $(function(){
+      $(“form”).garlic();
+    });
+  </script>
+</head>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111937751-1"></script>
   <script>
@@ -73,18 +91,17 @@ Application form for refugees  </h3>
 <!--  ----------------------------------------------------------------------  -->
 <!--  次の <FORM> 要素をページに追加してください。                                              -->
 <!--  ----------------------------------------------------------------------  -->
-
 <form data-persist=”garlic” action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
-  <p>Thank you for your interest in WELgee!!<br>
-    <br>Please be advised that the form must be completed once started
-    (if left idle for more than six hours all progress will be lost).
-    <br>This survey should take about  <strong>15 minutes</strong> of your time and will allow us to better address your needs or concerns.
-    <br><br>Please have your own passport and / or residence card for your information.
-  </p>
 
+<!--
 <input type=hidden name='captcha_settings' value='{"keyname":"KeyPair1","fallback":"true","orgId":"00D7F000007etFs","ts":""}'>
+-->
 <input type=hidden name="oid" value="00D7F000007etFs">
-<input type=hidden name="retURL" value="http://">
+<input type=hidden name="retURL" value="https://www.welgee.jp">
+
+<select  id="lead_source" name="lead_source" readonly hidden>
+  <option value="Change-Makers&#39; Form" selected></option>
+</select>
 
 <!--  ----------------------------------------------------------------------  -->
 <!--  注意: これらの項目は、省略可能なデバッグ用要素です。デバッグモードでテストを行う場合は、これらの行をコメント解除してください。        -->
@@ -92,1400 +109,997 @@ Application form for refugees  </h3>
 <!--  <input type="hidden" name="debugEmail" value="yota@welgee.jp">          -->
 <!--  ----------------------------------------------------------------------  -->
 
-<label for="first_name">First Name</label><input required  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
+<div class="FundamentalInformation">
+  <h2>Name</h2>
+    <label for="first_name">First Name</label>
+      <input id="first_name" required maxlength="40" name="first_name" size="20" type="text" /><br>
+    <label for="middle_name">Middle Name</label>
+      <input id="middle_name" maxlength="40" name="middle_name" size="20" type="text" /><br>
+    <label for="last_name">Last Name</label>
+      <input id="last_name" required maxlength="80" name="last_name" size="20" type="text" /><br>
 
-<label for="middle_name">Middle Name</label><input  id="middle_name" maxlength="40" name="middle_name" size="20" type="text" /><br>
+  <h2>Contact</h2>
+  <label for="email">Email Address</label>
+    <input  id="email" required maxlength="80" name="email" size="20" type="email" /><br>
+  <label for="mobile">Phone Number</label>
+    <input   id="mobile" maxlength="40" name="mobile" size="20" type="text" /><br>
 
-<label for="last_name">Last Name</label><input required  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
+  <h2>Address</h2>
+    <label for="state">Prefecture</label>
+      <select   id="state" name="state" required>
+        <option value="北海道">Hokkaido</option>
+        <option value="青森県">Aomori</option>
+        <option value="岩手県">Iwate</option>
+        <option value="宮城県">Miyagi</option>
+        <option value="秋田県">Akita</option>
+        <option value="山形県">Yamagata</option>
+        <option value="福島県">Fukushima</option>
+        <option value="茨城県">Ibaraki</option>
+        <option value="栃木県">Tochigi</option>
+        <option value="群馬県">Gumma</option>
+        <option value="埼玉県">Saitama</option>
+        <option value="千葉県">Chiba</option>
+        <option value="東京都" selected>Tokyo</option>
+        <option value="神奈川県">Kanagawa</option>
+        <option value="新潟県">Niigata</option>
+        <option value="富山県">Toyama</option>
+        <option value="石川県">Ishikawa</option>
+        <option value="福井県">Fukui</option>
+        <option value="山梨県">Yamanashi</option>
+        <option value="長野県">Nagano</option>
+        <option value="岐阜県">Gifu</option>
+        <option value="静岡県">Shizuoka</option>
+        <option value="愛知県">Aichi</option>
+        <option value="三重県">Mie</option>
+        <option value="滋賀県">Shiga</option>
+        <option value="京都府">Kyoto</option>
+        <option value="大阪府">Osaka</option>
+        <option value="兵庫県">Hyogo</option>
+        <option value="奈良県">Nara</option>
+        <option value="和歌山県">Wakayama</option>
+        <option value="鳥取県">Tottori</option>
+        <option value="島根県">Shimane</option>
+        <option value="岡山県">Okayama</option>
+        <option value="広島県">Hiroshima</option>
+        <option value="山口県">Yamaguchi</option>
+        <option value="徳島県">Tokushima</option>
+        <option value="香川県">Kagawa</option>
+        <option value="愛媛県">Ehime</option>
+        <option value="高知県">Kochi</option>
+        <option value="福岡県">Fukui</option>
+        <option value="佐賀県">Saga</option>
+        <option value="長崎県">Nagasaki</option>
+        <option value="熊本県">Kumamoto</option>
+        <option value="大分県">Oita</option>
+        <option value="宮崎県">Miyazaki</option>
+        <option value="鹿児島県">Kagoshima</option>
+        <option value="沖縄県">Okinawa</option>
+      </select><br>
+    <label for="city">City</label>
+      <input   id="city" required maxlength="40" name="city" size="20" type="text" /><br>
+    <label>Your Nearest Station:</label>
+      <input   id="00N0o00000Mfqly" required maxlength="50" name="00N0o00000Mfqly" size="20" type="text" />Station<br>
 
-<br>
+  <h2>Personal Information</h2>
+    <label>Sex:</label>
+      <select  id="00N0o00000MfoNL" name="00N0o00000MfoNL" required title="性別">
+        <option value="女性">female</option>
+        <option value="男性">male</option>
+        <option value="その他・答えたくない">else or don't want to answer</option>
+      </select><br>
+    <label>Birthday (yyyy/mm/dd):</label>
+      <input id="00N7F00000QrzMa" name="00N7F00000QrzMa" required size="12" type="date" /><br>
+    <label>Birth Country:</label>
+      <select  id="00N0o00000MfoNQ" name="00N0o00000MfoNQ" required title="出生国">
+        <option value="日本">Japan</option>
+        <option value="アブハジア">Abkhazia</option>
+        <option value="アフガニスタン">Afghanistan</option>
+        <option value="アルバニア">Albania</option>
+        <option value="アルジェリア">Algeria</option>
+        <option value="アンドラ">Andorra</option>
+        <option value="アンゴラ">Angola</option>
+        <option value="アンティグア・バーブーダ">Antigua and Barbuda</option>
+        <option value="アルゼンチン">Argentina</option>
+        <option value="アルメニア">Armenia</option>
+        <option value="オーストラリア">Australia</option>
+        <option value="オーストリア">Austria</option>
+        <option value="アゼルバイジャン">Azerbaijan</option>
+        <option value="バハマ">Bahamas</option>
+        <option value="バーレーン">Bahrain</option>
+        <option value="バングラデシュ">Bangladesh</option>
+        <option value="バルバドス">Barbados</option>
+        <option value="ベラルーシ">Belarus</option>
+        <option value="ベルギー">Belgium</option>
+        <option value="ベリーズ">Belize</option>
+        <option value="ベナン">Benin</option>
+        <option value="ブータン">Bhutan</option>
+        <option value="ボリビア">Bolivia</option>
+        <option value="ボスニア・ヘルツェゴビナ">Bosnia and Herzegovina</option>
+        <option value="ボツワナ">Botswana</option>
+        <option value="ブラジル">Brazil</option>
+        <option value="ブルネイ">Brunei Darussalam</option>
+        <option value="ブルガリア">Bulgaria</option>
+        <option value="ブルキナファソ">Burkina Faso</option>
+        <option value="ブルンジ">Burundi</option>
+        <option value="カンボジア">Cambodia</option>
+        <option value="カメルーン">Cameroon</option>
+        <option value="カナダ">Canada</option>
+        <option value="カーボベルデ">Cape Verde</option>
+        <option value="中央アフリカ共和国">Central African Republic</option>
+        <option value="チャド">Chad</option>
+        <option value="チリ">Chile</option>
+        <option value="中国">China</option>
+        <option value="コロンビア">Colombia</option>
+        <option value="コモロ">Comoros</option>
+        <option value="クック諸島">Cook Islands</option>
+        <option value="コソボ">Cosovo</option>
+        <option value="コスタリカ">Costa Rica</option>
+        <option value="コートジボワール">Cote d’Ivoire</option>
+        <option value="クロアチア">Croatia</option>
+        <option value="キューバ">Cuba</option>
+        <option value="キプロス">Cyprus</option>
+        <option value="チェコ">Czech Republic</option>
+        <option value="コンゴ民主共和国">Democratic Republic of the Congo</option>
+        <option value="デンマーク">Denmark</option>
+        <option value="ジブチ">Djibouti</option>
+        <option value="ドミニカ国">Dominica</option>
+        <option value="ドミニカ共和国">Dominican Republic</option>
+        <option value="エクアドル">Ecuador</option>
+        <option value="エジプト">Egypt</option>
+        <option value="エルサルバドル">El Salvador</option>
+        <option value="赤道ギニア">Equatorial Guinea</option>
+        <option value="エリトリア">Eritrea</option>
+        <option value="エストニア">Estonia</option>
+        <option value="エチオピア">Ethiopia</option>
+        <option value="フィジー">Fiji</option>
+        <option value="フィンランド">Finland</option>
+        <option value="フランス">France</option>
+        <option value="ガボン">Gabon</option>
+        <option value="ガンビア">Gambia</option>
+        <option value="ジョージア">Georgia</option>
+        <option value="ドイツ">Germany</option>
+        <option value="ガーナ">Ghana</option>
+        <option value="ギリシャ">Greece</option>
+        <option value="グレナダ">Grenada</option>
+        <option value="グアテマラ">Guatemala</option>
+        <option value="ギニア">Guinea</option>
+        <option value="ギニアビサウ">Guinea-Bissau</option>
+        <option value="ガイアナ">Guyana</option>
+        <option value="ハイチ">Haiti</option>
+        <option value="ホンジュラス">Honduras</option>
+        <option value="ハンガリー">Hungary</option>
+        <option value="アイスランド">Iceland</option>
+        <option value="インド">India</option>
+        <option value="インドネシア">Indonesia</option>
+        <option value="イラン">Iran</option>
+        <option value="イラク">Iraq</option>
+        <option value="アイルランド">Ireland</option>
+        <option value="イスラエル">Israel</option>
+        <option value="イタリア">Italy</option>
+        <option value="ジャマイカ">Jamaica</option>
+        <option value="日本">Japan</option>
+        <option value="ヨルダン">Jordan</option>
+        <option value="カザフスタン">Kazakhstan</option>
+        <option value="ケニア">Kenya</option>
+        <option value="キリバス">Kiribati</option>
+        <option value="クウェート">Kuwait</option>
+        <option value="キルギス">Kyrgyz</option>
+        <option value="ラオス">Lao People’s Democratic Republic</option>
+        <option value="ラトビア">Latvia</option>
+        <option value="レバノン">Lebanon</option>
+        <option value="レソト">Lesotho</option>
+        <option value="リベリア">Liberia</option>
+        <option value="リビア">Libya</option>
+        <option value="リヒテンシュタイン">Liechtenstein</option>
+        <option value="リトアニア">Lithuania</option>
+        <option value="ルクセンブルク">Luxembourg</option>
+        <option value="マダガスカル">Madagascar</option>
+        <option value="マラウイ">Malawi</option>
+        <option value="マレーシア">Malaysia</option>
+        <option value="モルディブ">Maldives</option>
+        <option value="マリ">Mali</option>
+        <option value="マルタ">Malta</option>
+        <option value="マーシャル諸島">Marshall Islands</option>
+        <option value="モーリタニア">Mauritania</option>
+        <option value="モーリシャス">Mauritius</option>
+        <option value="メキシコ">Mexico</option>
+        <option value="ミクロネシア連邦">Micronesia</option>
+        <option value="モナコ">Monaco</option>
+        <option value="モンゴル">Mongolia</option>
+        <option value="モンテネグロ">Montenegro</option>
+        <option value="モロッコ">Morocco</option>
+        <option value="モザンビーク">Mozambique</option>
+        <option value="ミャンマー">Myanmar</option>
+        <option value="ナゴルノ・カラバフ">Nagorno-Karabakh Republic</option>
+        <option value="ナミビア">Namibia</option>
+        <option value="ナウル">Nauru</option>
+        <option value="ネパール">Nepal</option>
+        <option value="オランダ">Netherlands</option>
+        <option value="ニュージーランド">New Zealand</option>
+        <option value="ニカラグア">Nicaragua</option>
+        <option value="ニジェール">Niger</option>
+        <option value="ナイジェリア">Nigeria</option>
+        <option value="ニウエ">Niue</option>
+        <option value="北キプロス">North Cyprus</option>
+        <option value="北朝鮮">North Korea</option>
+        <option value="ノルウェー">Norway</option>
+        <option value="オマーン">Oman</option>
+        <option value="パキスタン">Pakistan</option>
+        <option value="パラオ">Palau</option>
+        <option value="パレスチナ">Palestina</option>
+        <option value="パナマ">Panama</option>
+        <option value="パプアニューギニア">Papua New Guinea</option>
+        <option value="パラグアイ">Paraguay</option>
+        <option value="ペルー">Peru</option>
+        <option value="フィリピン">Philippines</option>
+        <option value="ポーランド">Poland</option>
+        <option value="ポルトガル">Portugal</option>
+        <option value="沿ドニエストル">Pridnestrovian Moldavian Republic</option>
+        <option value="カタール">Qatar</option>
+        <option value="モルドバ">Republic of Moldova</option>
+        <option value="コンゴ共和国">Republic of the Congo</option>
+        <option value="ルーマニア">Romania</option>
+        <option value="ロシア">Russia</option>
+        <option value="ルワンダ">Rwanda</option>
+        <option value="セントクリストファー・ネイビス">Saint Kitts and Nevis</option>
+        <option value="セントルシア">Saint Lucia</option>
+        <option value="セントビンセントおよびグレナディーン諸島">Saint Vincent and the Grenadines</option>
+        <option value="サモア">Samoa</option>
+        <option value="サンマリノ">San Marino</option>
+        <option value="サントメ・プリンシペ">Sao Tome and Principe</option>
+        <option value="サウジアラビア">Saudi Arabia</option>
+        <option value="セネガル">Senegal</option>
+        <option value="セルビア">Serbia</option>
+        <option value="セーシェル">Seychelles</option>
+        <option value="シエラレオネ">Sierra Leone</option>
+        <option value="シンガポール">Singapore</option>
+        <option value="スロバキア">Slovakia</option>
+        <option value="スロベニア">Slovenia</option>
+        <option value="ソロモン諸島">Solomon Islands</option>
+        <option value="ソマリア">Somalia</option>
+        <option value="ソマリランド">Somaliland </option>
+        <option value="南アフリカ">South Africa</option>
+        <option value="韓国">South Korea</option>
+        <option value="南オセチア">South Ossetia</option>
+        <option value="南スーダン">South Sudan</option>
+        <option value="スペイン">Spain</option>
+        <option value="スリランカ">Sri Lanka</option>
+        <option value="スーダン">Sudan</option>
+        <option value="スリナム">Suriname</option>
+        <option value="スワジランド">Swaziland</option>
+        <option value="スウェーデン">Sweden</option>
+        <option value="スイス">Switzerland</option>
+        <option value="シリア">Syria</option>
+        <option value="台湾">Taiwan</option>
+        <option value="タジキスタン">Tajikistan</option>
+        <option value="タイ">Thailand</option>
+        <option value="マケドニア旧ユーゴスラビア共和国">The formar Yugoslav Republic of Macedonia</option>
+        <option value="東ティモール">Timor Leste</option>
+        <option value="トーゴ">Togo</option>
+        <option value="トンガ">Tonga</option>
+        <option value="トリニダード・トバゴ">Trinidad and Tobago</option>
+        <option value="チュニジア">Tunisia</option>
+        <option value="トルコ">Turkey</option>
+        <option value="トルクメニスタン">Turkmenistan</option>
+        <option value="ツバル">Tuvalu</option>
+        <option value="ウガンダ">Uganda</option>
+        <option value="ウクライナ">Ukraine</option>
+        <option value="アラブ首長国連邦">United Arab Emirates</option>
+        <option value="イギリス">United Kingdom</option>
+        <option value="タンザニア">United of Republic of Tanzania</option>
+        <option value="アメリカ">United States</option>
+        <option value="ウルグアイ">Uruguay</option>
+        <option value="ウズベキスタン">Uzbekistan</option>
+        <option value="バヌアツ">Vanuatu</option>
+        <option value="バチカン">Vatican</option>
+        <option value="ベネズエラ">Venezuela</option>
+        <option value="ベトナム">Viet Nam</option>
+        <option value="西サハラ">Western Sahara</option>
+        <option value="イエメン">Yemen</option>
+        <option value="ザンビア">Zambia</option>
+        <option value="ジンバブエ">Zimbabwe</option>
+        <option value="">else</option>
+      </select><br>
+    <label>Ethnicity:</label>
+      <input  id="00N0o00000MfofU" maxlength="40" name="00N0o00000MfofU" size="20" type="text" /><br>
+    <label>Religion:</label>
+      <select   id="00N0o00000Mfofe" name="00N0o00000Mfofe" required title="宗教">
+        <option value="キリスト教">Christian</option>
+        <option value="イスラム教">Muslim</option>
+        <option value="仏教">Buddhist</option>
+        <option value="ヒンドゥー教">Hindu</option>
+        <option value="ユダヤ教">Jew</option>
+        <option value="その他">else</option>
+        <option value="無宗教">No Religion</option>
+      </select><br><br>
+    Choose the official languages of your country from the list.<br>
+    Otherwise, choose "else" and write the language name in the textbox.<br>
+    <select  id="00N0o00000Mfofj" multiple="multiple" name="00N0o00000Mfofj" required title="母国語（主要言語）">
+      <option value="中国語">Chinese</option>
+      <option value="スペイン語">Spanish</option>
+      <option value="英語">English</option>
+      <option value="ヒンディー語">Hindi</option>
+      <option value="アラビア語">Arabic</option>
+      <option value="ベンガル語">Bengali</option>
+      <option value="ポルトガル語">Portuguece</option>
+      <option value="ロシア語">Russian</option>
+      <option value="日本語">Japanese</option>
+      <option value="ラフンダー語">Lahnda</option>
+      <option value="マラーティー語">Marathi</option>
+      <option value="テルグ語">Telugu</option>
+      <option value="マレー語">Malay</option>
+      <option value="トルコ語">Turkish</option>
+      <option value="韓国語">Korean</option>
+      <option value="フランス語">French</option>
+      <option value="ドイツ語">German</option>
+      <option value="ベトナム語">Vietnamese</option>
+      <option value="タミル語">Tamil</option>
+      <option value="ウルドゥー語">Urdu</option>
+      <option value="ジャワ語">Javanese</option>
+      <option value="イタリア語">Italian</option>
+      <option value="ペルシア語">Persian</option>
+      <option value="グジャラート語">Gujarati</option>
+      <option value="ボージュプリー語">Bhojpuri</option>
+      <option value="その他">else</option>
+    </select>
+    <input placeholder="Official Language of Your Country" id="00N0o00000MfwUQ" maxlength="60" name="00N0o00000MfwUQ" size="25" type="text" /><br>
+    <label>English Language Level:</label>
+      <select  id="00N0o00000MfvIO" name="00N0o00000MfvIO" required title="英語レベル">
+        <option value="NotAtAll">Not at All</option>
+        <option value="LittleABit">Little a Bit</option>
+        <option value="DailyLife">Daily Life</option>
+        <option value="Business">Business</option>
+        <option value="Native">Native</option>
+      </select><br><br>
 
-<label for="email">Email Address</label><input required id="email" maxlength="80" name="email" size="20" type="email" /><br>
-
-<label for="mobile">Phone Number</label><input required  id="mobile" maxlength="40" name="mobile" size="20" type="text" /><br>
-
-Your Facebook URL:<input  id="00N0o00000MfwPQ" maxlength="255" name="00N0o00000MfwPQ" size="20" type="url" /><br>
-
-<br>
-
-<label>Address</label><br>
-
-<label for="state">Prefecture</label><select required  id="state" name="state">
-  <option value="北海道">Hokkaido</option>
-  <option value="青森県">Aomori</option>
-  <option value="岩手県">Iwate</option>
-  <option value="宮城県">Miyagi</option>
-  <option value="秋田県">Akita</option>
-  <option value="山形県">Yamagata</option>
-  <option value="福島県">Fukushima</option>
-  <option value="茨城県">Ibaraki</option>
-  <option value="栃木県">Tochigi</option>
-  <option value="群馬県">Gumma</option>
-  <option value="埼玉県">Saitama</option>
-  <option value="千葉県">Chiba</option>
-  <option value="東京都" selected>Tokyo</option>
-  <option value="神奈川県">Kanagawa</option>
-  <option value="新潟県">Niigata</option>
-  <option value="富山県">Toyama</option>
-  <option value="石川県">Ishikawa</option>
-  <option value="福井県">Fukui</option>
-  <option value="山梨県">Yamanashi</option>
-  <option value="長野県">Nagano</option>
-  <option value="岐阜県">Gifu</option>
-  <option value="静岡県">Shizuoka</option>
-  <option value="愛知県">Aichi</option>
-  <option value="三重県">Mie</option>
-  <option value="滋賀県">Shiga</option>
-  <option value="京都府">Kyoto</option>
-  <option value="大阪府">Osaka</option>
-  <option value="兵庫県">Hyogo</option>
-  <option value="奈良県">Nara</option>
-  <option value="和歌山県">Wakayama</option>
-  <option value="鳥取県">Tottori</option>
-  <option value="島根県">Shimane</option>
-  <option value="岡山県">Okayama</option>
-  <option value="広島県">Hiroshima</option>
-  <option value="山口県">Yamaguchi</option>
-  <option value="徳島県">Tokushima</option>
-  <option value="香川県">Kagawa</option>
-  <option value="愛媛県">Ehime</option>
-  <option value="高知県">Kochi</option>
-  <option value="福岡県">Fukui</option>
-  <option value="佐賀県">Saga</option>
-  <option value="長崎県">Nagasaki</option>
-  <option value="熊本県">Kumamoto</option>
-  <option value="大分県">Oita</option>
-  <option value="宮崎県">Miyazaki</option>
-  <option value="鹿児島県">Kagoshima</option>
-  <option value="沖縄県">Okinawa</option>
-</select><br>
-
-<label for="city">City</label><input required  id="city" maxlength="40" name="city" size="20" type="text" /><br>
-
-<label for="street">Street/Number</label><textarea required name="street"></textarea><br>
-
-Your Nearest Station:<input required  id="00N0o00000Mfqly" maxlength="50" name="00N0o00000Mfqly" size="20" type="text" /><br>
-
-<select  id="lead_source" name="lead_source" readonly hidden>
-<option value="Change-Makers&#39; Form" selected></option>
-</select><br>
-
-<select  id="recordType" name="recordType" readonly hidden>
-  <option value="0120o000001JX3Z" selected></option>
-</select><br>
-
-Sex:<select required  id="00N0o00000MfoNL" name="00N0o00000MfoNL" title="性別">
-  <option value="女性">female</option>
-  <option value="男性">male</option>
-  <option value="その他・答えたくない">else or don't want to answer</option>
-</select><br>
-
-Birthday (yyyy/mm/dd):<span class="dateInput dateOnlyInput"><input required  id="00N7F00000QrzMa" name="00N7F00000QrzMa" size="12" type="date" /></span><br>
-
-Birth Country:<select required  id="00N0o00000MfoNQ" name="00N0o00000MfoNQ" title="出生国">
-<option value="日本">Japan</option>
-<option value="アブハジア">Abkhazia</option>
-<option value="アフガニスタン">Afghanistan</option>
-<option value="アルバニア">Albania</option>
-<option value="アルジェリア">Algeria</option>
-<option value="アンドラ">Andorra</option>
-<option value="アンゴラ">Angola</option>
-<option value="アンティグア・バーブーダ">Antigua and Barbuda</option>
-<option value="アルゼンチン">Argentina</option>
-<option value="アルメニア">Armenia</option>
-<option value="オーストラリア">Australia</option>
-<option value="オーストリア">Austria</option>
-<option value="アゼルバイジャン">Azerbaijan</option>
-<option value="バハマ">Bahamas</option>
-<option value="バーレーン">Bahrain</option>
-<option value="バングラデシュ">Bangladesh</option>
-<option value="バルバドス">Barbados</option>
-<option value="ベラルーシ">Belarus</option>
-<option value="ベルギー">Belgium</option>
-<option value="ベリーズ">Belize</option>
-<option value="ベナン">Benin</option>
-<option value="ブータン">Bhutan</option>
-<option value="ボリビア">Bolivia</option>
-<option value="ボスニア・ヘルツェゴビナ">Bosnia and Herzegovina</option>
-<option value="ボツワナ">Botswana</option>
-<option value="ブラジル">Brazil</option>
-<option value="ブルネイ">Brunei Darussalam</option>
-<option value="ブルガリア">Bulgaria</option>
-<option value="ブルキナファソ">Burkina Faso</option>
-<option value="ブルンジ">Burundi</option>
-<option value="カンボジア">Cambodia</option>
-<option value="カメルーン">Cameroon</option>
-<option value="カナダ">Canada</option>
-<option value="カーボベルデ">Cape Verde</option>
-<option value="中央アフリカ共和国">Central African Republic</option>
-<option value="チャド">Chad</option>
-<option value="チリ">Chile</option>
-<option value="中国">China</option>
-<option value="コロンビア">Colombia</option>
-<option value="コモロ">Comoros</option>
-<option value="クック諸島">Cook Islands</option>
-<option value="コソボ">Cosovo</option>
-<option value="コスタリカ">Costa Rica</option>
-<option value="コートジボワール">Cote d’Ivoire</option>
-<option value="クロアチア">Croatia</option>
-<option value="キューバ">Cuba</option>
-<option value="キプロス">Cyprus</option>
-<option value="チェコ">Czech Republic</option>
-<option value="コンゴ民主共和国">Democratic Republic of the Congo</option>
-<option value="デンマーク">Denmark</option>
-<option value="ジブチ">Djibouti</option>
-<option value="ドミニカ国">Dominica</option>
-<option value="ドミニカ共和国">Dominican Republic</option>
-<option value="エクアドル">Ecuador</option>
-<option value="エジプト">Egypt</option>
-<option value="エルサルバドル">El Salvador</option>
-<option value="赤道ギニア">Equatorial Guinea</option>
-<option value="エリトリア">Eritrea</option>
-<option value="エストニア">Estonia</option>
-<option value="エチオピア">Ethiopia</option>
-<option value="フィジー">Fiji</option>
-<option value="フィンランド">Finland</option>
-<option value="フランス">France</option>
-<option value="ガボン">Gabon</option>
-<option value="ガンビア">Gambia</option>
-<option value="ジョージア">Georgia</option>
-<option value="ドイツ">Germany</option>
-<option value="ガーナ">Ghana</option>
-<option value="ギリシャ">Greece</option>
-<option value="グレナダ">Grenada</option>
-<option value="グアテマラ">Guatemala</option>
-<option value="ギニア">Guinea</option>
-<option value="ギニアビサウ">Guinea-Bissau</option>
-<option value="ガイアナ">Guyana</option>
-<option value="ハイチ">Haiti</option>
-<option value="ホンジュラス">Honduras</option>
-<option value="ハンガリー">Hungary</option>
-<option value="アイスランド">Iceland</option>
-<option value="インド">India</option>
-<option value="インドネシア">Indonesia</option>
-<option value="イラン">Iran</option>
-<option value="イラク">Iraq</option>
-<option value="アイルランド">Ireland</option>
-<option value="イスラエル">Israel</option>
-<option value="イタリア">Italy</option>
-<option value="ジャマイカ">Jamaica</option>
-<option value="日本">Japan</option>
-<option value="ヨルダン">Jordan</option>
-<option value="カザフスタン">Kazakhstan</option>
-<option value="ケニア">Kenya</option>
-<option value="キリバス">Kiribati</option>
-<option value="クウェート">Kuwait</option>
-<option value="キルギス">Kyrgyz</option>
-<option value="ラオス">Lao People’s Democratic Republic</option>
-<option value="ラトビア">Latvia</option>
-<option value="レバノン">Lebanon</option>
-<option value="レソト">Lesotho</option>
-<option value="リベリア">Liberia</option>
-<option value="リビア">Libya</option>
-<option value="リヒテンシュタイン">Liechtenstein</option>
-<option value="リトアニア">Lithuania</option>
-<option value="ルクセンブルク">Luxembourg</option>
-<option value="マダガスカル">Madagascar</option>
-<option value="マラウイ">Malawi</option>
-<option value="マレーシア">Malaysia</option>
-<option value="モルディブ">Maldives</option>
-<option value="マリ">Mali</option>
-<option value="マルタ">Malta</option>
-<option value="マーシャル諸島">Marshall Islands</option>
-<option value="モーリタニア">Mauritania</option>
-<option value="モーリシャス">Mauritius</option>
-<option value="メキシコ">Mexico</option>
-<option value="ミクロネシア連邦">Micronesia</option>
-<option value="モナコ">Monaco</option>
-<option value="モンゴル">Mongolia</option>
-<option value="モンテネグロ">Montenegro</option>
-<option value="モロッコ">Morocco</option>
-<option value="モザンビーク">Mozambique</option>
-<option value="ミャンマー">Myanmar</option>
-<option value="ナゴルノ・カラバフ">Nagorno-Karabakh Republic</option>
-<option value="ナミビア">Namibia</option>
-<option value="ナウル">Nauru</option>
-<option value="ネパール">Nepal</option>
-<option value="オランダ">Netherlands</option>
-<option value="ニュージーランド">New Zealand</option>
-<option value="ニカラグア">Nicaragua</option>
-<option value="ニジェール">Niger</option>
-<option value="ナイジェリア">Nigeria</option>
-<option value="ニウエ">Niue</option>
-<option value="北キプロス">North Cyprus</option>
-<option value="北朝鮮">North Korea</option>
-<option value="ノルウェー">Norway</option>
-<option value="オマーン">Oman</option>
-<option value="パキスタン">Pakistan</option>
-<option value="パラオ">Palau</option>
-<option value="パレスチナ">Palestina</option>
-<option value="パナマ">Panama</option>
-<option value="パプアニューギニア">Papua New Guinea</option>
-<option value="パラグアイ">Paraguay</option>
-<option value="ペルー">Peru</option>
-<option value="フィリピン">Philippines</option>
-<option value="ポーランド">Poland</option>
-<option value="ポルトガル">Portugal</option>
-<option value="沿ドニエストル">Pridnestrovian Moldavian Republic</option>
-<option value="カタール">Qatar</option>
-<option value="モルドバ">Republic of Moldova</option>
-<option value="コンゴ共和国">Republic of the Congo</option>
-<option value="ルーマニア">Romania</option>
-<option value="ロシア">Russia</option>
-<option value="ルワンダ">Rwanda</option>
-<option value="セントクリストファー・ネイビス">Saint Kitts and Nevis</option>
-<option value="セントルシア">Saint Lucia</option>
-<option value="セントビンセントおよびグレナディーン諸島">Saint Vincent and the Grenadines</option>
-<option value="サモア">Samoa</option>
-<option value="サンマリノ">San Marino</option>
-<option value="サントメ・プリンシペ">Sao Tome and Principe</option>
-<option value="サウジアラビア">Saudi Arabia</option>
-<option value="セネガル">Senegal</option>
-<option value="セルビア">Serbia</option>
-<option value="セーシェル">Seychelles</option>
-<option value="シエラレオネ">Sierra Leone</option>
-<option value="シンガポール">Singapore</option>
-<option value="スロバキア">Slovakia</option>
-<option value="スロベニア">Slovenia</option>
-<option value="ソロモン諸島">Solomon Islands</option>
-<option value="ソマリア">Somalia</option>
-<option value="ソマリランド">Somaliland </option>
-<option value="南アフリカ">South Africa</option>
-<option value="韓国">South Korea</option>
-<option value="南オセチア">South Ossetia</option>
-<option value="南スーダン">South Sudan</option>
-<option value="スペイン">Spain</option>
-<option value="スリランカ">Sri Lanka</option>
-<option value="スーダン">Sudan</option>
-<option value="スリナム">Suriname</option>
-<option value="スワジランド">Swaziland</option>
-<option value="スウェーデン">Sweden</option>
-<option value="スイス">Switzerland</option>
-<option value="シリア">Syria</option>
-<option value="台湾">Taiwan</option>
-<option value="タジキスタン">Tajikistan</option>
-<option value="タイ">Thailand</option>
-<option value="マケドニア旧ユーゴスラビア共和国">The formar Yugoslav Republic of Macedonia</option>
-<option value="東ティモール">Timor Leste</option>
-<option value="トーゴ">Togo</option>
-<option value="トンガ">Tonga</option>
-<option value="トリニダード・トバゴ">Trinidad and Tobago</option>
-<option value="チュニジア">Tunisia</option>
-<option value="トルコ">Turkey</option>
-<option value="トルクメニスタン">Turkmenistan</option>
-<option value="ツバル">Tuvalu</option>
-<option value="ウガンダ">Uganda</option>
-<option value="ウクライナ">Ukraine</option>
-<option value="アラブ首長国連邦">United Arab Emirates</option>
-<option value="イギリス">United Kingdom</option>
-<option value="タンザニア">United of Republic of Tanzania</option>
-<option value="アメリカ">United States</option>
-<option value="ウルグアイ">Uruguay</option>
-<option value="ウズベキスタン">Uzbekistan</option>
-<option value="バヌアツ">Vanuatu</option>
-<option value="バチカン">Vatican</option>
-<option value="ベネズエラ">Venezuela</option>
-<option value="ベトナム">Viet Nam</option>
-<option value="西サハラ">Western Sahara</option>
-<option value="イエメン">Yemen</option>
-<option value="ザンビア">Zambia</option>
-<option value="ジンバブエ">Zimbabwe</option>
-<option value="">else</option>
-</select><br>
-
-<!-- Ethnicity:<input  id="00N0o00000MfofU" maxlength="40" name="00N0o00000MfofU" size="20" type="text" /><br> -->
-
-Religion:<select required  id="00N0o00000Mfofe" name="00N0o00000Mfofe" title="宗教">
-  <option value="キリスト教">Christian</option>
-  <option value="イスラム教">Muslim</option>
-  <option value="仏教">Buddhist</option>
-  <option value="ヒンドゥー教">Hindu</option>
-  <option value="ユダヤ教">Jew</option>
-  <option value="その他">else</option>
-  <option value="無宗教">No Religion</option>
-</select><br>
-
-<br>
-
-
-Choose the official languages of your country from the list.<br>
-Otherwise, choose "else" and write the language name in the textbox.<br>
-<select required id="00N0o00000Mfofj" multiple="multiple" name="00N0o00000Mfofj" title="母国語（主要言語）">
-  <option value="中国語">Chinese</option>
-  <option value="スペイン語">Spanish</option>
-  <option value="英語">English</option>
-  <option value="ヒンディー語">Hindi</option>
-  <option value="アラビア語">Arabic</option>
-  <option value="ベンガル語">Bengali</option>
-  <option value="ポルトガル語">Portuguece</option>
-  <option value="ロシア語">Russian</option>
-  <option value="日本語">Japanese</option>
-  <option value="ラフンダー語">Lahnda</option>
-  <option value="マラーティー語">Marathi</option>
-  <option value="テルグ語">Telugu</option>
-  <option value="マレー語">Malay</option>
-  <option value="トルコ語">Turkish</option>
-  <option value="韓国語">Korean</option>
-  <option value="フランス語">French</option>
-  <option value="ドイツ語">German</option>
-  <option value="ベトナム語">Vietnamese</option>
-  <option value="タミル語">Tamil</option>
-  <option value="ウルドゥー語">Urdu</option>
-  <option value="ジャワ語">Javanese</option>
-  <option value="イタリア語">Italian</option>
-  <option value="ペルシア語">Persian</option>
-  <option value="グジャラート語">Gujarati</option>
-  <option value="ボージュプリー語">Bhojpuri</option>
-  <option value="その他">else</option>
-</select>
-<input placeholder="Offical Language of Your Country" id="00N0o00000MfwUQ" maxlength="60" name="00N0o00000MfwUQ" size="25" type="text" /><br>
-<br>
-
-Choose your mother Languages are in the list, choose them.<br>
-Otherwise, choose "else" and write them in the textbox.<br>
-<select required id="00N0o00000MfwUG" multiple="multiple" name="00N0o00000MfwUG" title="母語（主要言語）">
-  <option value="中国語">Chinese</option>
-  <option value="スペイン語">Spanish</option>
-  <option value="英語">English</option>
-  <option value="ヒンディー語">Hindi</option>
-  <option value="アラビア語">Arabic</option>
-  <option value="ベンガル語">Bengali</option>
-  <option value="ポルトガル語">Portuguece</option>
-  <option value="ロシア語">Russian</option>
-  <option value="日本語">Japanese</option>
-  <option value="ラフンダー語">Lahnda</option>
-  <option value="マラーティー語">Marathi</option>
-  <option value="テルグ語">Telugu</option>
-  <option value="マレー語">Malay</option>
-  <option value="トルコ語">Turkish</option>
-  <option value="韓国語">Korean</option>
-  <option value="フランス語">French</option>
-  <option value="ドイツ語">German</option>
-  <option value="ベトナム語">Vietnamese</option>
-  <option value="タミル語">Tamil</option>
-  <option value="ウルドゥー語">Urdu</option>
-  <option value="ジャワ語">Javanese</option>
-  <option value="イタリア語">Italian</option>
-  <option value="ペルシア語">Persian</option>
-  <option value="グジャラート語">Gujarati</option>
-  <option value="ボージュプリー語">Bhojpuri</option>
-  <option value="その他">else</option>
-</select>
-
-<input placeholder="Your Mother Language" id="00N0o00000Mfofo" maxlength="60" name="00N0o00000Mfofo" size="25" type="text" /><br>
-<br>
-
-<hr style="border:1px dotted #000000;"><p><strong>You've finished 50%!!</strong>Go ahead!!</p>
-Reason for Your Emmigration:
-<select required  id="00N0o00000MfvJ2" multiple="multiple" name="00N0o00000MfvJ2" title="出国理由">
-  <option value="迫害（のおそれ）">(Fear of) Persecution</option>
-  <option value="紛争">Conflict or War</option>
-  <option value="環境">Environmental Reason</option>
-  <option value="治安の悪化">Lack of Social Security</option>
-  <option value="その他">else</option>
-</select><br>
-<br>
-
-Date of Your Immigration to Japan (yyyy/mm/dd):
-<input required  id="00N0o00000MfvJb" name="00N0o00000MfvJb" size="12" type="date" /><br>
-
-Your Current Residence Status:
-<select required  id="00N0o00000MfvLc" name="00N0o00000MfvLc" title="在留資格">
-  <option value=""></option>
-  <!-- <option value="Diplomat">Diplomat</option>
-  <option value="Official">Official</option>
-  <option value="Professor">Professor</option>
-  <option value="Artist">Artist</option>
-  <option value="ReligiousActivities">ReligiousActivities</option>
-  <option value="Journalist">Journalist</option>
-  <option value="HighlySkilledProfessional(1)">HighlySkilledProfessional(1)</option>
-  <option value="HighlySkilledProfessional(2)">HighlySkilledProfessional(2)</option>
-  <option value="BusinessManager">BusinessManager</option>
-  <option value="Legal/AccountingServices">Legal/AccountingServices</option>
-  <option value="MedicalServices">MedicalServices</option>
-  <option value="Researcher">Researcher</option>
-  <option value="Instructor">Instructor</option>
-  <option value="Engineer/SpecialistInHumanities/InternationalServices">Engineer/SpecialistInHumanities/InternationalServices</option>
-  <option value="Intra-CompanyTransferee">Intra-CompanyTransferee</option>
-  <option value="NursingCare">NursingCare</option>
-  <option value="Entertainer">Entertainer</option>
-  <option value="SkilledLabor">SkilledLabor</option>
-  <option value="TechnicalInternTraining(1)">TechnicalInternTraining(1)</option>
-  <option value="TechnicalInternTraining(2)">TechnicalInternTraining(2)</option>
-  <option value="TechnicalInternTraining(3)">TechnicalInternTraining(3)</option>
-  <option value="SpecifiedSkills(1)">SpecifiedSkills(1)</option>
-  <option value="SpecifiedSkills(2)">SpecifiedSkills(2)</option>
-  <option value="CulturalActivities">CulturalActivities</option> -->
-  <option value="TemporaryVisitor">TemporaryVisitor</option>
-  <option value="Student">Student</option>
-  <!-- <option value="Trainee">Trainee</option> -->
-  <!-- <option value="Dependent">Dependent</option> -->
-  <option value="DesignatedActivities">DesignatedActivities</option>
-  <option value="PermanentResident">PermanentResident</option>
-  <!-- <option value="SpouseOrChildOfJapaneseNational">SpouseOrChildOfJapaneseNational</option>
-  <option value="SpouseOrChildOfPermanentResident">SpouseOrChildOfPermanentResident</option> -->
-  <option value="LongTermResident">LongTermResident</option>
-  <option value="No Residence Status">No Residence Status</option>
-  <option value="Others">Others</option>
-</select><br>
-
-<!-- Is your status is "Provisional Release (Kari-Homen)"? If yes, put a check mark.=>
-<input  id="00N0o00000MfvLm" name="00N0o00000MfvLm" type="checkbox" value="1" /><br>
-
-Is your status is "Permit for Provisional Stay (Kari-Taizai-Kyoka)"? If yes, put a check mark.=>
-<input  id="00N0o00000MfvM1" name="00N0o00000MfvM1" type="checkbox" value="1" /><br> -->
-
-<br>
-
-Your Residence:
-<select required id="00N0o00000MfvIs" name="00N0o00000MfvIs" title="主要住居形態">
-  <option value=""></option>
-  <option value="アパート">Apartment</option>
-  <!-- <option value="戸建て">House</option> -->
-  <option value="宗教施設">Religious Building</option>
-  <option value="ホテル・ホステル等宿泊施設">Accomodation like hotel or hostel</option>
-  <option value="不定">Not Fixed</option>
-  <option value="その他">else</option>
-</select><br>
-
-<!-- Roommates:
-<select required  id="00N0o00000MfvJM" multiple="multiple" name="00N0o00000MfvJM" title="同居人">
-  <option value="なし">No</option>
-  <option value="友人">Friend(s)</option>
-  <option value="知人">Acquaintance(s)</option>
-  <option value="パートナー">Partner(s)</option>
-  <option value="家族">Family</option>
-  <option value="親戚">Relative(s)</option>
-  <option value="支援者">Supporter(s)</option>
-  <option value="その他">Else</option>
-</select><br> -->
-
-Times of Applications for Refugee Recognition (the refugee status) in Japan:
-<select required  id="00N0o00000MfvKK" name="00N0o00000MfvKK" title="難民認定申請回数">
-<option value="0回">Never</option>
-<option value="1回">Once</option>
-<option value="2回">Twice</option>
-<option value="3回以上">Three Times or More</option>
-</select><br>
-
-Date of the Newest Application (yyyy/mm/dd):
-<input required id="00N0o00000MfvKZ" name="00N0o00000MfvKZ" size="12" type="date" /><br>
-
-Status or Result of the Newest Refugee Application:
-<select required  id="00N0o00000MfvLN" name="00N0o00000MfvLN" title="難民認定申請状況（最新）">
-<option value=""></option>
-<option value="申請中">In the Application Process</option>
-<option value="不認定">Denial (Not Recognized)</option>
-<option value="認定">Approval (Recognized)</option>
-<option value="人道配慮">Special Permission to Stay for the Humanitarian Reason</option>
-<option value="異議申立中">In the Objection Process</option>
-<option value="その他">Others</option>
-</select><br>
-
-<br>
-<!--
-JLPT Grade:
-<select required  id="00N0o00000Mfqul" name="00N0o00000Mfqul" title="日本語能力試験（JLPT）">
-  <option value="なし">No Grade</option>
-  <option value="N5">N5</option>
-  <option value="N4">N4</option>
-  <option value="N3">N3</option>
-  <option value="N2">N2</option>
-  <option value="N1">N1</option>
-</select>
-<br> -->
-
-
-Japanese Language Level:
-<select  id="00N0o00000Mfsvm" name="00N0o00000Mfsvm" title="日本語レベル">
-  <option value="">--なし--</option>
-  <option value="N5相当（基本的な日本語をある程度理解することができる）">beginner`s level</option>
-  <option value="N4相当（基本的な日本語を理解することができる）">beginner`s level to Everyday level</option>
-  <option value="N3相当（日常的な場面で使われる日本語をある程度理解することができる）">Everyday level to Bussiness level</option>
-  <option value="N2相当（日常的な場面で使われる日本語の理解に加え、より幅広い場面で使われる日本語をある程度理解することができる）">Bussiness level</option>
-  <option value="N1相当（幅広い場面で使われる日本語を理解することができる）">Native level</option>
-</select><br>
-
-CTIC Japanese Language School:
-<select required required id="00N0o00000Mfswk" name="00N0o00000Mfswk" title="CTIC日本語教室">
-  <option value="NotKnow">Do Not Know</option>
-  <option value="NotAttend">Do Not Attend</option>
-  <option value="Attending">Attending</option>
-  <option value="DroppedOut">Dropped Out</option>
-  <option value="Completed">Completed</option>
-</select><br>
-
-DAIKI Japanese Language School:
-<select required id="00N0o00000Mfswu" name="00N0o00000Mfswu" title="DAIKI日本語教室">
-  <option value="NotKnow">Do Not Know</option>
-  <option value="NotAttend">Do Not Attend</option>
-  <option value="Attending">Attending</option>
-  <option value="DroppedOut">Dropped Out</option>
-  <option value="Completed">Completed</option>
-</select>
-<br>
-
-English Language Level:
-<select required id="00N0o00000MfvIO" name="00N0o00000MfvIO" title="英語レベル">
-  <option value="NotAtAll">Not at All</option>
-  <option value="LittleABit">Little a Bit</option>
-  <option value="DailyLife">Daily Life</option>
-  <option value="Business">Business</option>
-  <option value="Native">Native</option>
-</select>
-<br>
-
-<br>
-
-Do you have work permission from the Japanese Government? If yes, put a check mark.=>
-<input id="00N0o00000Mfsh6" name="00N0o00000Mfsh6" type="checkbox" value="1" /><br>
-<!--
-When did you or are you scheduled to get the work permission?
-<p>
-<select id="00N0o00000MfshB" name="00N0o00000MfshB" title="就労許可取得（予定）年">
-  <option value=""></option>
-  <option value="1991">1991</option>
-  <option value="1992">1992</option>
-  <option value="1993">1993</option>
-  <option value="1994">1994</option>
-  <option value="1995">1995</option>
-  <option value="1996">1996</option>
-  <option value="1997">1997</option>
-  <option value="1998">1998</option>
-  <option value="1999">1999</option>
-  <option value="2000">2000</option>
-  <option value="2001">2001</option>
-  <option value="2002">2002</option>
-  <option value="2003">2003</option>
-  <option value="2004">2004</option>
-  <option value="2005">2005</option>
-  <option value="2006">2006</option>
-  <option value="2007">2007</option>
-  <option value="2008">2008</option>
-  <option value="2009">2009</option>
-  <option value="2010">2010</option>
-  <option value="2011">2011</option>
-  <option value="2012">2012</option>
-  <option value="2013">2013</option>
-  <option value="2014">2014</option>
-  <option value="2015">2015</option>
-  <option value="2016">2016</option>
-  <option value="2017">2017</option>
-  <option value="2018">2018</option>
-  <option value="2019">2019</option>
-  <option value="2020">2020</option>
-  <option value="2021">2021</option>
-  <option value="2022">2022</option>
-  <option value="2023">2023</option>
-  <option value="2024">2024</option>
-  <option value="2025">2025</option>
-  <option value="2026">2026</option>
-  <option value="2027">2027</option>
-  <option value="2028">2028</option>
-  <option value="2029">2029</option>
-  <option value="2030">2030</option>
-</select>
-</p>
-
-<select  id="00N0o00000MfshG" name="00N0o00000MfshG" title="就労許可取得（予定）月">
-  <option value=""></option>
-  <option value="1月">Jan.</option>
-  <option value="2月">Feb.</option>
-  <option value="3月">Mar.</option>
-  <option value="4月">Apr.</option>
-  <option value="5月">May</option>
-  <option value="6月">Jun</option>
-  <option value="7月">July</option>
-  <option value="8月">Aug.</option>
-  <option value="9月">Sep.</option>
-  <option value="10月">Oct.</option>
-  <option value="11月">Nov.</option>
-  <option value="12月">Dec.</option>
-</select><br> -->
-
-Do you have a driver licence valid in Japan? If yes, put a check mark.=>
-<input  id="00N0o00000Mfqug" name="00N0o00000Mfqug" type="checkbox" value="1" /><br>
-
-Licences and Certificates:
-<textarea  id="00N0o00000MfogS" name="00N0o00000MfogS" type="text" wrap="soft"></textarea><br>
-
-<br>
+  <h2>Migration</h2>
+    <label>Date of Your Immigration to Japan (yyyy/mm/dd):</label>
+      <input   id="00N0o00000MfvJb" name="00N0o00000MfvJb" required size="12" type="date" /><br>
+      Your Current Residence Status:
+  <select required  id="00N0o00000MfvLc" name="00N0o00000MfvLc" title="在留資格">
+    <option value=""></option>
+    <!-- <option value="Diplomat">Diplomat</option>
+    <option value="Official">Official</option>
+    <option value="Professor">Professor</option>
+    <option value="Artist">Artist</option>
+    <option value="ReligiousActivities">ReligiousActivities</option>
+    <option value="Journalist">Journalist</option>
+    <option value="HighlySkilledProfessional(1)">HighlySkilledProfessional(1)</option>
+    <option value="HighlySkilledProfessional(2)">HighlySkilledProfessional(2)</option>
+    <option value="BusinessManager">BusinessManager</option>
+    <option value="Legal/AccountingServices">Legal/AccountingServices</option>
+    <option value="MedicalServices">MedicalServices</option>
+    <option value="Researcher">Researcher</option>
+    <option value="Instructor">Instructor</option>
+    <option value="Engineer/SpecialistInHumanities/InternationalServices">Engineer/SpecialistInHumanities/InternationalServices</option>
+    <option value="Intra-CompanyTransferee">Intra-CompanyTransferee</option>
+    <option value="NursingCare">NursingCare</option>
+    <option value="Entertainer">Entertainer</option>
+    <option value="SkilledLabor">SkilledLabor</option>
+    <option value="TechnicalInternTraining(1)">TechnicalInternTraining(1)</option>
+    <option value="TechnicalInternTraining(2)">TechnicalInternTraining(2)</option>
+    <option value="TechnicalInternTraining(3)">TechnicalInternTraining(3)</option>
+    <option value="SpecifiedSkills(1)">SpecifiedSkills(1)</option>
+    <option value="SpecifiedSkills(2)">SpecifiedSkills(2)</option>
+    <option value="CulturalActivities">CulturalActivities</option> -->
+    <option value="TemporaryVisitor">TemporaryVisitor</option>
+    <option value="Student">Student</option>
+    <!-- <option value="Trainee">Trainee</option> -->
+    <!-- <option value="Dependent">Dependent</option> -->
+    <option value="DesignatedActivities">DesignatedActivities</option>
+    <option value="PermanentResident">PermanentResident</option>
+    <!-- <option value="SpouseOrChildOfJapaneseNational">SpouseOrChildOfJapaneseNational</option>
+    <option value="SpouseOrChildOfPermanentResident">SpouseOrChildOfPermanentResident</option> -->
+    <option value="LongTermResident">LongTermResident</option>
+    <option value="No Residence Status">No Residence Status</option>
+    <option value="Others">Others</option>
+  </select><br><br>
+    <label>Times of Applications for Refugee Recognition (the refugee status) in Japan:</label>
+      <select   id="00N0o00000MfvKK" name="00N0o00000MfvKK" required title="難民認定申請回数">
+        <option value="0回">Never</option>
+        <option value="1回">Once</option>
+        <option value="2回">Twice</option>
+        <option value="3回以上">Three Times or More</option>
+      </select><br>
+    <label>Date of the Newest Application (yyyy/mm/dd):</label>
+      <input  id="00N0o00000MfvKZ" name="00N0o00000MfvKZ" required size="12" type="date" /><br>
+    <label>Status or Result of the Newest Application:</label>
+      <select   id="00N0o00000MfvLN" name="00N0o00000MfvLN" required title="難民認定申請状況（最新）">
+        <option value=""></option>
+        <option value="申請中">In the Application Process</option>
+        <option value="不認定">Denial (or Not Recognized)</option>
+        <option value="認定">Approval (or Recognized)</option>
+        <option value="人道配慮">Special Permission to Stay for the Humanitarian Reason</option>
+        <option value="異議申立中">In the Objection Process</option>
+        <option value="不認定処分取消訴訟中">In the Litigation for the Revocation of the Denial Disposition</option>
+      </select><br><br>
+    Do you have work permission from the Japanese Government? If yes, put a check mark.=>
+      <input id="00N0o00000Mfsh6" name="00N0o00000Mfsh6" type="checkbox" value="1" />
+</div>
 
 <div class="FinalEducationalBackground">
-
-<hr style="border:1px dotted #000000;"><p><strong>You've finished 75%!!</strong>Keep going!!</p>
-<h2>Final Educational Background</h2>
-Year of Enrollment
-<select required  id="00N0o00000MgLVs" name="00N0o00000MgLVs" title="入学年">
-  <option value=""></option>
-  <option value="2005">2005</option>
-  <option value="2006">2006</option>
-  <option value="2007">2007</option>
-  <option value="2008">2008</option>
-  <option value="2009">2009</option>
-  <option value="2010">2010</option>
-  <option value="2011">2011</option>
-  <option value="2012">2012</option>
-  <option value="2013">2013</option>
-  <option value="2014">2014</option>
-  <option value="2015">2015</option>
-  <option value="2016">2016</option>
-  <option value="2017">2017</option>
-  <option value="2018">2018</option>
-  <option value="2019">2019</option>
-  <option value="2020">2020</option>
-  <option value="2021">2021</option>
-  <option value="2022">2022</option>
-  <option value="2023">2023</option>
-  <option value="2024">2024</option>
-  <option value="2025">2025</option>
-  <!-- <option value="2026">2026</option>
-  <option value="2027">2027</option>
-  <option value="2028">2028</option>
-  <option value="2029">2029</option>
-  <option value="2030">2030</option>
-  <option value="2031">2031</option>
-  <option value="2032">2032</option>
-  <option value="2033">2033</option>
-  <option value="2034">2034</option>
-  <option value="2035">2035</option>
-  <option value="2036">2036</option>
-  <option value="2037">2037</option>
-  <option value="2038">2038</option>
-  <option value="2039">2039</option> -->
-</select>
-
-
-Month of Enrollment
-
-<select required  id="00N0o00000MgLVx" name="00N0o00000MgLVx" title="入学月">
-  <option value=""></option>
-  <option value="1月">Jan.</option>
-  <option value="2月">Feb.</option>
-  <option value="3月">Mar.</option>
-  <option value="4月">Apr.</option>
-  <option value="5月">May</option>
-  <option value="6月">Jun</option>
-  <option value="7月">July</option>
-  <option value="8月">Aug.</option>
-  <option value="9月">Sep.</option>
-  <option value="10月">Oct.</option>
-  <option value="11月">Nov.</option>
-  <option value="12月">Dec.</option>
-</select>
-
-Year of Graduation
-
-<select required id="00N0o00000MfwVO" name="00N0o00000MfwVO" title="卒業・修了・退学年">
-  <option value=""></option>
-  <option value="">Current</option>
-  <option value="2005">2005</option>
-  <option value="2006">2006</option>
-  <option value="2007">2007</option>
-  <option value="2008">2008</option>
-  <option value="2009">2009</option>
-  <option value="2010">2010</option>
-  <option value="2011">2011</option>
-  <option value="2012">2012</option>
-  <option value="2013">2013</option>
-  <option value="2014">2014</option>
-  <option value="2015">2015</option>
-  <option value="2016">2016</option>
-  <option value="2017">2017</option>
-  <option value="2018">2018</option>
-  <option value="2019">2019</option>
-  <option value="2020">2020</option>
-  <option value="2021">2021</option>
-  <option value="2022">2022</option>
-  <option value="2023">2023</option>
-  <option value="2024">2024</option>
-  <option value="2025">2025</option>
-  <!-- <option value="2010">2010</option>
-  <option value="2011">2011</option>
-  <option value="2012">2012</option>
-  <option value="2013">2013</option>
-  <option value="2014">2014</option>
-  <option value="2015">2015</option>
-  <option value="2016">2016</option>
-  <option value="2017">2017</option>
-  <option value="2018">2018</option>
-  <option value="2019">2019</option>
-  <option value="2020">2020</option>
-  <option value="2021">2021</option>
-  <option value="2022">2022</option>
-  <option value="2023">2023</option>
-  <option value="2024">2024</option>
-  <option value="2025">2025</option>
-  <option value="2026">2026</option>
-  <option value="2027">2027</option>
-  <option value="2028">2028</option>
-  <option value="2029">2029</option>
-  <option value="2030">2030</option>
-  <option value="2031">2031</option>
-  <option value="2032">2032</option>
-  <option value="2033">2033</option>
-  <option value="2034">2034</option>
-  <option value="2035">2035</option>
-  <option value="2036">2036</option>
-  <option value="2037">2037</option>
-  <option value="2038">2038</option>
-  <option value="2039">2039</option> -->
-</select>
-
-Month of Graduation
-
-<select required  id="00N0o00000MfwVT" name="00N0o00000MfwVT" title="卒業・修了・退学月">
-  <option value=""></option>
-  <option value="1月">Jan.</option>
-  <option value="2月">Feb.</option>
-  <option value="3月">Mar.</option>
-  <option value="4月">Apr.</option>
-  <option value="5月">May</option>
-  <option value="6月">Jun</option>
-  <option value="7月">July</option>
-  <option value="8月">Aug.</option>
-  <option value="9月">Sep.</option>
-  <option value="10月">Oct.</option>
-  <option value="11月">Nov.</option>
-  <option value="12月">Dec.</option>
-</select>
-
-Current Status
-<select required  id="00N0o00000MfwVJ" name="00N0o00000MfwVJ" title="在籍・卒業・修了・退学" >
-  <option value="" ></option>
-  <option value="在籍中">Attending</option>
-  <option value="卒業">Graduated</option>
-  <option value="卒業見込">Scheduled to Graduate</option>
-  <option value="退学">Quitted</option>
-</select><br>
-
-Type of School:
-<select required id="00N0o00000MfwUa" name="00N0o00000MfwUa" title="学校分類">
-  <option value="" disabled selected></option>
-  <option value="小学校">Elementary School</option>
-  <option value="中学校">Junior High School</option>
-  <option value="高等学校">High School</option>
-  <option value="専門学校">Vocational School(Speciality School)</option>
-  <option value="短期大学">Junior College</option>
-  <option value="大学">Bachelor/University</option>
-  <option value="大学院">Master/Graduate School</option>
-  <option value="その他">else</option>
-</select><br>
-
-School Name(please write full name):
-<input required  id="00N0o00000MfwUf" maxlength="40" name="00N0o00000MfwUf" size="20" type="text" /><br>
-
-Country of School:
-<select required  id="00N0o00000MfwUk" name="00N0o00000MfwUk" title="所在国">
-  <option value="日本">Japan</option>
-  <option value="アブハジア">Abkhazia</option>
-  <option value="アフガニスタン">Afghanistan</option>
-  <option value="アルバニア">Albania</option>
-  <option value="アルジェリア">Algeria</option>
-  <option value="アンドラ">Andorra</option>
-  <option value="アンゴラ">Angola</option>
-  <option value="アンティグア・バーブーダ">Antigua and Barbuda</option>
-  <option value="アルゼンチン">Argentina</option>
-  <option value="アルメニア">Armenia</option>
-  <option value="オーストラリア">Australia</option>
-  <option value="オーストリア">Austria</option>
-  <option value="アゼルバイジャン">Azerbaijan</option>
-  <option value="バハマ">Bahamas</option>
-  <option value="バーレーン">Bahrain</option>
-  <option value="バングラデシュ">Bangladesh</option>
-  <option value="バルバドス">Barbados</option>
-  <option value="ベラルーシ">Belarus</option>
-  <option value="ベルギー">Belgium</option>
-  <option value="ベリーズ">Belize</option>
-  <option value="ベナン">Benin</option>
-  <option value="ブータン">Bhutan</option>
-  <option value="ボリビア">Bolivia</option>
-  <option value="ボスニア・ヘルツェゴビナ">Bosnia and Herzegovina</option>
-  <option value="ボツワナ">Botswana</option>
-  <option value="ブラジル">Brazil</option>
-  <option value="ブルネイ">Brunei Darussalam</option>
-  <option value="ブルガリア">Bulgaria</option>
-  <option value="ブルキナファソ">Burkina Faso</option>
-  <option value="ブルンジ">Burundi</option>
-  <option value="カンボジア">Cambodia</option>
-  <option value="カメルーン">Cameroon</option>
-  <option value="カナダ">Canada</option>
-  <option value="カーボベルデ">Cape Verde</option>
-  <option value="中央アフリカ共和国">Central African Republic</option>
-  <option value="チャド">Chad</option>
-  <option value="チリ">Chile</option>
-  <option value="中国">China</option>
-  <option value="コロンビア">Colombia</option>
-  <option value="コモロ">Comoros</option>
-  <option value="クック諸島">Cook Islands</option>
-  <option value="コソボ">Cosovo</option>
-  <option value="コスタリカ">Costa Rica</option>
-  <option value="コートジボワール">Cote d’Ivoire</option>
-  <option value="クロアチア">Croatia</option>
-  <option value="キューバ">Cuba</option>
-  <option value="キプロス">Cyprus</option>
-  <option value="チェコ">Czech Republic</option>
-  <option value="コンゴ民主共和国">Democratic Republic of the Congo</option>
-  <option value="デンマーク">Denmark</option>
-  <option value="ジブチ">Djibouti</option>
-  <option value="ドミニカ国">Dominica</option>
-  <option value="ドミニカ共和国">Dominican Republic</option>
-  <option value="エクアドル">Ecuador</option>
-  <option value="エジプト">Egypt</option>
-  <option value="エルサルバドル">El Salvador</option>
-  <option value="赤道ギニア">Equatorial Guinea</option>
-  <option value="エリトリア">Eritrea</option>
-  <option value="エストニア">Estonia</option>
-  <option value="エチオピア">Ethiopia</option>
-  <option value="フィジー">Fiji</option>
-  <option value="フィンランド">Finland</option>
-  <option value="フランス">France</option>
-  <option value="ガボン">Gabon</option>
-  <option value="ガンビア">Gambia</option>
-  <option value="ジョージア">Georgia</option>
-  <option value="ドイツ">Germany</option>
-  <option value="ガーナ">Ghana</option>
-  <option value="ギリシャ">Greece</option>
-  <option value="グレナダ">Grenada</option>
-  <option value="グアテマラ">Guatemala</option>
-  <option value="ギニア">Guinea</option>
-  <option value="ギニアビサウ">Guinea-Bissau</option>
-  <option value="ガイアナ">Guyana</option>
-  <option value="ハイチ">Haiti</option>
-  <option value="ホンジュラス">Honduras</option>
-  <option value="ハンガリー">Hungary</option>
-  <option value="アイスランド">Iceland</option>
-  <option value="インド">India</option>
-  <option value="インドネシア">Indonesia</option>
-  <option value="イラン">Iran</option>
-  <option value="イラク">Iraq</option>
-  <option value="アイルランド">Ireland</option>
-  <option value="イスラエル">Israel</option>
-  <option value="イタリア">Italy</option>
-  <option value="ジャマイカ">Jamaica</option>
-  <option value="日本">Japan</option>
-  <option value="ヨルダン">Jordan</option>
-  <option value="カザフスタン">Kazakhstan</option>
-  <option value="ケニア">Kenya</option>
-  <option value="キリバス">Kiribati</option>
-  <option value="クウェート">Kuwait</option>
-  <option value="キルギス">Kyrgyz</option>
-  <option value="ラオス">Lao People’s Democratic Republic</option>
-  <option value="ラトビア">Latvia</option>
-  <option value="レバノン">Lebanon</option>
-  <option value="レソト">Lesotho</option>
-  <option value="リベリア">Liberia</option>
-  <option value="リビア">Libya</option>
-  <option value="リヒテンシュタイン">Liechtenstein</option>
-  <option value="リトアニア">Lithuania</option>
-  <option value="ルクセンブルク">Luxembourg</option>
-  <option value="マダガスカル">Madagascar</option>
-  <option value="マラウイ">Malawi</option>
-  <option value="マレーシア">Malaysia</option>
-  <option value="モルディブ">Maldives</option>
-  <option value="マリ">Mali</option>
-  <option value="マルタ">Malta</option>
-  <option value="マーシャル諸島">Marshall Islands</option>
-  <option value="モーリタニア">Mauritania</option>
-  <option value="モーリシャス">Mauritius</option>
-  <option value="メキシコ">Mexico</option>
-  <option value="ミクロネシア連邦">Micronesia</option>
-  <option value="モナコ">Monaco</option>
-  <option value="モンゴル">Mongolia</option>
-  <option value="モンテネグロ">Montenegro</option>
-  <option value="モロッコ">Morocco</option>
-  <option value="モザンビーク">Mozambique</option>
-  <option value="ミャンマー">Myanmar</option>
-  <option value="ナゴルノ・カラバフ">Nagorno-Karabakh Republic</option>
-  <option value="ナミビア">Namibia</option>
-  <option value="ナウル">Nauru</option>
-  <option value="ネパール">Nepal</option>
-  <option value="オランダ">Netherlands</option>
-  <option value="ニュージーランド">New Zealand</option>
-  <option value="ニカラグア">Nicaragua</option>
-  <option value="ニジェール">Niger</option>
-  <option value="ナイジェリア">Nigeria</option>
-  <option value="ニウエ">Niue</option>
-  <option value="北キプロス">North Cyprus</option>
-  <option value="北朝鮮">North Korea</option>
-  <option value="ノルウェー">Norway</option>
-  <option value="オマーン">Oman</option>
-  <option value="パキスタン">Pakistan</option>
-  <option value="パラオ">Palau</option>
-  <option value="パレスチナ">Palestina</option>
-  <option value="パナマ">Panama</option>
-  <option value="パプアニューギニア">Papua New Guinea</option>
-  <option value="パラグアイ">Paraguay</option>
-  <option value="ペルー">Peru</option>
-  <option value="フィリピン">Philippines</option>
-  <option value="ポーランド">Poland</option>
-  <option value="ポルトガル">Portugal</option>
-  <option value="沿ドニエストル">Pridnestrovian Moldavian Republic</option>
-  <option value="カタール">Qatar</option>
-  <option value="モルドバ">Republic of Moldova</option>
-  <option value="コンゴ共和国">Republic of the Congo</option>
-  <option value="ルーマニア">Romania</option>
-  <option value="ロシア">Russia</option>
-  <option value="ルワンダ">Rwanda</option>
-  <option value="セントクリストファー・ネイビス">Saint Kitts and Nevis</option>
-  <option value="セントルシア">Saint Lucia</option>
-  <option value="セントビンセントおよびグレナディーン諸島">Saint Vincent and the Grenadines</option>
-  <option value="サモア">Samoa</option>
-  <option value="サンマリノ">San Marino</option>
-  <option value="サントメ・プリンシペ">Sao Tome and Principe</option>
-  <option value="サウジアラビア">Saudi Arabia</option>
-  <option value="セネガル">Senegal</option>
-  <option value="セルビア">Serbia</option>
-  <option value="セーシェル">Seychelles</option>
-  <option value="シエラレオネ">Sierra Leone</option>
-  <option value="シンガポール">Singapore</option>
-  <option value="スロバキア">Slovakia</option>
-  <option value="スロベニア">Slovenia</option>
-  <option value="ソロモン諸島">Solomon Islands</option>
-  <option value="ソマリア">Somalia</option>
-  <option value="ソマリランド">Somaliland </option>
-  <option value="南アフリカ">South Africa</option>
-  <option value="韓国">South Korea</option>
-  <option value="南オセチア">South Ossetia</option>
-  <option value="南スーダン">South Sudan</option>
-  <option value="スペイン">Spain</option>
-  <option value="スリランカ">Sri Lanka</option>
-  <option value="スーダン">Sudan</option>
-  <option value="スリナム">Suriname</option>
-  <option value="スワジランド">Swaziland</option>
-  <option value="スウェーデン">Sweden</option>
-  <option value="スイス">Switzerland</option>
-  <option value="シリア">Syria</option>
-  <option value="台湾">Taiwan</option>
-  <option value="タジキスタン">Tajikistan</option>
-  <option value="タイ">Thailand</option>
-  <option value="マケドニア旧ユーゴスラビア共和国">The formar Yugoslav Republic of Macedonia</option>
-  <option value="東ティモール">Timor Leste</option>
-  <option value="トーゴ">Togo</option>
-  <option value="トンガ">Tonga</option>
-  <option value="トリニダード・トバゴ">Trinidad and Tobago</option>
-  <option value="チュニジア">Tunisia</option>
-  <option value="トルコ">Turkey</option>
-  <option value="トルクメニスタン">Turkmenistan</option>
-  <option value="ツバル">Tuvalu</option>
-  <option value="ウガンダ">Uganda</option>
-  <option value="ウクライナ">Ukraine</option>
-  <option value="アラブ首長国連邦">United Arab Emirates</option>
-  <option value="イギリス">United Kingdom</option>
-  <option value="タンザニア">United of Republic of Tanzania</option>
-  <option value="アメリカ">United States</option>
-  <option value="ウルグアイ">Uruguay</option>
-  <option value="ウズベキスタン">Uzbekistan</option>
-  <option value="バヌアツ">Vanuatu</option>
-  <option value="バチカン">Vatican</option>
-  <option value="ベネズエラ">Venezuela</option>
-  <option value="ベトナム">Viet Nam</option>
-  <option value="西サハラ">Western Sahara</option>
-  <option value="イエメン">Yemen</option>
-  <option value="ザンビア">Zambia</option>
-  <option value="ジンバブエ">Zimbabwe</option>
-  <option value="">else</option>
-</select><br>
-
-Faculty:
-<input  id="00N0o00000MfwUp" maxlength="50" name="00N0o00000MfwUp" size="20" type="text" /><br>
-<!--
-Department:
-<input  id="00N0o00000MfwUu" maxlength="50" name="00N0o00000MfwUu" size="20" type="text" /><br> -->
-
-Course (in case of graduate schol):
-<select  id="00N0o00000MfwUz" name="00N0o00000MfwUz" title="課程">
-  <option value=""></option>
-  <option value="修士課程（MBAを除く）">Master (excluding MBA)</option>
-  <option value="MBA">MBA</option>
-  <option value="博士課程">Doctor</option>
-</select><br>
-
-Discipline:
-<select  id="00N0o00000MfwV4" name="00N0o00000MfwV4" title="専門領域">
-  <option value=""></option>
-  <option value="数学">Mathematics</option>
-  <option value="物理学">Physics</option>
-  <option value="工学">Engineering</option>
-  <option value="化学">Chemicals</option>
-  <option value="生物学">Biology</option>
-  <option value="天文学">Astronomy</option>
-  <option value="医学">Medicine</option>
-  <option value="建築学">Architecture</option>
-  <option value="心理学">Psychology</option>
-  <option value="社会学">Sociology</option>
-  <option value="教育学">Education</option>
-  <option value="法学">Law</option>
-  <option value="政治学">Politics</option>
-  <option value="経済学">Economics</option>
-  <option value="経営学">Management</option>
-  <option value="哲学">Philosophy</option>
-  <option value="芸術学">Art</option>
-  <option value="文学">Literature</option>
-  <option value="言語学">Linguistics</option>
-  <option value="歴史学">History</option>
-  <option value="人類学">Anthoropology</option>
-  <option value="その他">else</option>
-</select><br>
-
-<!-- Discipline Description:
-<textarea  id="00N0o00000MfwV9" name="00N0o00000MfwV9" type="text" wrap="soft"></textarea><br> -->
-
-Thesis or Research Theme:
-<textarea  id="00N0o00000MfwVE" name="00N0o00000MfwVE" type="text" wrap="soft"></textarea><br>
-
+  <h2>Final Educational Background</h2>
+  <label>Year of Graduation:</label>
+    <select id="00N0o00000MfwVO" name="00N0o00000MfwVO" required title="卒業・修了・退学年">
+      <option value=""></option>
+      <option value="">Current</option>
+      <option value="2005">2005</option>
+      <option value="2006">2006</option>
+      <option value="2007">2007</option>
+      <option value="2008">2008</option>
+      <option value="2009">2009</option>
+      <option value="2010">2010</option>
+      <option value="2011">2011</option>
+      <option value="2012">2012</option>
+      <option value="2013">2013</option>
+      <option value="2014">2014</option>
+      <option value="2015">2015</option>
+      <option value="2016">2016</option>
+      <option value="2017">2017</option>
+      <option value="2018">2018</option>
+      <option value="2019">2019</option>
+      <option value="2020">2020</option>
+      <option value="2021">2021</option>
+      <option value="2022">2022</option>
+      <option value="2023">2023</option>
+      <option value="2024">2024</option>
+      <option value="2025">2025</option>
+      <!-- <option value="2026">2026</option>
+      <option value="2027">2027</option>
+      <option value="2028">2028</option>
+      <option value="2029">2029</option>
+      <option value="2030">2030</option>
+      <option value="2031">2031</option>
+      <option value="2032">2032</option>
+      <option value="2033">2033</option>
+      <option value="2034">2034</option>
+      <option value="2035">2035</option>
+      <option value="2036">2036</option>
+      <option value="2037">2037</option>
+      <option value="2038">2038</option>
+      <option value="2039">2039</option> -->
+    </select><br>
+  <label>Status</label>
+    <select   id="00N0o00000MfwVJ" name="00N0o00000MfwVJ" title="在籍・卒業・修了・退学" >
+      <option value="" ></option>
+      <option value="在籍中">Attending</option>
+      <option value="卒業">Graduated</option>
+      <option value="卒業見込">Scheduled to Graduate</option>
+      <option value="退学">Quitted</option>
+    </select><br>
+  <label>Type of School:</label>
+    <select  id="00N0o00000MfwUa" name="00N0o00000MfwUa" required title="学校分類">
+      <option value="" disabled selected></option>
+      <option value="小学校">Elementary School</option>
+      <option value="中学校">Junior High School</option>
+      <option value="高等学校">High School</option>
+      <option value="専門学校">Vocational School</option>
+      <option value="短期大学">Junior College</option>
+      <option value="大学">University/College</option>
+      <option value="大学院">Graduate School</option>
+      <option value="その他">else</option>
+    </select><br>
+  <label>School Name (Please Write Full Name):</label>
+    <input   id="00N0o00000MfwUf" maxlength="40" name="00N0o00000MfwUf" required size="20" type="text" /><br>
+  <label>Country of School:</label>
+    <select   id="00N0o00000MfwUk" name="00N0o00000MfwUk" required title="所在国">
+      <option value="日本">Japan</option>
+      <option value="アブハジア">Abkhazia</option>
+      <option value="アフガニスタン">Afghanistan</option>
+      <option value="アルバニア">Albania</option>
+      <option value="アルジェリア">Algeria</option>
+      <option value="アンドラ">Andorra</option>
+      <option value="アンゴラ">Angola</option>
+      <option value="アンティグア・バーブーダ">Antigua and Barbuda</option>
+      <option value="アルゼンチン">Argentina</option>
+      <option value="アルメニア">Armenia</option>
+      <option value="オーストラリア">Australia</option>
+      <option value="オーストリア">Austria</option>
+      <option value="アゼルバイジャン">Azerbaijan</option>
+      <option value="バハマ">Bahamas</option>
+      <option value="バーレーン">Bahrain</option>
+      <option value="バングラデシュ">Bangladesh</option>
+      <option value="バルバドス">Barbados</option>
+      <option value="ベラルーシ">Belarus</option>
+      <option value="ベルギー">Belgium</option>
+      <option value="ベリーズ">Belize</option>
+      <option value="ベナン">Benin</option>
+      <option value="ブータン">Bhutan</option>
+      <option value="ボリビア">Bolivia</option>
+      <option value="ボスニア・ヘルツェゴビナ">Bosnia and Herzegovina</option>
+      <option value="ボツワナ">Botswana</option>
+      <option value="ブラジル">Brazil</option>
+      <option value="ブルネイ">Brunei Darussalam</option>
+      <option value="ブルガリア">Bulgaria</option>
+      <option value="ブルキナファソ">Burkina Faso</option>
+      <option value="ブルンジ">Burundi</option>
+      <option value="カンボジア">Cambodia</option>
+      <option value="カメルーン">Cameroon</option>
+      <option value="カナダ">Canada</option>
+      <option value="カーボベルデ">Cape Verde</option>
+      <option value="中央アフリカ共和国">Central African Republic</option>
+      <option value="チャド">Chad</option>
+      <option value="チリ">Chile</option>
+      <option value="中国">China</option>
+      <option value="コロンビア">Colombia</option>
+      <option value="コモロ">Comoros</option>
+      <option value="クック諸島">Cook Islands</option>
+      <option value="コソボ">Cosovo</option>
+      <option value="コスタリカ">Costa Rica</option>
+      <option value="コートジボワール">Cote d’Ivoire</option>
+      <option value="クロアチア">Croatia</option>
+      <option value="キューバ">Cuba</option>
+      <option value="キプロス">Cyprus</option>
+      <option value="チェコ">Czech Republic</option>
+      <option value="コンゴ民主共和国">Democratic Republic of the Congo</option>
+      <option value="デンマーク">Denmark</option>
+      <option value="ジブチ">Djibouti</option>
+      <option value="ドミニカ国">Dominica</option>
+      <option value="ドミニカ共和国">Dominican Republic</option>
+      <option value="エクアドル">Ecuador</option>
+      <option value="エジプト">Egypt</option>
+      <option value="エルサルバドル">El Salvador</option>
+      <option value="赤道ギニア">Equatorial Guinea</option>
+      <option value="エリトリア">Eritrea</option>
+      <option value="エストニア">Estonia</option>
+      <option value="エチオピア">Ethiopia</option>
+      <option value="フィジー">Fiji</option>
+      <option value="フィンランド">Finland</option>
+      <option value="フランス">France</option>
+      <option value="ガボン">Gabon</option>
+      <option value="ガンビア">Gambia</option>
+      <option value="ジョージア">Georgia</option>
+      <option value="ドイツ">Germany</option>
+      <option value="ガーナ">Ghana</option>
+      <option value="ギリシャ">Greece</option>
+      <option value="グレナダ">Grenada</option>
+      <option value="グアテマラ">Guatemala</option>
+      <option value="ギニア">Guinea</option>
+      <option value="ギニアビサウ">Guinea-Bissau</option>
+      <option value="ガイアナ">Guyana</option>
+      <option value="ハイチ">Haiti</option>
+      <option value="ホンジュラス">Honduras</option>
+      <option value="ハンガリー">Hungary</option>
+      <option value="アイスランド">Iceland</option>
+      <option value="インド">India</option>
+      <option value="インドネシア">Indonesia</option>
+      <option value="イラン">Iran</option>
+      <option value="イラク">Iraq</option>
+      <option value="アイルランド">Ireland</option>
+      <option value="イスラエル">Israel</option>
+      <option value="イタリア">Italy</option>
+      <option value="ジャマイカ">Jamaica</option>
+      <option value="日本">Japan</option>
+      <option value="ヨルダン">Jordan</option>
+      <option value="カザフスタン">Kazakhstan</option>
+      <option value="ケニア">Kenya</option>
+      <option value="キリバス">Kiribati</option>
+      <option value="クウェート">Kuwait</option>
+      <option value="キルギス">Kyrgyz</option>
+      <option value="ラオス">Lao People’s Democratic Republic</option>
+      <option value="ラトビア">Latvia</option>
+      <option value="レバノン">Lebanon</option>
+      <option value="レソト">Lesotho</option>
+      <option value="リベリア">Liberia</option>
+      <option value="リビア">Libya</option>
+      <option value="リヒテンシュタイン">Liechtenstein</option>
+      <option value="リトアニア">Lithuania</option>
+      <option value="ルクセンブルク">Luxembourg</option>
+      <option value="マダガスカル">Madagascar</option>
+      <option value="マラウイ">Malawi</option>
+      <option value="マレーシア">Malaysia</option>
+      <option value="モルディブ">Maldives</option>
+      <option value="マリ">Mali</option>
+      <option value="マルタ">Malta</option>
+      <option value="マーシャル諸島">Marshall Islands</option>
+      <option value="モーリタニア">Mauritania</option>
+      <option value="モーリシャス">Mauritius</option>
+      <option value="メキシコ">Mexico</option>
+      <option value="ミクロネシア連邦">Micronesia</option>
+      <option value="モナコ">Monaco</option>
+      <option value="モンゴル">Mongolia</option>
+      <option value="モンテネグロ">Montenegro</option>
+      <option value="モロッコ">Morocco</option>
+      <option value="モザンビーク">Mozambique</option>
+      <option value="ミャンマー">Myanmar</option>
+      <option value="ナゴルノ・カラバフ">Nagorno-Karabakh Republic</option>
+      <option value="ナミビア">Namibia</option>
+      <option value="ナウル">Nauru</option>
+      <option value="ネパール">Nepal</option>
+      <option value="オランダ">Netherlands</option>
+      <option value="ニュージーランド">New Zealand</option>
+      <option value="ニカラグア">Nicaragua</option>
+      <option value="ニジェール">Niger</option>
+      <option value="ナイジェリア">Nigeria</option>
+      <option value="ニウエ">Niue</option>
+      <option value="北キプロス">North Cyprus</option>
+      <option value="北朝鮮">North Korea</option>
+      <option value="ノルウェー">Norway</option>
+      <option value="オマーン">Oman</option>
+      <option value="パキスタン">Pakistan</option>
+      <option value="パラオ">Palau</option>
+      <option value="パレスチナ">Palestina</option>
+      <option value="パナマ">Panama</option>
+      <option value="パプアニューギニア">Papua New Guinea</option>
+      <option value="パラグアイ">Paraguay</option>
+      <option value="ペルー">Peru</option>
+      <option value="フィリピン">Philippines</option>
+      <option value="ポーランド">Poland</option>
+      <option value="ポルトガル">Portugal</option>
+      <option value="沿ドニエストル">Pridnestrovian Moldavian Republic</option>
+      <option value="カタール">Qatar</option>
+      <option value="モルドバ">Republic of Moldova</option>
+      <option value="コンゴ共和国">Republic of the Congo</option>
+      <option value="ルーマニア">Romania</option>
+      <option value="ロシア">Russia</option>
+      <option value="ルワンダ">Rwanda</option>
+      <option value="セントクリストファー・ネイビス">Saint Kitts and Nevis</option>
+      <option value="セントルシア">Saint Lucia</option>
+      <option value="セントビンセントおよびグレナディーン諸島">Saint Vincent and the Grenadines</option>
+      <option value="サモア">Samoa</option>
+      <option value="サンマリノ">San Marino</option>
+      <option value="サントメ・プリンシペ">Sao Tome and Principe</option>
+      <option value="サウジアラビア">Saudi Arabia</option>
+      <option value="セネガル">Senegal</option>
+      <option value="セルビア">Serbia</option>
+      <option value="セーシェル">Seychelles</option>
+      <option value="シエラレオネ">Sierra Leone</option>
+      <option value="シンガポール">Singapore</option>
+      <option value="スロバキア">Slovakia</option>
+      <option value="スロベニア">Slovenia</option>
+      <option value="ソロモン諸島">Solomon Islands</option>
+      <option value="ソマリア">Somalia</option>
+      <option value="ソマリランド">Somaliland </option>
+      <option value="南アフリカ">South Africa</option>
+      <option value="韓国">South Korea</option>
+      <option value="南オセチア">South Ossetia</option>
+      <option value="南スーダン">South Sudan</option>
+      <option value="スペイン">Spain</option>
+      <option value="スリランカ">Sri Lanka</option>
+      <option value="スーダン">Sudan</option>
+      <option value="スリナム">Suriname</option>
+      <option value="スワジランド">Swaziland</option>
+      <option value="スウェーデン">Sweden</option>
+      <option value="スイス">Switzerland</option>
+      <option value="シリア">Syria</option>
+      <option value="台湾">Taiwan</option>
+      <option value="タジキスタン">Tajikistan</option>
+      <option value="タイ">Thailand</option>
+      <option value="マケドニア旧ユーゴスラビア共和国">The formar Yugoslav Republic of Macedonia</option>
+      <option value="東ティモール">Timor Leste</option>
+      <option value="トーゴ">Togo</option>
+      <option value="トンガ">Tonga</option>
+      <option value="トリニダード・トバゴ">Trinidad and Tobago</option>
+      <option value="チュニジア">Tunisia</option>
+      <option value="トルコ">Turkey</option>
+      <option value="トルクメニスタン">Turkmenistan</option>
+      <option value="ツバル">Tuvalu</option>
+      <option value="ウガンダ">Uganda</option>
+      <option value="ウクライナ">Ukraine</option>
+      <option value="アラブ首長国連邦">United Arab Emirates</option>
+      <option value="イギリス">United Kingdom</option>
+      <option value="タンザニア">United of Republic of Tanzania</option>
+      <option value="アメリカ">United States</option>
+      <option value="ウルグアイ">Uruguay</option>
+      <option value="ウズベキスタン">Uzbekistan</option>
+      <option value="バヌアツ">Vanuatu</option>
+      <option value="バチカン">Vatican</option>
+      <option value="ベネズエラ">Venezuela</option>
+      <option value="ベトナム">Viet Nam</option>
+      <option value="西サハラ">Western Sahara</option>
+      <option value="イエメン">Yemen</option>
+      <option value="ザンビア">Zambia</option>
+      <option value="ジンバブエ">Zimbabwe</option>
+      <option value="">else</option>
+    </select><br>
+  <label>Faculty:</label>
+    <input  id="00N0o00000MfwUp" maxlength="50" name="00N0o00000MfwUp" size="20" type="text" /><br>
+  <label>Course (in case of graduate school):</label>
+    <select  id="00N0o00000MfwUz" name="00N0o00000MfwUz" title="課程">
+      <option value=""></option>
+      <option value="修士課程（MBAを除く）">Master (excluding MBA)</option>
+      <option value="MBA">MBA</option>
+      <option value="博士課程">Doctor</option>
+    </select><br>
 </div>
 
 <br>
 
 <div class="FinalJobExperience">
-<h2>Final Job Experience</h2>
-
-Name of Office & Company:
-<input id="00N0o00000MgKsg" maxlength="60" name="00N0o00000MgKsg" size="20" type="text" /><br>
-
-Country of Office:
-<select  id="00N0o00000MgKum" name="00N0o00000MgKum" title="事業所の所在国">
-  <option value="日本">Japan</option>
-  <option value="アブハジア">Abkhazia</option>
-  <option value="アフガニスタン">Afghanistan</option>
-  <option value="アルバニア">Albania</option>
-  <option value="アルジェリア">Algeria</option>
-  <option value="アンドラ">Andorra</option>
-  <option value="アンゴラ">Angola</option>
-  <option value="アンティグア・バーブーダ">Antigua and Barbuda</option>
-  <option value="アルゼンチン">Argentina</option>
-  <option value="アルメニア">Armenia</option>
-  <option value="オーストラリア">Australia</option>
-  <option value="オーストリア">Austria</option>
-  <option value="アゼルバイジャン">Azerbaijan</option>
-  <option value="バハマ">Bahamas</option>
-  <option value="バーレーン">Bahrain</option>
-  <option value="バングラデシュ">Bangladesh</option>
-  <option value="バルバドス">Barbados</option>
-  <option value="ベラルーシ">Belarus</option>
-  <option value="ベルギー">Belgium</option>
-  <option value="ベリーズ">Belize</option>
-  <option value="ベナン">Benin</option>
-  <option value="ブータン">Bhutan</option>
-  <option value="ボリビア">Bolivia</option>
-  <option value="ボスニア・ヘルツェゴビナ">Bosnia and Herzegovina</option>
-  <option value="ボツワナ">Botswana</option>
-  <option value="ブラジル">Brazil</option>
-  <option value="ブルネイ">Brunei Darussalam</option>
-  <option value="ブルガリア">Bulgaria</option>
-  <option value="ブルキナファソ">Burkina Faso</option>
-  <option value="ブルンジ">Burundi</option>
-  <option value="カンボジア">Cambodia</option>
-  <option value="カメルーン">Cameroon</option>
-  <option value="カナダ">Canada</option>
-  <option value="カーボベルデ">Cape Verde</option>
-  <option value="中央アフリカ共和国">Central African Republic</option>
-  <option value="チャド">Chad</option>
-  <option value="チリ">Chile</option>
-  <option value="中国">China</option>
-  <option value="コロンビア">Colombia</option>
-  <option value="コモロ">Comoros</option>
-  <option value="クック諸島">Cook Islands</option>
-  <option value="コソボ">Cosovo</option>
-  <option value="コスタリカ">Costa Rica</option>
-  <option value="コートジボワール">Cote d’Ivoire</option>
-  <option value="クロアチア">Croatia</option>
-  <option value="キューバ">Cuba</option>
-  <option value="キプロス">Cyprus</option>
-  <option value="チェコ">Czech Republic</option>
-  <option value="コンゴ民主共和国">Democratic Republic of the Congo</option>
-  <option value="デンマーク">Denmark</option>
-  <option value="ジブチ">Djibouti</option>
-  <option value="ドミニカ国">Dominica</option>
-  <option value="ドミニカ共和国">Dominican Republic</option>
-  <option value="エクアドル">Ecuador</option>
-  <option value="エジプト">Egypt</option>
-  <option value="エルサルバドル">El Salvador</option>
-  <option value="赤道ギニア">Equatorial Guinea</option>
-  <option value="エリトリア">Eritrea</option>
-  <option value="エストニア">Estonia</option>
-  <option value="エチオピア">Ethiopia</option>
-  <option value="フィジー">Fiji</option>
-  <option value="フィンランド">Finland</option>
-  <option value="フランス">France</option>
-  <option value="ガボン">Gabon</option>
-  <option value="ガンビア">Gambia</option>
-  <option value="ジョージア">Georgia</option>
-  <option value="ドイツ">Germany</option>
-  <option value="ガーナ">Ghana</option>
-  <option value="ギリシャ">Greece</option>
-  <option value="グレナダ">Grenada</option>
-  <option value="グアテマラ">Guatemala</option>
-  <option value="ギニア">Guinea</option>
-  <option value="ギニアビサウ">Guinea-Bissau</option>
-  <option value="ガイアナ">Guyana</option>
-  <option value="ハイチ">Haiti</option>
-  <option value="ホンジュラス">Honduras</option>
-  <option value="ハンガリー">Hungary</option>
-  <option value="アイスランド">Iceland</option>
-  <option value="インド">India</option>
-  <option value="インドネシア">Indonesia</option>
-  <option value="イラン">Iran</option>
-  <option value="イラク">Iraq</option>
-  <option value="アイルランド">Ireland</option>
-  <option value="イスラエル">Israel</option>
-  <option value="イタリア">Italy</option>
-  <option value="ジャマイカ">Jamaica</option>
-  <option value="日本">Japan</option>
-  <option value="ヨルダン">Jordan</option>
-  <option value="カザフスタン">Kazakhstan</option>
-  <option value="ケニア">Kenya</option>
-  <option value="キリバス">Kiribati</option>
-  <option value="クウェート">Kuwait</option>
-  <option value="キルギス">Kyrgyz</option>
-  <option value="ラオス">Lao People’s Democratic Republic</option>
-  <option value="ラトビア">Latvia</option>
-  <option value="レバノン">Lebanon</option>
-  <option value="レソト">Lesotho</option>
-  <option value="リベリア">Liberia</option>
-  <option value="リビア">Libya</option>
-  <option value="リヒテンシュタイン">Liechtenstein</option>
-  <option value="リトアニア">Lithuania</option>
-  <option value="ルクセンブルク">Luxembourg</option>
-  <option value="マダガスカル">Madagascar</option>
-  <option value="マラウイ">Malawi</option>
-  <option value="マレーシア">Malaysia</option>
-  <option value="モルディブ">Maldives</option>
-  <option value="マリ">Mali</option>
-  <option value="マルタ">Malta</option>
-  <option value="マーシャル諸島">Marshall Islands</option>
-  <option value="モーリタニア">Mauritania</option>
-  <option value="モーリシャス">Mauritius</option>
-  <option value="メキシコ">Mexico</option>
-  <option value="ミクロネシア連邦">Micronesia</option>
-  <option value="モナコ">Monaco</option>
-  <option value="モンゴル">Mongolia</option>
-  <option value="モンテネグロ">Montenegro</option>
-  <option value="モロッコ">Morocco</option>
-  <option value="モザンビーク">Mozambique</option>
-  <option value="ミャンマー">Myanmar</option>
-  <option value="ナゴルノ・カラバフ">Nagorno-Karabakh Republic</option>
-  <option value="ナミビア">Namibia</option>
-  <option value="ナウル">Nauru</option>
-  <option value="ネパール">Nepal</option>
-  <option value="オランダ">Netherlands</option>
-  <option value="ニュージーランド">New Zealand</option>
-  <option value="ニカラグア">Nicaragua</option>
-  <option value="ニジェール">Niger</option>
-  <option value="ナイジェリア">Nigeria</option>
-  <option value="ニウエ">Niue</option>
-  <option value="北キプロス">North Cyprus</option>
-  <option value="北朝鮮">North Korea</option>
-  <option value="ノルウェー">Norway</option>
-  <option value="オマーン">Oman</option>
-  <option value="パキスタン">Pakistan</option>
-  <option value="パラオ">Palau</option>
-  <option value="パレスチナ">Palestina</option>
-  <option value="パナマ">Panama</option>
-  <option value="パプアニューギニア">Papua New Guinea</option>
-  <option value="パラグアイ">Paraguay</option>
-  <option value="ペルー">Peru</option>
-  <option value="フィリピン">Philippines</option>
-  <option value="ポーランド">Poland</option>
-  <option value="ポルトガル">Portugal</option>
-  <option value="沿ドニエストル">Pridnestrovian Moldavian Republic</option>
-  <option value="カタール">Qatar</option>
-  <option value="モルドバ">Republic of Moldova</option>
-  <option value="コンゴ共和国">Republic of the Congo</option>
-  <option value="ルーマニア">Romania</option>
-  <option value="ロシア">Russia</option>
-  <option value="ルワンダ">Rwanda</option>
-  <option value="セントクリストファー・ネイビス">Saint Kitts and Nevis</option>
-  <option value="セントルシア">Saint Lucia</option>
-  <option value="セントビンセントおよびグレナディーン諸島">Saint Vincent and the Grenadines</option>
-  <option value="サモア">Samoa</option>
-  <option value="サンマリノ">San Marino</option>
-  <option value="サントメ・プリンシペ">Sao Tome and Principe</option>
-  <option value="サウジアラビア">Saudi Arabia</option>
-  <option value="セネガル">Senegal</option>
-  <option value="セルビア">Serbia</option>
-  <option value="セーシェル">Seychelles</option>
-  <option value="シエラレオネ">Sierra Leone</option>
-  <option value="シンガポール">Singapore</option>
-  <option value="スロバキア">Slovakia</option>
-  <option value="スロベニア">Slovenia</option>
-  <option value="ソロモン諸島">Solomon Islands</option>
-  <option value="ソマリア">Somalia</option>
-  <option value="ソマリランド">Somaliland </option>
-  <option value="南アフリカ">South Africa</option>
-  <option value="韓国">South Korea</option>
-  <option value="南オセチア">South Ossetia</option>
-  <option value="南スーダン">South Sudan</option>
-  <option value="スペイン">Spain</option>
-  <option value="スリランカ">Sri Lanka</option>
-  <option value="スーダン">Sudan</option>
-  <option value="スリナム">Suriname</option>
-  <option value="スワジランド">Swaziland</option>
-  <option value="スウェーデン">Sweden</option>
-  <option value="スイス">Switzerland</option>
-  <option value="シリア">Syria</option>
-  <option value="台湾">Taiwan</option>
-  <option value="タジキスタン">Tajikistan</option>
-  <option value="タイ">Thailand</option>
-  <option value="マケドニア旧ユーゴスラビア共和国">The formar Yugoslav Republic of Macedonia</option>
-  <option value="東ティモール">Timor Leste</option>
-  <option value="トーゴ">Togo</option>
-  <option value="トンガ">Tonga</option>
-  <option value="トリニダード・トバゴ">Trinidad and Tobago</option>
-  <option value="チュニジア">Tunisia</option>
-  <option value="トルコ">Turkey</option>
-  <option value="トルクメニスタン">Turkmenistan</option>
-  <option value="ツバル">Tuvalu</option>
-  <option value="ウガンダ">Uganda</option>
-  <option value="ウクライナ">Ukraine</option>
-  <option value="アラブ首長国連邦">United Arab Emirates</option>
-  <option value="イギリス">United Kingdom</option>
-  <option value="タンザニア">United of Republic of Tanzania</option>
-  <option value="アメリカ">United States</option>
-  <option value="ウルグアイ">Uruguay</option>
-  <option value="ウズベキスタン">Uzbekistan</option>
-  <option value="バヌアツ">Vanuatu</option>
-  <option value="バチカン">Vatican</option>
-  <option value="ベネズエラ">Venezuela</option>
-  <option value="ベトナム">Viet Nam</option>
-  <option value="西サハラ">Western Sahara</option>
-  <option value="イエメン">Yemen</option>
-  <option value="ザンビア">Zambia</option>
-  <option value="ジンバブエ">Zimbabwe</option>
-  <option value="">else</option>
-</select><br>
-
-Regular or Irregular Work?:
-<select id="00N0o00000MgKyj" name="00N0o00000MgKyj" title="常勤／非常勤">
-  <option value="" ></option>
-  <option value="常勤">Full Time</option>
-  <option value="非常勤">Part Time</option>
-</select><br>
-
-Job Description:
-<textarea  id="00N0o00000MgKwn" name="00N0o00000MgKwn" type="text" wrap="soft"></textarea><br>
-
-Period:
-From(Year)
-<select  id="00N0o00000MgKws" name="00N0o00000MgKws" title="開始年">
-  <option value=""></option>
-  <option value="2010">2010</option>
-  <option value="2011">2011</option>
-  <option value="2012">2012</option>
-  <option value="2013">2013</option>
-  <option value="2014">2014</option>
-  <option value="2015">2015</option>
-  <option value="2016">2016</option>
-  <option value="2017">2017</option>
-  <option value="2018">2018</option>
-  <option value="2019">2019</option>
-  <option value="2020">2020</option>
-  <option value="2021">2021</option>
-  <option value="2022">2022</option>
-  <option value="2023">2023</option>
-  <option value="2024">2024</option>
-  <option value="2025">2025</option>
-  <option value="2026">2026</option>
-  <option value="2027">2027</option>
-  <option value="2028">2028</option>
-  <option value="2029">2029</option>
-  <option value="2030">2030</option>
-  <option value="2031">2031</option>
-  <option value="2032">2032</option>
-  <option value="2033">2033</option>
-  <option value="2034">2034</option>
-  <option value="2035">2035</option>
-  <option value="2036">2036</option>
-  <option value="2037">2037</option>
-  <option value="2038">2038</option>
-  <option value="2039">2039</option>
-</select>
-,(Month)
-
-<select  id="00N0o00000MgKwx" name="00N0o00000MgKwx" title="開始月">
-  <option value=""></option>
-  <option value="1月">Jan.</option>
-  <option value="2月">Feb.</option>
-  <option value="3月">Mar.</option>
-  <option value="4月">Apr.</option>
-  <option value="5月">May</option>
-  <option value="6月">Jun</option>
-  <option value="7月">July</option>
-  <option value="8月">Aug.</option>
-  <option value="9月">Sep.</option>
-  <option value="10月">Oct.</option>
-  <option value="11月">Nov.</option>
-  <option value="12月">Dec.</option>
-</select>
-
-To(Year)
-
-<select  id="00N0o00000MgKyU" name="00N0o00000MgKyU" title="終了年">
-  <option value=""></option>
-  <option value="2010">2010</option>
-  <option value="2011">2011</option>
-  <option value="2012">2012</option>
-  <option value="2013">2013</option>
-  <option value="2014">2014</option>
-  <option value="2015">2015</option>
-  <option value="2016">2016</option>
-  <option value="2017">2017</option>
-  <option value="2018">2018</option>
-  <option value="2019">2019</option>
-  <option value="2020">2020</option>
-  <option value="2021">2021</option>
-  <option value="2022">2022</option>
-  <option value="2023">2023</option>
-  <option value="2024">2024</option>
-  <option value="2025">2025</option>
-  <option value="2026">2026</option>
-  <option value="2027">2027</option>
-  <option value="2028">2028</option>
-  <option value="2029">2029</option>
-  <option value="2030">2030</option>
-  <option value="2031">2031</option>
-  <option value="2032">2032</option>
-  <option value="2033">2033</option>
-  <option value="2034">2034</option>
-  <option value="2035">2035</option>
-  <option value="2036">2036</option>
-  <option value="2037">2037</option>
-  <option value="2038">2038</option>
-  <option value="2039">2039</option>
-</select>
-
-,(Month)
-
-<select  id="00N0o00000MgKyZ" name="00N0o00000MgKyZ" title="終了月">
-  <option value=""></option>
-  <option value="1月">Jan.</option>
-  <option value="2月">Feb.</option>
-  <option value="3月">Mar.</option>
-  <option value="4月">Apr.</option>
-  <option value="5月">May</option>
-  <option value="6月">Jun</option>
-  <option value="7月">July</option>
-  <option value="8月">Aug.</option>
-  <option value="9月">Sep.</option>
-  <option value="10月">Oct.</option>
-  <option value="11月">Nov.</option>
-  <option value="12月">Dec.</option>
-</select><br>
-
-Reason for Quitting
-<textarea  id="00N0o00000MgKye" name="00N0o00000MgKye" type="text" wrap="soft"></textarea><br>
-<p>All right!<br>
-You've completed to fill the form!<br>
-We really appliciate your efforts! Thank you so much!
-</p>
+  <h2>Final Job Experience</h2>
+  <label>Name of Office & Company:</label>
+    <input id="00N0o00000MgKsg" maxlength="60" name="00N0o00000MgKsg" size="20" type="text" /><br>
+  <label>Country of Office:</label>
+    <select  id="00N0o00000MgKum" name="00N0o00000MgKum" title="事業所の所在国">
+      <option value="日本">Japan</option>
+      <option value="アブハジア">Abkhazia</option>
+      <option value="アフガニスタン">Afghanistan</option>
+      <option value="アルバニア">Albania</option>
+      <option value="アルジェリア">Algeria</option>
+      <option value="アンドラ">Andorra</option>
+      <option value="アンゴラ">Angola</option>
+      <option value="アンティグア・バーブーダ">Antigua and Barbuda</option>
+      <option value="アルゼンチン">Argentina</option>
+      <option value="アルメニア">Armenia</option>
+      <option value="オーストラリア">Australia</option>
+      <option value="オーストリア">Austria</option>
+      <option value="アゼルバイジャン">Azerbaijan</option>
+      <option value="バハマ">Bahamas</option>
+      <option value="バーレーン">Bahrain</option>
+      <option value="バングラデシュ">Bangladesh</option>
+      <option value="バルバドス">Barbados</option>
+      <option value="ベラルーシ">Belarus</option>
+      <option value="ベルギー">Belgium</option>
+      <option value="ベリーズ">Belize</option>
+      <option value="ベナン">Benin</option>
+      <option value="ブータン">Bhutan</option>
+      <option value="ボリビア">Bolivia</option>
+      <option value="ボスニア・ヘルツェゴビナ">Bosnia and Herzegovina</option>
+      <option value="ボツワナ">Botswana</option>
+      <option value="ブラジル">Brazil</option>
+      <option value="ブルネイ">Brunei Darussalam</option>
+      <option value="ブルガリア">Bulgaria</option>
+      <option value="ブルキナファソ">Burkina Faso</option>
+      <option value="ブルンジ">Burundi</option>
+      <option value="カンボジア">Cambodia</option>
+      <option value="カメルーン">Cameroon</option>
+      <option value="カナダ">Canada</option>
+      <option value="カーボベルデ">Cape Verde</option>
+      <option value="中央アフリカ共和国">Central African Republic</option>
+      <option value="チャド">Chad</option>
+      <option value="チリ">Chile</option>
+      <option value="中国">China</option>
+      <option value="コロンビア">Colombia</option>
+      <option value="コモロ">Comoros</option>
+      <option value="クック諸島">Cook Islands</option>
+      <option value="コソボ">Cosovo</option>
+      <option value="コスタリカ">Costa Rica</option>
+      <option value="コートジボワール">Cote d’Ivoire</option>
+      <option value="クロアチア">Croatia</option>
+      <option value="キューバ">Cuba</option>
+      <option value="キプロス">Cyprus</option>
+      <option value="チェコ">Czech Republic</option>
+      <option value="コンゴ民主共和国">Democratic Republic of the Congo</option>
+      <option value="デンマーク">Denmark</option>
+      <option value="ジブチ">Djibouti</option>
+      <option value="ドミニカ国">Dominica</option>
+      <option value="ドミニカ共和国">Dominican Republic</option>
+      <option value="エクアドル">Ecuador</option>
+      <option value="エジプト">Egypt</option>
+      <option value="エルサルバドル">El Salvador</option>
+      <option value="赤道ギニア">Equatorial Guinea</option>
+      <option value="エリトリア">Eritrea</option>
+      <option value="エストニア">Estonia</option>
+      <option value="エチオピア">Ethiopia</option>
+      <option value="フィジー">Fiji</option>
+      <option value="フィンランド">Finland</option>
+      <option value="フランス">France</option>
+      <option value="ガボン">Gabon</option>
+      <option value="ガンビア">Gambia</option>
+      <option value="ジョージア">Georgia</option>
+      <option value="ドイツ">Germany</option>
+      <option value="ガーナ">Ghana</option>
+      <option value="ギリシャ">Greece</option>
+      <option value="グレナダ">Grenada</option>
+      <option value="グアテマラ">Guatemala</option>
+      <option value="ギニア">Guinea</option>
+      <option value="ギニアビサウ">Guinea-Bissau</option>
+      <option value="ガイアナ">Guyana</option>
+      <option value="ハイチ">Haiti</option>
+      <option value="ホンジュラス">Honduras</option>
+      <option value="ハンガリー">Hungary</option>
+      <option value="アイスランド">Iceland</option>
+      <option value="インド">India</option>
+      <option value="インドネシア">Indonesia</option>
+      <option value="イラン">Iran</option>
+      <option value="イラク">Iraq</option>
+      <option value="アイルランド">Ireland</option>
+      <option value="イスラエル">Israel</option>
+      <option value="イタリア">Italy</option>
+      <option value="ジャマイカ">Jamaica</option>
+      <option value="日本">Japan</option>
+      <option value="ヨルダン">Jordan</option>
+      <option value="カザフスタン">Kazakhstan</option>
+      <option value="ケニア">Kenya</option>
+      <option value="キリバス">Kiribati</option>
+      <option value="クウェート">Kuwait</option>
+      <option value="キルギス">Kyrgyz</option>
+      <option value="ラオス">Lao People’s Democratic Republic</option>
+      <option value="ラトビア">Latvia</option>
+      <option value="レバノン">Lebanon</option>
+      <option value="レソト">Lesotho</option>
+      <option value="リベリア">Liberia</option>
+      <option value="リビア">Libya</option>
+      <option value="リヒテンシュタイン">Liechtenstein</option>
+      <option value="リトアニア">Lithuania</option>
+      <option value="ルクセンブルク">Luxembourg</option>
+      <option value="マダガスカル">Madagascar</option>
+      <option value="マラウイ">Malawi</option>
+      <option value="マレーシア">Malaysia</option>
+      <option value="モルディブ">Maldives</option>
+      <option value="マリ">Mali</option>
+      <option value="マルタ">Malta</option>
+      <option value="マーシャル諸島">Marshall Islands</option>
+      <option value="モーリタニア">Mauritania</option>
+      <option value="モーリシャス">Mauritius</option>
+      <option value="メキシコ">Mexico</option>
+      <option value="ミクロネシア連邦">Micronesia</option>
+      <option value="モナコ">Monaco</option>
+      <option value="モンゴル">Mongolia</option>
+      <option value="モンテネグロ">Montenegro</option>
+      <option value="モロッコ">Morocco</option>
+      <option value="モザンビーク">Mozambique</option>
+      <option value="ミャンマー">Myanmar</option>
+      <option value="ナゴルノ・カラバフ">Nagorno-Karabakh Republic</option>
+      <option value="ナミビア">Namibia</option>
+      <option value="ナウル">Nauru</option>
+      <option value="ネパール">Nepal</option>
+      <option value="オランダ">Netherlands</option>
+      <option value="ニュージーランド">New Zealand</option>
+      <option value="ニカラグア">Nicaragua</option>
+      <option value="ニジェール">Niger</option>
+      <option value="ナイジェリア">Nigeria</option>
+      <option value="ニウエ">Niue</option>
+      <option value="北キプロス">North Cyprus</option>
+      <option value="北朝鮮">North Korea</option>
+      <option value="ノルウェー">Norway</option>
+      <option value="オマーン">Oman</option>
+      <option value="パキスタン">Pakistan</option>
+      <option value="パラオ">Palau</option>
+      <option value="パレスチナ">Palestina</option>
+      <option value="パナマ">Panama</option>
+      <option value="パプアニューギニア">Papua New Guinea</option>
+      <option value="パラグアイ">Paraguay</option>
+      <option value="ペルー">Peru</option>
+      <option value="フィリピン">Philippines</option>
+      <option value="ポーランド">Poland</option>
+      <option value="ポルトガル">Portugal</option>
+      <option value="沿ドニエストル">Pridnestrovian Moldavian Republic</option>
+      <option value="カタール">Qatar</option>
+      <option value="モルドバ">Republic of Moldova</option>
+      <option value="コンゴ共和国">Republic of the Congo</option>
+      <option value="ルーマニア">Romania</option>
+      <option value="ロシア">Russia</option>
+      <option value="ルワンダ">Rwanda</option>
+      <option value="セントクリストファー・ネイビス">Saint Kitts and Nevis</option>
+      <option value="セントルシア">Saint Lucia</option>
+      <option value="セントビンセントおよびグレナディーン諸島">Saint Vincent and the Grenadines</option>
+      <option value="サモア">Samoa</option>
+      <option value="サンマリノ">San Marino</option>
+      <option value="サントメ・プリンシペ">Sao Tome and Principe</option>
+      <option value="サウジアラビア">Saudi Arabia</option>
+      <option value="セネガル">Senegal</option>
+      <option value="セルビア">Serbia</option>
+      <option value="セーシェル">Seychelles</option>
+      <option value="シエラレオネ">Sierra Leone</option>
+      <option value="シンガポール">Singapore</option>
+      <option value="スロバキア">Slovakia</option>
+      <option value="スロベニア">Slovenia</option>
+      <option value="ソロモン諸島">Solomon Islands</option>
+      <option value="ソマリア">Somalia</option>
+      <option value="ソマリランド">Somaliland </option>
+      <option value="南アフリカ">South Africa</option>
+      <option value="韓国">South Korea</option>
+      <option value="南オセチア">South Ossetia</option>
+      <option value="南スーダン">South Sudan</option>
+      <option value="スペイン">Spain</option>
+      <option value="スリランカ">Sri Lanka</option>
+      <option value="スーダン">Sudan</option>
+      <option value="スリナム">Suriname</option>
+      <option value="スワジランド">Swaziland</option>
+      <option value="スウェーデン">Sweden</option>
+      <option value="スイス">Switzerland</option>
+      <option value="シリア">Syria</option>
+      <option value="台湾">Taiwan</option>
+      <option value="タジキスタン">Tajikistan</option>
+      <option value="タイ">Thailand</option>
+      <option value="マケドニア旧ユーゴスラビア共和国">The formar Yugoslav Republic of Macedonia</option>
+      <option value="東ティモール">Timor Leste</option>
+      <option value="トーゴ">Togo</option>
+      <option value="トンガ">Tonga</option>
+      <option value="トリニダード・トバゴ">Trinidad and Tobago</option>
+      <option value="チュニジア">Tunisia</option>
+      <option value="トルコ">Turkey</option>
+      <option value="トルクメニスタン">Turkmenistan</option>
+      <option value="ツバル">Tuvalu</option>
+      <option value="ウガンダ">Uganda</option>
+      <option value="ウクライナ">Ukraine</option>
+      <option value="アラブ首長国連邦">United Arab Emirates</option>
+      <option value="イギリス">United Kingdom</option>
+      <option value="タンザニア">United of Republic of Tanzania</option>
+      <option value="アメリカ">United States</option>
+      <option value="ウルグアイ">Uruguay</option>
+      <option value="ウズベキスタン">Uzbekistan</option>
+      <option value="バヌアツ">Vanuatu</option>
+      <option value="バチカン">Vatican</option>
+      <option value="ベネズエラ">Venezuela</option>
+      <option value="ベトナム">Viet Nam</option>
+      <option value="西サハラ">Western Sahara</option>
+      <option value="イエメン">Yemen</option>
+      <option value="ザンビア">Zambia</option>
+      <option value="ジンバブエ">Zimbabwe</option>
+      <option value="">else</option>
+    </select><br>
+  <label>Job Description:</label>
+    <textarea  id="00N0o00000MgKwn" name="00N0o00000MgKwn" type="text" wrap="soft"></textarea><br>
+  <label>Period:</label>
+    <label>From(Yea) </label>
+      <select  id="00N0o00000MgKws" name="00N0o00000MgKws" title="開始年">
+        <option value=""></option>
+        <option value="2010">2010</option>
+        <option value="2011">2011</option>
+        <option value="2012">2012</option>
+        <option value="2013">2013</option>
+        <option value="2014">2014</option>
+        <option value="2015">2015</option>
+        <option value="2016">2016</option>
+        <option value="2017">2017</option>
+        <option value="2018">2018</option>
+        <option value="2019">2019</option>
+        <option value="2020">2020</option>
+        <option value="2021">2021</option>
+        <option value="2022">2022</option>
+        <option value="2023">2023</option>
+        <option value="2024">2024</option>
+        <option value="2025">2025</option>
+        <option value="2026">2026</option>
+        <option value="2027">2027</option>
+        <option value="2028">2028</option>
+        <option value="2029">2029</option>
+        <option value="2030">2030</option>
+        <option value="2031">2031</option>
+        <option value="2032">2032</option>
+        <option value="2033">2033</option>
+        <option value="2034">2034</option>
+        <option value="2035">2035</option>
+        <option value="2036">2036</option>
+        <option value="2037">2037</option>
+        <option value="2038">2038</option>
+        <option value="2039">2039</option>
+      </select>
+    <label>To(Year)</label>
+      <select  id="00N0o00000MgKyU" name="00N0o00000MgKyU" title="終了年">
+        <option value=""></option>
+        <option value="2010">2010</option>
+        <option value="2011">2011</option>
+        <option value="2012">2012</option>
+        <option value="2013">2013</option>
+        <option value="2014">2014</option>
+        <option value="2015">2015</option>
+        <option value="2016">2016</option>
+        <option value="2017">2017</option>
+        <option value="2018">2018</option>
+        <option value="2019">2019</option>
+        <option value="2020">2020</option>
+        <option value="2021">2021</option>
+        <option value="2022">2022</option>
+        <option value="2023">2023</option>
+        <option value="2024">2024</option>
+        <option value="2025">2025</option>
+        <option value="2026">2026</option>
+        <option value="2027">2027</option>
+        <option value="2028">2028</option>
+        <option value="2029">2029</option>
+        <option value="2030">2030</option>
+        <option value="2031">2031</option>
+        <option value="2032">2032</option>
+        <option value="2033">2033</option>
+        <option value="2034">2034</option>
+        <option value="2035">2035</option>
+        <option value="2036">2036</option>
+        <option value="2037">2037</option>
+        <option value="2038">2038</option>
+        <option value="2039">2039</option>
+      </select>
 </div>
 
-<div class="g-recaptcha" data-sitekey="6LdKV6wUAAAAAB-31K-QfQ4pjaN6xmaoPRigck73"></div><br>
+
+<!--
+<div class="g-recaptcha" data-sitekey="6LdSV6wUAAAAAJJpxfVT9skaMbFMWuubcTIwo1Da"></div><br>
+-->
 <input type="submit" name="submit">
 
 </form>
-
 
 <style>
 form{
