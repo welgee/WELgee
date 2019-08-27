@@ -2,6 +2,11 @@
 /*
 Carrer ProgramのCss */
 
+.questions
+{
+display: block;
+}
+
 #messages {
   margin-top: 100px;
 }
