@@ -2,6 +2,16 @@
 /*
 Carrer ProgramのCss */
 
+.img-carrer
+{
+  width: 100vw;
+  height: 500px;
+  margin-top: 100px;
+  background-image: url(https://lh3.googleusercontent.com/Xd-vjtGXdSdxSPR9O83SLgmLe1mwjk8ea2vnIkX3Ufzj1ibH2wIsixx-947GnP44eWnX5kzWy2Or_tBxAWSxwrEsXgFmleU8uhYY6O0mBax1wNia5o-uOboRHeRzKWnRxzaXq31XcxT_IPLpB6M6e0uWO5sRf-XC9oV9mnQnEhLJNVb87ONXlmuHCzoEOUAIKQelhYutlC8GB3fjMnjjngp_ceUu4kM73wuFGNKX7P7mAmGGooAa_0VR05y4y-jQZ1u438sORGI0moH_fcZVeSCQrFlxrqXJ9s1G9m8a73kUCSecA-zkbZivW_1NoF5YNOfeHnfW433GxlU-w-QE3UylYgVP_E0qquMRTzyn6Z477lDDLHC28XY55PO7ilWl_QRJQDGNnSDXkcO4B7E-pznOLKgyWxMWZoWA_D1CZS1hDpEhZw-hPL9eXkkDPavHyFygUFQYQEH3O84Uy6zeFqEBfOY6Fl2_D5A5LeqLccwJ8eO0_2iHJSqr7lWbkeTAXI16PmqB3kCcEC46wStViqMa_4GrVJzaMAmKYS7BLJsPuEIV7ILt7OGQr4AJVU8rNBgwD2tDRnDEXHQ6MFbqpvFQAGtpUJABRhOSQ06fPLEM2G7q4DOJYk9cBRHdN0VSn5cFQHHvv2cZwphhS_JCvafkdk6tJ_V5ACq2P6Wh68ulKry2c-Seq8H3RH3DlSv-f170jirxe263iWJd_g=w650-h433-no);
+  background-size: cover;
+  background-position: center;
+}
+
 .questions
 {
 display: block;
