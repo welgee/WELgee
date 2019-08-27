@@ -2,6 +2,17 @@
 /*
 Carrer ProgramのCss */
 
+#partners > .questions {
+  display: table;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+
 .img-carrer
 {
   width: 100vw;
