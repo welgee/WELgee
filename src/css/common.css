@@ -2,6 +2,12 @@
 /*
 career ProgramのCss */
 
+
+.scheme-image{
+  margin-top: 50px;
+  width: 100%;
+}
+
 #partners > .questions {
   display: table;
   flex-wrap: wrap;
