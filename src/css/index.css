@@ -8,7 +8,6 @@
   background-position: center;
 }
 
-
 /* Campaign */
 
 #campaign {
@@ -288,6 +287,12 @@
 #programs > .group > .items > .item img {
   width: 100%;
   border-radius: 4px;
+}
+
+
+#programs > .group > .items > .item img:hover img{
+  opacity: 0.6;
+  transition-duration: 0.3s;
 }
 
 #programs > .group > .items > .item > h5 {

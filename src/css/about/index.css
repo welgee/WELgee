@@ -75,15 +75,14 @@
   background-color: #FFBF00;
 }
 
-
-#mission {
+#team {
   margin-top: 100px;
   background-image: url("${IMG_URL}/about/mission-bg.png");
   background-size: cover;
   background-position: center;
 }
 
-#mission > .filter {
+#team > .filter {
   width: 100%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.8);
@@ -91,14 +90,42 @@
   padding-bottom: 50px;
 }
 
-#mission > .filter > p {
+#team > .filter > p {
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
   margin-top: 60px;
 }
 
-#mission > .filter > a.button {
+#team > .filter > a.button {
+  margin-top: 60px;
+  background-color: #FFBF00;
+}
+
+
+#team {
+  margin-top: 100px;
+  background-image: url("https://lightroom.adobe.com/v2c/spaces/43c595e478f64bad8d0055a7cd36868e/assets/eec9ed5874cf42ffa4a3133d60ab3ab0/revisions/ef175ba59d334825aab89b5885d9c539/renditions/8ffdb01082e23d8d3f6b27da64543aab");
+  background-size: cover;
+  background-position: center;
+}
+
+#team > .filter {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+#team > .filter > p {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+#team > .filter > a.button {
   margin-top: 60px;
   background-color: #FFBF00;
 }
