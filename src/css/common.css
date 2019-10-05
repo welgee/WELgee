@@ -1,8 +1,54 @@
 /* Common */
+
+.img:hover img{
+  opacity: 0.6;
+  transition-duration: 0.3s;
+}
+
+
+/*
+team WELgee */
+
+#programs {
+  margin-top: 100px;
+}
+
+#programs > .items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+#programs > .items > .item {
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+#programs > .items > .item > img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+#programs > .items > .item > h5 {
+  margin-top: 20px;
+}
+
+#programs > .items > .item > p {
+  margin-top: 10px;
+}
+
+#programs > a.button {
+  margin-top: 50px;
+  background-color: #FFBF00;
+}
+
 /*
 career ProgramのCss */
-
-
 .scheme-image{
   margin-top: 50px;
   width: 100%;
