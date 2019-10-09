@@ -1,9 +1,131 @@
 /* Common */
 
+
+/*
+About WELggee salon */
+
+.img-welgee-salon
+{
+  width: 100vw;
+  height: 500px;
+  margin-top: 100px;
+  background-image: url(https://lh3.googleusercontent.com/Xd-vjtGXdSdxSPR9O83SLgmLe1mwjk8ea2vnIkX3Ufzj1ibH2wIsixx-947GnP44eWnX5kzWy2Or_tBxAWSxwrEsXgFmleU8uhYY6O0mBax1wNia5o-uOboRHeRzKWnRxzaXq31XcxT_IPLpB6M6e0uWO5sRf-XC9oV9mnQnEhLJNVb87ONXlmuHCzoEOUAIKQelhYutlC8GB3fjMnjjngp_ceUu4kM73wuFGNKX7P7mAmGGooAa_0VR05y4y-jQZ1u438sORGI0moH_fcZVeSCQrFlxrqXJ9s1G9m8a73kUCSecA-zkbZivW_1NoF5YNOfeHnfW433GxlU-w-QE3UylYgVP_E0qquMRTzyn6Z477lDDLHC28XY55PO7ilWl_QRJQDGNnSDXkcO4B7E-pznOLKgyWxMWZoWA_D1CZS1hDpEhZw-hPL9eXkkDPavHyFygUFQYQEH3O84Uy6zeFqEBfOY6Fl2_D5A5LeqLccwJ8eO0_2iHJSqr7lWbkeTAXI16PmqB3kCcEC46wStViqMa_4GrVJzaMAmKYS7BLJsPuEIV7ILt7OGQr4AJVU8rNBgwD2tDRnDEXHQ6MFbqpvFQAGtpUJABRhOSQ06fPLEM2G7q4DOJYk9cBRHdN0VSn5cFQHHvv2cZwphhS_JCvafkdk6tJ_V5ACq2P6Wh68ulKry2c-Seq8H3RH3DlSv-f170jirxe263iWJd_g=w650-h433-no);
+  background-size: cover;
+  background-position: center;
+}
+
+#voice_welgee_salon {
+  margin-top: 100px;
+  background-image: url("${IMG_URL}/about/mission-bg.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#voice_welgee_salon > .filter {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+#voice_welgee_salon > .filter > p {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+#voice_welgee_salon > .filter > a.button {
+  margin-top: 60px;
+  background-color: #FFBF00;
+}
+
+
+#voice_welgee_salon {
+  margin-top: 100px;
+  background-image: url("https://lightroom.adobe.com/v2c/spaces/43c595e478f64bad8d0055a7cd36868e/assets/eec9ed5874cf42ffa4a3133d60ab3ab0/revisions/ef175ba59d334825aab89b5885d9c539/renditions/8ffdb01082e23d8d3f6b27da64543aab");
+  background-size: cover;
+  background-position: center;
+}
+
+#voice_welgee_salon > .filter {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+#voice_welgee_salon > .filter > p {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+#voice_welgee_salon > .filter > a.button {
+  margin-top: 60px;
+  background-color: #FFBF00;
+}
+
+.remarkable_results {
+    margin: 2em 0;
+    background: #f1f1f1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
+}
+.remarkable_results .box-title {
+    font-size: 1.2em;
+    background: #FFBF00;
+    padding: 4px;
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+.remarkable_results p {
+    padding: 15px 20px;
+    margin: 0;
+}
+
+#merit {
+  margin-top: 100px;
+  padding-bottom: 100px;
+}
+
+#merit > .items {
+  width: 90%;
+  max-width: 1100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+#merit > .items > .item {
+  width: 100%;
+  max-width: 290px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+#merit > .items > .item > img {
+  width: 100%;
+}
+
+#merit > .items > .item > h5 {
+  font-weight: normal;
+  margin-top: 20px;
+}
+
+#merit > .items > .item > p {
+  text-align: left;
+  margin-top: 20px;
+}
+
+
 /*
 team WELgee */
-
-
 #join {
   margin-top: 100px;
   padding-top: 50px;
