@@ -4,6 +4,18 @@
 /*
 About WELggee salon */
 
+.salon_programs{
+  width: 100%;
+list-style: none outside;
+
+}
+
+.salon_programs > li{
+padding: 0;
+float: left;
+width: 50%;
+}
+
 .img-welgee-salon
 {
   width: 100vw;
@@ -14,14 +26,14 @@ About WELggee salon */
   background-position: center;
 }
 
-#voice_welgee_salon {
+#voice_welgee_salon_2 {
   margin-top: 100px;
   background-image: url("${IMG_URL}/about/mission-bg.png");
   background-size: cover;
   background-position: center;
 }
 
-#voice_welgee_salon > .filter {
+#voice_welgee_salon_2 > .filter {
   width: 100%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.8);
@@ -29,27 +41,27 @@ About WELggee salon */
   padding-bottom: 50px;
 }
 
-#voice_welgee_salon > .filter > p {
+#voice_welgee_salon_2 > .filter > p {
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
   margin-top: 60px;
 }
 
-#voice_welgee_salon > .filter > a.button {
+#voice_welgee_salon_2 > .filter > a.button {
   margin-top: 60px;
   background-color: #FFBF00;
 }
 
 
-#voice_welgee_salon {
+#voice_welgee_salon_2 {
   margin-top: 100px;
   background-image: url("https://lightroom.adobe.com/v2c/spaces/43c595e478f64bad8d0055a7cd36868e/assets/eec9ed5874cf42ffa4a3133d60ab3ab0/revisions/ef175ba59d334825aab89b5885d9c539/renditions/8ffdb01082e23d8d3f6b27da64543aab");
   background-size: cover;
   background-position: center;
 }
 
-#voice_welgee_salon > .filter {
+#voice_welgee_salon_2 > .filter {
   width: 100%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.8);
@@ -57,14 +69,69 @@ About WELggee salon */
   padding-bottom: 50px;
 }
 
-#voice_welgee_salon > .filter > p {
+#voice_welgee_salon_2 > .filter > p {
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
   margin-top: 60px;
 }
 
-#voice_welgee_salon > .filter > a.button {
+#voice_welgee_salon_2 > .filter > a.button {
+  margin-top: 60px;
+  background-color: #FFBF00;
+}
+
+#voice_welgee_salon_1 {
+  margin-top: 100px;
+  background-image: url("${IMG_URL}/about/mission-bg.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#voice_welgee_salon_1 > .filter {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+#voice_welgee_salon_1 > .filter > p {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+#voice_welgee_salon_1 > .filter > a.button {
+  margin-top: 60px;
+  background-color: #FFBF00;
+}
+
+
+#voice_welgee_salon_1 {
+  margin-top: 100px;
+  background-image: url("https://lightroom.adobe.com/v2c/spaces/43c595e478f64bad8d0055a7cd36868e/assets/eec9ed5874cf42ffa4a3133d60ab3ab0/revisions/ef175ba59d334825aab89b5885d9c539/renditions/8ffdb01082e23d8d3f6b27da64543aab");
+  background-size: cover;
+  background-position: center;
+}
+
+#voice_welgee_salon_1 > .filter {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+#voice_welgee_salon_1 > .filter > p {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+#voice_welgee_salon_1 > .filter > a.button {
   margin-top: 60px;
   background-color: #FFBF00;
 }
