@@ -4,6 +4,46 @@
 /*
 About WELggee salon */
 
+
+/* family voice */
+
+#family-voice {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  /* border-top: solid 1px #707070; */
+}
+
+#family-voice > .container > .items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#family-voice > .container > .items > .item {
+  max-width: 400px;
+  margin-top: 50px;
+}
+
+#family-voice > .container > .items > .item > img {
+  display: block;
+  width: 280px;
+  height: 280px;
+  border-radius: 140px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+#family-voice > .container > .items > .item > h5 {
+  margin-top: 30px;
+  font-weight: normal;
+  color: #333333;
+}
+
+#family-voice > .container > .items > .item > p {
+  margin-top: 30px;
+}
+
+
 .salon_index {
     position: relative;
     margin: 2em 0;
