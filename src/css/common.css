@@ -1,6 +1,16 @@
 /* Common */
 
+/*
+English */
+.welgee-video{
+display: block;
+margin: auto;
+}
 
+.welgee-introduction-video-english{
+  width: 80vw;
+  height: 50vw;
+}
 /*
 About WELggee salon */
 
