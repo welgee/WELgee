@@ -2,14 +2,12 @@
 
 /*
 English */
-.welgee-video{
-display: block;
-margin: auto;
-}
 
-.welgee-introduction-video-english{
+.welgee-video{
   width: 80vw;
   height: 50vw;
+  display: block;
+margin: auto;
 }
 /*
 About WELggee salon */
