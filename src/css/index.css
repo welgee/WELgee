@@ -75,7 +75,7 @@
 }
 
 #news > a.button {
-  background-color: #FFDE59;
+  background-color: #FFBF00;
   color: white;
   margin-top: 50px;
 }
@@ -117,7 +117,7 @@
 
 #what-welgee > a.button {
   margin-top: 60px;
-  background-color: #FFDE59;
+  background-color: #FFBF00;
   color: white;
 }
 
@@ -150,7 +150,7 @@
 
 #passion > .filter > a.button {
   margin-top: 20px;
-  background-color: #FFDE59;
+  background-color: #FFBF00;
 }
 
 
@@ -205,7 +205,7 @@
 
 #director-msg > a.button {
   margin-top: 80px;
-  background-color: #FFDE59;
+  background-color: #FFBF00;
   color: white;
 }
 
